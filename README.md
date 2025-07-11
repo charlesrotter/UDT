@@ -1,0 +1,2 @@
+# CosmologicalModel
+Hybrid cosmology.
