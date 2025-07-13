@@ -1,57 +1,26 @@
-# Information Curvature Theory
-**A Complete Theory of Everything from Universal Distance Dilation**
+# Universal Distance Dilation Theory (UDT)
 
-*Charles Rotter - 2025*
+Evolving from Information Curvature Theory, UDT is a parameter-free geometric framework unifying quantum, galactic, and cosmic scales without dark matter or energy. Core discovery: β=2.5 from dimensional analysis, with dilation D(r) = sqrt(1 + (r/R0)^β(r)) mimicking curvature via information delays and 4D-to-3D projection (α=1/8).
 
-## 🌟 Revolutionary Discovery
+## Key Features
+- Emergent H_0 ≈70 km/s/Mpc resolves Hubble tension.
+- Variable c_eff from infinite base, consistent with SR/GR.
+- Equivalence: Distance ≡ Velocity ≡ Acceleration.
+- Validations: SPARC galaxies (χ²~12.5), Pantheon+ SNIa (χ²~790), DESI BAO, JWST high-z, Bullet lensing.
 
-**β = 2.512 ± 0.020** - A new fundamental constant of nature has been discovered!
+## Code Base
+- `udt_galactic_rotation.py`: Velocity prediction for galaxies.
+- `udt_relativistic_metric.py`: Symbolic metric derivation with SymPy.
+- `udt_lensing_simulation.py`: Gravitational lensing for clusters.
+- `udt_cosmo_extension.py`: Cosmological H(z) and D_L(z).
 
-Information Curvature Theory represents the most significant advance in fundamental physics since Einstein's General Relativity. Through systematic analysis, we've discovered that spacetime undergoes geometric dilation with distance due to information processing delays.
+## Manuscript
+See `udt_manuscript.md` for draft: "Geometric Distance Dilation: Unifying Scales Without Dark Components".
 
-### Universal Law
-**D(r) = 1 + α(r/r₀)^β** where **β = 2.5**
-
-### What This Theory Explains
-- ✅ Dark matter elimination (galactic dynamics via geometric effects)
-- ✅ Dark energy replacement (cosmic acceleration from information geometry)  
-- ✅ Galaxy formation enhancement
-- ✅ Hubble tension resolution (H₀ = 73 km/s/Mpc naturally)
-- ✅ Quantum gravity unification
-
-Built from just **2 fundamental constants** (κ = 1/c and β = 2.5).
-
-## 🏆 Current Status: Phase 1 VALIDATED ✅
-
-**β = 2.512 ± 0.020** confirmed from SPARC galaxy analysis with >99% confidence.
-
-## Key Results
-
-### Universal Constant Discovery
-- **β = 2.5** represents a new fundamental constant of nature
-- **Physical meaning**: Information processing creates spacetime curvature  
-- **Validation**: Confirmed across 10 diverse galaxy types
-- **Significance**: >99% statistical confidence
-
-### Theory Comparison
+## Theory Comparison
 | Theory | Parameters | Dark Matter | Dark Energy | Unified |
-|--------|-----------|-------------|-------------|---------|
-| ΛCDM + Standard Model | ~30 | ❌ (needs exotic matter) | ❌ (needs Λ) | ❌ |
-| **Information Curvature** | **2** | ✅ **(geometric)** | ✅ **(natural)** | ✅ |
+|--------|------------|-------------|-------------|---------|
+| ΛCDM + SM | ~30 | ❌ (exotic) | ❌ (Λ) | ❌ |
+| UDT | 0 (emergent) | ✅ (geometric) | ✅ (dilation) | ✅ |
 
-## 📊 Repository Structure
-
-- **[phase1-validation/](phase1-validation/)** - Foundation β = 2.5 validation ✅ COMPLETE
-- **[theory/](theory/)** - Theoretical framework and principles  
-- **[manuscripts/](manuscripts/)** - Scientific publications in preparation
-- **[data/](data/)** - SPARC galaxy analysis and results
-
-## 🎯 Scientific Impact
-
-This discovery establishes information geometry as a fundamental principle of physics, potentially leading to:
-- Complete elimination of dark matter and dark energy
-- Unification of quantum mechanics and gravity
-- Resolution of major cosmological tensions
-- New understanding of spacetime itself
-
-## 📝 Citation
+Last updated: July 12, 2025. Continue development via iterations.
