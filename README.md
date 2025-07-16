@@ -42,6 +42,7 @@ c_eff(r) = c₀ × R₀/(R₀ + r)
 - Galactic scale: R₀ ~ 38 kpc (from SPARC analysis)
 - Cosmological scale: R₀ ~ 3,000 Mpc (from supernova analysis)
 - Scale hierarchy: Quantum → Galactic → Cosmic (10²⁰ : 10⁵ : 1)
+- **Scaling Behavior**: Discrete scale-specific domains with well-separated transition masses
 
 ## Observational Analysis
 
@@ -84,6 +85,10 @@ python scripts/test_quantum_experimental_simulation.py
 # Solar system and relativistic tests
 python scripts/test_mercury_precession.py
 python scripts/test_udt_gr_convergence.py
+
+# R₀ emergence and scaling analysis
+python scripts/test_r0_emergence_from_mass_volume.py
+python scripts/analyze_r0_scaling_continuity.py
 
 # Legacy analysis scripts (for reference)
 python temporal_unification_breakthrough.py
@@ -166,6 +171,9 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - **Quantum Foundation**: UDT provides the fundamental framework from which quantum mechanics emerges
 - **Quantum Weirdness Explained**: Wave-particle duality and quantum behavior emerge from c_eff(r) transitions
 - **Scale Unification**: Single temporal geometry function τ(r) = R₀/(R₀ + r) spans quantum to cosmic scales
+- **Discrete Scaling Framework**: R₀ operates as discrete scale-specific domains rather than continuous function
+- **R₀ Emergence**: Characteristic scales emerge naturally from mass/volume relationships at each scale
+- **Hybrid Scaling Theory**: Continuous variation within domains, discrete transitions between scales
 - **Geometric Origin**: Explains galactic rotation curves and cosmological redshift through temporal geometry
 - **Position-Dependent Light Speed**: c_eff(r) = c₀ × R₀/(R₀ + r) maintains causal consistency
 - **Equivalence Principle Extension**: Temporal-spatial relationships unified across all scales

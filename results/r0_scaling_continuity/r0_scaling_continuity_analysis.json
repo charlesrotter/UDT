@@ -1,0 +1,145 @@
+{
+  "continuous_scaling": {
+    "structure_factors": [
+      4.024863146653445e+44,
+      794002.3538752923,
+      0.831195095714714
+    ],
+    "gravitational_scales": [
+      1.2422782633385566e-54,
+      1476922573688218.0,
+      1.113817928874976e+26
+    ],
+    "masses": [
+      1.673e-27,
+      1.9889999999999998e+42,
+      1.5e+53
+    ],
+    "scaling_behavior": "discrete"
+  },
+  "intermediate_scales": [
+    {
+      "name": "Atomic nucleus",
+      "mass": 3.34e-25,
+      "category": "nuclear",
+      "predicted_R0": 5.922383929733757e-57,
+      "physical_size": 1e-14,
+      "R0_over_size": 5.922383929733757e-43
+    },
+    {
+      "name": "Molecule",
+      "mass": 1.67e-24,
+      "category": "molecular",
+      "predicted_R0": 2.9611919648668785e-56,
+      "physical_size": 1e-09,
+      "R0_over_size": 2.9611919648668782e-47
+    },
+    {
+      "name": "Nanoparticle",
+      "mass": 1e-18,
+      "category": "nano",
+      "predicted_R0": 1.7731688412376517e-50,
+      "physical_size": 1e-07,
+      "R0_over_size": 1.7731688412376518e-43
+    },
+    {
+      "name": "Microorganism",
+      "mass": 1e-12,
+      "category": "micro",
+      "predicted_R0": 1.7731688412376517e-44,
+      "physical_size": 1e-06,
+      "R0_over_size": 1.7731688412376517e-38
+    },
+    {
+      "name": "Grain of sand",
+      "mass": 1e-08,
+      "category": "grain",
+      "predicted_R0": 1.7731688412376518e-40,
+      "physical_size": 0.0001,
+      "R0_over_size": 1.7731688412376517e-36
+    },
+    {
+      "name": "Asteroid",
+      "mass": 1000000000000000.0,
+      "category": "asteroid",
+      "predicted_R0": 1.773168841237652e-17,
+      "physical_size": 1000.0,
+      "R0_over_size": 1.773168841237652e-20
+    },
+    {
+      "name": "Moon",
+      "mass": 7.35e+22,
+      "category": "lunar",
+      "predicted_R0": 1.3032790983096742e-09,
+      "physical_size": 1740000.0,
+      "R0_over_size": 7.490109760400426e-16
+    },
+    {
+      "name": "Earth",
+      "mass": 5.97e+24,
+      "category": "planetary",
+      "predicted_R0": 1.0585817982188782e-07,
+      "physical_size": 6370000.0,
+      "R0_over_size": 1.6618238590563237e-14
+    },
+    {
+      "name": "Sun",
+      "mass": 1.989e+30,
+      "category": "stellar",
+      "predicted_R0": 0.035268328252216895,
+      "physical_size": 696000000.0,
+      "R0_over_size": 5.067288541985186e-11
+    },
+    {
+      "name": "Stellar cluster",
+      "mass": 1e+36,
+      "category": "cluster",
+      "predicted_R0": 17731.68841237652,
+      "physical_size": 1e+16,
+      "R0_over_size": 1.7731688412376519e-12
+    },
+    {
+      "name": "Globular cluster",
+      "mass": 1e+38,
+      "category": "globular",
+      "predicted_R0": 1773168.8412376516,
+      "physical_size": 3e+17,
+      "R0_over_size": 5.910562804125506e-12
+    }
+  ],
+  "domain_transitions": {
+    "domains": [
+      {
+        "name": "Quantum",
+        "R0": 5e-10,
+        "M_char": 1.673e-27,
+        "range_min": 1e-30,
+        "range_max": 1e+20
+      },
+      {
+        "name": "Galactic",
+        "R0": 1.17268e+21,
+        "M_char": 1.9889999999999998e+42,
+        "range_min": 1e+20,
+        "range_max": 1e+50
+      },
+      {
+        "name": "Cosmic",
+        "R0": 9.258e+25,
+        "M_char": 1.5e+53,
+        "range_min": 1e+50,
+        "range_max": 1e+60
+      }
+    ],
+    "transition_masses": [
+      1.0312211603879442e+33,
+      4.437367539825328e+50
+    ],
+    "overlap_regions": []
+  },
+  "theory_synthesis": {
+    "recommended_framework": "hybrid_continuous_discrete",
+    "scaling_law": "R0(M) = (GM/c\u00b2) \u00d7 structure_factor(M)",
+    "implementation": "domain_selection_with_interpolation"
+  }
+}

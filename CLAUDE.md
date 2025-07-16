@@ -36,6 +36,10 @@ python scripts/test_quantum_experimental_simulation.py
 # Solar system and relativistic tests
 python scripts/test_mercury_precession.py
 python scripts/test_udt_gr_convergence.py
+
+# R₀ emergence and scaling analysis
+python scripts/test_r0_emergence_from_mass_volume.py
+python scripts/analyze_r0_scaling_continuity.py
 ```
 
 ## Architecture and Theory
@@ -47,6 +51,7 @@ python scripts/test_udt_gr_convergence.py
   - Galactic scale: ~38 kpc (from SPARC analysis)
   - Cosmological scale: ~3,000 Mpc (from supernova analysis)
   - Scale hierarchy: Quantum → Galactic → Cosmic (10²⁰ : 10⁵ : 1)
+  - **Scaling behavior**: Discrete scale-specific domains rather than continuous function
 - **Enhancement Factor**: 1/τ² = (1 + r/R₀)² for galactic dynamics
 
 ### Key Theoretical Framework
@@ -118,6 +123,8 @@ The project now uses a proper package structure for better maintainability:
 - `scripts/test_quantum_experimental_simulation.py` - Simulated quantum experiments
 - `scripts/test_mercury_precession.py` - Solar system orbital precession tests
 - `scripts/test_udt_gr_convergence.py` - Mathematical UDT-GR convergence proof
+- `scripts/test_r0_emergence_from_mass_volume.py` - R₀ emergence from fundamental mass/volume relationships
+- `scripts/analyze_r0_scaling_continuity.py` - Analysis of continuous vs discrete R₀ scaling behavior
 - Scripts import from the udt package for modularity
 
 **Legacy Scripts (for reference):**
@@ -151,3 +158,9 @@ The project now uses a proper package structure for better maintainability:
 7. **Quantum breakthrough**: UDT has been demonstrated to serve as the fundamental framework from which quantum mechanics emerges, rather than being a modification of existing quantum theory. This represents a paradigm shift where c_eff(r) approaching c₀ explains quantum weirdness naturally.
 
 8. **Scale unification**: The same temporal geometry function successfully describes phenomena from hydrogen atoms (R₀ ~ 5×10⁻¹⁰ m) to cosmic structures (R₀ ~ 3,000 Mpc), demonstrating true universal applicability.
+
+9. **R₀ emergence**: Analysis shows that characteristic R₀ values emerge naturally from fundamental mass/volume relationships at each scale rather than being arbitrary parameters.
+
+10. **Discrete scaling behavior**: R₀ operates as discrete scale-specific domains (quantum/galactic/cosmic) with well-separated transition masses (~10³³ kg and ~4×10⁵⁰ kg), rather than following a continuous universal function.
+
+11. **Hybrid scaling framework**: UDT uses a hybrid continuous-discrete approach with continuous variation within scale domains and discrete transitions between domains.
