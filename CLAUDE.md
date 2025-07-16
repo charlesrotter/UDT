@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Universal Distance Dilation Theory (UDT)** research project, formerly known as Information Curvature Theory. It's a theoretical physics framework proposing a parameter-free geometric explanation for galactic rotation curves and cosmological phenomena without requiring dark matter or dark energy.
+This is the **Universal Distance Dilation Theory (UDT)** research project, formerly known as Information Curvature Theory. It's a theoretical physics framework proposing a unified temporal geometry for galactic and cosmological phenomena. UDT introduces a position-dependent temporal dilation function that provides an alternative explanation for observations currently attributed to dark matter and dark energy.
 
 ## Key Commands
 
@@ -32,17 +32,20 @@ python csp_udt_temporal.py
 ## Architecture and Theory
 
 ### Core Theory Parameters
-- **β = 2.5**: Universal geometric exponent (from dimensional analysis)
-- **α = 1/8 (0.125)**: Tesseract projection factor from 4D to 3D
-- **R₀ = 1.5 kpc**: Characteristic galactic scale
-- **τ(r) = R₀/(R₀ + r)**: Universal temporal geometry
+- **τ(r) = R₀/(R₀ + r)**: Universal temporal geometry function
+- **R₀**: Characteristic scale parameter
+  - Galactic scale: ~38 kpc (from SPARC analysis)
+  - Cosmological scale: ~3,000 Mpc (from supernova analysis)
+  - Scale ratio: ~79,000:1
+- **Enhancement Factor**: 1/τ² = (1 + r/R₀)² for galactic dynamics
 
 ### Key Theoretical Framework
-The project implements a "pure temporal" universe model where:
-- c = ∞ (infinite speed, instant causality)
-- Distance ≡ Velocity ≡ Acceleration (unified through dilation)
+The project implements a temporal geometry model where:
+- Position-dependent effective speed of light: c_eff(r) = c₀ × R₀/(R₀ + r)
+- Galactic dynamics enhancement: V²_observed(r) = V²_baryonic(r) × (1 + r/R₀)²
+- Cosmological distance relation: d_L = z × R₀ (z interpreted as temporal dilation)
 - No expansion - redshift is purely temporal geometric effect
-- Enhancement factor 1/τ² for galactic dynamics
+- Single temporal geometry function applied across multiple scales
 
 ### Data Sources
 - **SPARC Database**: Galaxy rotation curves in `data/sparc_database/`
@@ -57,10 +60,11 @@ The project uses standalone analysis scripts rather than a centralized module st
 - Results stored in `results/` with subdirectories for different analyses
 
 ### Validation Status
-- Phase 1 validation confirmed β = 2.512 ± 0.020 (target: 2.5)
-- SPARC galaxies: χ² ~ 12.5 (some fits show χ² ~ 200.7 in newer runs)
-- Successfully fits rotation curves without dark matter
-- Active development with ongoing parameter optimization
+- SPARC galaxies: 171/175 successful fits (97.7% success rate)
+- Mean RMS deviation: 31.3 ± 34.3 km/s for galactic rotation curves
+- CSP supernovae: χ² difference of +12,660 relative to ΛCDM
+- RMS magnitude residual: 1.168 (comparable to ΛCDM: 1.171)
+- Successfully fits rotation curves without dark matter parameters
 
 ## Important Development Notes
 
@@ -73,3 +77,5 @@ The project uses standalone analysis scripts rather than a centralized module st
 4. **Data dependencies**: Scripts expect specific data files in `data/` subdirectories. Ensure these exist before running analyses.
 
 5. **Theory evolution**: The project has evolved from "Information Curvature Theory" to "Universal Distance Dilation Theory" - some documentation may still reference the old name.
+
+6. **Current focus**: The theory now emphasizes a unified temporal geometry function τ(r) = R₀/(R₀ + r) applied across both galactic and cosmological scales, with position-dependent effective light speed maintaining causal consistency.
