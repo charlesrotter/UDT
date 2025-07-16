@@ -52,6 +52,38 @@ The project implements a temporal geometry model where:
 - **CSP DR3**: Supernova photometry in `data/CSP_Photometry_DR3/`
 - **Pantheon+**: Supernova data in `data/Pantheon_SH0ES.dat`
 
+### Data Contamination Prevention
+When performing model comparisons, it's critical to use raw observational data to avoid circular reasoning. Key guidelines:
+
+**SPARC Raw Data (Use These):**
+- V_obs(R): Direct rotation velocities from spectroscopy
+- R: Galactocentric radius (verify distance source)
+- err_V: Measurement uncertainties
+- Spitzer 3.6μm surface brightness for stellar mass
+
+**SPARC Contaminated Data (Avoid):**
+- V_bar/V_obs ratios (pre-calculated with assumptions)
+- Dark matter fractions (assumes baryonic models)
+- Absolute magnitudes (distance-dependent)
+
+**Pantheon+ Raw Data (Use These):**
+- z_cmb: CMB frame redshift
+- m_b_corrected: Peak apparent magnitude
+- x1, c: SALT2 parameters
+
+**Pantheon+ Contaminated Data (Avoid):**
+- d_L: Luminosity distance (assumes cosmology)
+- Hubble residuals (deviation from ΛCDM)
+- mu_model: Model-predicted distance modulus
+
+**Testing Protocol:**
+1. Extract identical raw datasets for all models
+2. Apply identical quality cuts and corrections
+3. Document all processing assumptions
+4. Compare models on exact same data points
+
+See `docs/Data Contamination Prevention Guide.md` for complete details.
+
 ### Code Organization
 The project uses standalone analysis scripts rather than a centralized module structure:
 - `temporal_unification_breakthrough.py`: Main SPARC galaxy analysis using temporal framework

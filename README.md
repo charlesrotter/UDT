@@ -97,6 +97,32 @@ def pure_temporal_magnitude(z, R0, M_B):
 - **CSP DR3**: `data/CSP_Photometry_DR3/` - Supernova photometry
 - **Pantheon+**: `data/Pantheon_SH0ES.dat` - Extended supernova catalog
 
+## Data Contamination Prevention
+
+When testing UDT against standard models, it's critical to avoid circular reasoning by using data that has been pre-processed through competing models. See `docs/Data Contamination Prevention Guide.md` for detailed guidance.
+
+### Quick Reference
+
+#### SPARC Database - Use Raw Data:
+- ✅ **V_obs(R)**: Direct rotation velocities from HI/Hα spectroscopy
+- ✅ **R**: Galactocentric radius (check distance method)
+- ✅ **err_V**: Observational uncertainties
+- ✅ **Spitzer 3.6μm**: Raw infrared photometry
+- ❌ **Avoid**: V_bar/V_obs ratios, dark matter fractions, absolute magnitudes
+
+#### Pantheon+ Database - Use Raw Data:
+- ✅ **z_cmb**: CMB frame redshift (kinematic corrections only)
+- ✅ **m_b_corrected**: Peak apparent magnitude
+- ✅ **x1, c**: SALT2 light curve parameters
+- ❌ **Avoid**: d_L (luminosity distance), Hubble residuals, mu_model
+
+### Key Principles
+1. Always trace back to direct observational measurements
+2. Check assumptions in any processed data
+3. Use identical raw datasets for model comparisons
+4. Verify geometric/kinematic distances over Hubble flow distances
+5. Document all data processing steps
+
 ## Project Structure
 ```
 ├── temporal_unification_breakthrough.py  # SPARC galaxy analysis
