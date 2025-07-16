@@ -85,29 +85,100 @@ def load_sparc_database(data_directory):
         
     Returns
     -------
-    pd.DataFrame
-        DataFrame containing all galaxy data
+    list
+        List of galaxy data dictionaries
     """
     if not os.path.exists(data_directory):
         raise ValueError(f"Data directory not found: {data_directory}")
     
-    # Find all galaxy files
-    galaxy_files = glob.glob(os.path.join(data_directory, "*.mrt"))
-    if not galaxy_files:
-        galaxy_files = glob.glob(os.path.join(data_directory, "*rotmod*.txt"))
+    # Look for the MassModels file
+    mass_models_file = None
+    for filename in ['MassModels_Lelli2016c.mrt', 'MassModels_Lelli2016c.txt']:
+        filepath = os.path.join(data_directory, filename)
+        if os.path.exists(filepath):
+            mass_models_file = filepath
+            break
     
-    print(f"Found {len(galaxy_files)} galaxy files")
+    if not mass_models_file:
+        print("MassModels file not found. Looking for individual galaxy files...")
+        # Fall back to individual files
+        galaxy_files = glob.glob(os.path.join(data_directory, "*.mrt"))
+        if not galaxy_files:
+            galaxy_files = glob.glob(os.path.join(data_directory, "*rotmod*.txt"))
+        
+        print(f"Found {len(galaxy_files)} galaxy files")
+        
+        # Load each galaxy
+        galaxies = []
+        for file_path in galaxy_files:
+            galaxy_data = load_sparc_galaxy(file_path)
+            if galaxy_data is not None:
+                galaxies.append(galaxy_data)
+        
+        print(f"Successfully loaded {len(galaxies)} galaxies")
+        return galaxies
     
-    # Load each galaxy
-    galaxies = []
-    for file_path in galaxy_files:
-        galaxy_data = load_sparc_galaxy(file_path)
-        if galaxy_data is not None:
-            galaxies.append(galaxy_data)
+    # Parse the MassModels file
+    print(f"Loading from MassModels file: {mass_models_file}")
     
-    print(f"Successfully loaded {len(galaxies)} galaxies")
-    
-    return galaxies
+    try:
+        # Read the file, skipping header lines
+        with open(mass_models_file, 'r') as f:
+            lines = f.readlines()
+        
+        # Find data start (after the header)
+        data_start = 0
+        for i, line in enumerate(lines):
+            if line.strip().startswith('---'):
+                data_start = i + 1
+                break
+        
+        # Parse data lines
+        galaxies_dict = {}
+        for line in lines[data_start:]:
+            if line.strip() and not line.startswith('#'):
+                parts = line.split()
+                if len(parts) >= 9:
+                    galaxy_name = parts[0]
+                    try:
+                        r = float(parts[2])  # Galactocentric radius
+                        v_obs = float(parts[3])  # Observed velocity
+                        v_err = float(parts[4])  # Velocity error
+                        
+                        # Basic quality checks
+                        if r > 0 and v_obs > 0 and v_err > 0:
+                            if galaxy_name not in galaxies_dict:
+                                galaxies_dict[galaxy_name] = {
+                                    'name': galaxy_name,
+                                    'radius': [],
+                                    'velocity': [],
+                                    'velocity_error': []
+                                }
+                            
+                            galaxies_dict[galaxy_name]['radius'].append(r)
+                            galaxies_dict[galaxy_name]['velocity'].append(v_obs)
+                            galaxies_dict[galaxy_name]['velocity_error'].append(v_err)
+                    except (ValueError, IndexError):
+                        continue
+        
+        # Convert to proper format
+        galaxies = []
+        for galaxy_name, data in galaxies_dict.items():
+            if len(data['radius']) > 3:  # Minimum points for fitting
+                galaxies.append({
+                    'name': galaxy_name,
+                    'radius': np.array(data['radius']),
+                    'velocity': np.array(data['velocity']),
+                    'velocity_error': np.array(data['velocity_error']),
+                    'n_points': len(data['radius'])
+                })
+        
+        print(f"Successfully loaded {len(galaxies)} galaxies from MassModels file")
+        return galaxies
+        
+    except Exception as e:
+        print(f"Error parsing MassModels file: {e}")
+        return []
 
 
 def load_csp_supernova(sn_file):

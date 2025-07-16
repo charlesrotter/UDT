@@ -37,11 +37,11 @@ def analyze_galaxy(galaxy_data, output_dir=None):
     fit_result = fit_galaxy_rotation_curve(radius, velocity, velocity_error)
     
     if fit_result['success']:
-        print(f"  ✓ Fit successful")
-        print(f"  R₀_gal = {fit_result['R0_gal']:.1f} kpc")
+        print(f"  OK Fit successful")
+        print(f"  R0_gal = {fit_result['R0_gal']:.1f} kpc")
         print(f"  V_scale = {fit_result['V_scale']:.1f} km/s")
         print(f"  RMS = {fit_result['rms']:.1f} km/s")
-        print(f"  χ²/dof = {fit_result['chi2'] / (len(radius) - 2):.2f}")
+        print(f"  chi2/dof = {fit_result['chi2'] / (len(radius) - 2):.2f}")
         
         # Plot if output directory specified
         if output_dir:
@@ -50,7 +50,7 @@ def analyze_galaxy(galaxy_data, output_dir=None):
                               v_predicted=fit_result['v_predicted'],
                               galaxy_name=name, save_path=plot_path)
     else:
-        print(f"  ✗ Fit failed")
+        print(f"  ERROR Fit failed")
     
     # Add metadata to result
     fit_result['name'] = name
@@ -81,8 +81,8 @@ def main():
     print("=" * 60)
     print("SPARC GALAXY ANALYSIS - UDT FRAMEWORK")
     print("=" * 60)
-    print(f"Theory: τ(r) = R₀/(R₀ + r)")
-    print(f"Enhancement: 1/τ² = (1 + r/R₀)²")
+    print(f"Theory: tau(r) = R0/(R0 + r)")
+    print(f"Enhancement: 1/tau^2 = (1 + r/R0)^2")
     print("=" * 60)
     
     # Load galaxy data
@@ -117,7 +117,10 @@ def main():
     print("ANALYSIS SUMMARY")
     print("=" * 60)
     print(f"Total galaxies analyzed: {len(results)}")
-    print(f"Successful fits: {successful_fits} ({successful_fits/len(results)*100:.1f}%)")
+    if len(results) > 0:
+        print(f"Successful fits: {successful_fits} ({successful_fits/len(results)*100:.1f}%)")
+    else:
+        print("No galaxies were successfully analyzed")
     
     # Calculate statistics for successful fits
     successful_results = [r for r in results if r['success']]
@@ -125,7 +128,7 @@ def main():
         R0_values = [r['R0_gal'] for r in successful_results]
         rms_values = [r['rms'] for r in successful_results]
         
-        print(f"\nR₀_gal statistics:")
+        print(f"\nR0_gal statistics:")
         print(f"  Mean: {np.mean(R0_values):.1f} kpc")
         print(f"  Median: {np.median(R0_values):.1f} kpc")
         print(f"  Std: {np.std(R0_values):.1f} kpc")
