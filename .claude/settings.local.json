@@ -9,7 +9,15 @@
       "Bash(python test:*)",
       "Bash(find:*)",
       "Bash(ls:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(tar:*)",
+      "Bash(PYTHONPATH=. python scripts/test_mercury_precession.py)",
+      "Bash(PYTHONPATH=. python scripts/test_udt_gr_convergence.py)",
+      "Bash(PYTHONPATH=. python scripts/test_quantum_temporal_geometry.py)",
+      "Bash(PYTHONPATH=. python scripts/test_quantum_experimental_simulation.py)",
+      "Bash(PYTHONPATH=. python scripts/test_udt_quantum_dominance.py)"
     ],
     "deny": []
   }

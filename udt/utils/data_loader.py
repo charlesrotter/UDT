@@ -200,56 +200,61 @@ def load_csp_supernova(sn_file):
         with open(sn_file, 'r') as f:
             lines = f.readlines()
         
-        # Extract SN name
-        sn_name = os.path.basename(sn_file).split('_')[0]
+        # Extract SN name and redshift from first line
+        # Format: SN2004dt 0.019700 30.553208 -0.097639 (name, redshift, RA, Dec)
+        if len(lines) == 0:
+            return None
+            
+        header = lines[0].strip().split()
+        if len(header) < 2:
+            return None
+            
+        sn_name = header[0]
+        try:
+            redshift = float(header[1])
+        except ValueError:
+            return None
         
-        # Look for redshift
-        redshift = None
-        for line in lines[:50]:  # Check header area
-            if 'z' in line.lower() or 'redshift' in line.lower():
+        # Parse B-band photometry data
+        b_band_data = []
+        in_b_filter = False
+        
+        for line in lines[1:]:  # Skip header line
+            line = line.strip()
+            if line.startswith('filter B') and not line.startswith('filter BV'):
+                in_b_filter = True
+                continue
+            elif line.startswith('filter') and in_b_filter:
+                break
+            elif in_b_filter and line and not line.startswith('filter'):
                 parts = line.split()
-                for i, part in enumerate(parts):
-                    if part.lower() in ['z', 'z:', 'redshift:', 'redshift']:
-                        if i + 1 < len(parts):
-                            try:
-                                redshift = float(parts[i + 1])
-                                break
-                            except ValueError:
-                                continue
-        
-        # Parse photometry data
-        data_start = False
-        time_data = []
-        b_mag = []
-        b_err = []
-        
-        for line in lines:
-            if line.strip() and not line.startswith('#'):
-                parts = line.strip().split()
-                if len(parts) >= 6:  # Typical format has multiple columns
+                if len(parts) >= 3:
                     try:
                         mjd = float(parts[0])
-                        # Look for B-band data (usually in specific columns)
-                        if len(parts) > 3:
-                            b = float(parts[2])  # Adjust based on actual format
-                            b_e = float(parts[3])
-                            if 10 < b < 30 and 0 < b_e < 2:  # Reasonable magnitude range
-                                time_data.append(mjd)
-                                b_mag.append(b)
-                                b_err.append(b_e)
+                        mag = float(parts[1])
+                        err = float(parts[2])
+                        
+                        # Quality check: reasonable magnitude range for Type Ia
+                        if 10.0 < mag < 25.0 and 0.001 < err < 1.0:
+                            b_band_data.append((mjd, mag, err))
                     except ValueError:
                         continue
         
-        if redshift and len(b_mag) > 0:
-            # Find peak magnitude
-            peak_idx = np.argmin(b_mag)
+        if redshift and len(b_band_data) >= 3:  # Need minimum observations
+            # Convert to numpy array for easier manipulation
+            b_band_data = np.array(b_band_data)
+            
+            # Find peak magnitude (minimum magnitude = maximum brightness)
+            peak_idx = np.argmin(b_band_data[:, 1])
+            
             return {
                 'name': sn_name,
                 'redshift': redshift,
-                'B_peak_raw': b_mag[peak_idx],
-                'B_error_raw': b_err[peak_idx],
-                'n_observations': len(b_mag),
-                'time_span': max(time_data) - min(time_data) if len(time_data) > 1 else 0
+                'B_peak_raw': b_band_data[peak_idx, 1],  # Peak magnitude
+                'B_error_raw': b_band_data[peak_idx, 2],  # Peak error
+                'n_observations': len(b_band_data),
+                'time_span': b_band_data[:, 0].max() - b_band_data[:, 0].min(),
+                'mag_range': b_band_data[:, 1].max() - b_band_data[:, 1].min()
             }
         else:
             return None

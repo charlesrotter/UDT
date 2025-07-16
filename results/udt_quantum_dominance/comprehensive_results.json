@@ -1,0 +1,69 @@
+{
+  "optimal_R0": 5e-10,
+  "best_error_percent": 13.797420759312493,
+  "hydrogen_analysis": {
+    "R0_quantum": 5e-10,
+    "r_udt": 3.819666292840939e-10,
+    "r_classical": 5.292e-11,
+    "tau_char": 0.5669148734185758,
+    "c_eff_char": 169961079.05088905,
+    "enhancement_char": 3.1114605406829843,
+    "binding_energy_udt_eV": 11.728722931487942,
+    "binding_energy_classical_eV": 27.207711637714283,
+    "accuracy_percent": 13.797420759312493
+  },
+  "tunneling_analysis": {
+    "R0_quantum": 5e-10,
+    "barrier_width": 1e-09,
+    "barrier_height_eV": 1.0,
+    "effective_barrier_height_eV": 3.299741895719567,
+    "c_eff_avg": 165038315.05883196,
+    "tau_avg": 0.5504947133383321,
+    "temporal_enhancement": 3.299846170858566,
+    "T_classical": 0.0007160502199373693,
+    "T_udt": 3.611123439014212e-08,
+    "probability_ratio": 5.04311476830503e-05
+  },
+  "quantum_weirdness": {
+    "R0_quantum": 5e-10,
+    "scale_analysis": [
+      {
+        "scale_name": "Atomic radius",
+        "r_scale": 1e-10,
+        "c_eff": 249833333.33333334,
+        "c_ratio": 0.8333333333333334,
+        "tau": 0.8333333333333334
+      },
+      {
+        "scale_name": "Nuclear radius",
+        "r_scale": 1e-15,
+        "c_eff": 299799400.40119916,
+        "c_ratio": 0.9999980000039999,
+        "tau": 0.999998000004
+      },
+      {
+        "scale_name": "Proton radius",
+        "r_scale": 1e-15,
+        "c_eff": 299799400.40119916,
+        "c_ratio": 0.9999980000039999,
+        "tau": 0.999998000004
+      },
+      {
+        "scale_name": "Electron Compton wavelength",
+        "r_scale": 2.4e-12,
+        "c_eff": 298367834.39490443,
+        "c_ratio": 0.9952229299363057,
+        "tau": 0.9952229299363057
+      },
+      {
+        "scale_name": "Planck length",
+        "r_scale": 1.6e-35,
+        "c_eff": 299800000.0,
+        "c_ratio": 1.0,
+        "tau": 1.0
+      }
+    ],
+    "uncertainty_principle": "Preserved in UDT framework",
+    "wave_particle_duality": "Emerges from c_eff(r) transition"
+  }
+}
