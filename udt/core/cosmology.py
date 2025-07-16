@@ -31,11 +31,11 @@ def pure_temporal_magnitude(z, R0, M_B):
     m_B : float or array-like
         Apparent B-band magnitude
     """
-    # Luminosity distance in kpc
-    d_L_kpc = distance_from_redshift(z, R0)
+    # Luminosity distance in Mpc (since R0 is in Mpc)
+    d_L_mpc = distance_from_redshift(z, R0)
     
     # Convert to parsecs for distance modulus
-    d_L_pc = d_L_kpc * 1000
+    d_L_pc = d_L_mpc * 1e6
     
     # Distance modulus: m - M = 5 log10(d_L/10 pc)
     return M_B + 5 * np.log10(d_L_pc / 10)
@@ -59,14 +59,14 @@ def temporal_distance_modulus(z, R0):
     mu : float or array-like
         Distance modulus
     """
-    d_L_kpc = distance_from_redshift(z, R0)
-    d_L_pc = d_L_kpc * 1000
+    d_L_mpc = distance_from_redshift(z, R0)
+    d_L_pc = d_L_mpc * 1e6
     return 5 * np.log10(d_L_pc / 10)
 
 
 def fit_supernova_hubble_diagram(z_obs, m_obs, m_err, 
-                               R0_bounds=(1000, 10000), 
-                               M_B_bounds=(-20, -17)):
+                               R0_bounds=(100, 10000), 
+                               M_B_bounds=(-22, -17)):
     """
     Fit UDT model to supernova Hubble diagram.
     
@@ -102,7 +102,7 @@ def fit_supernova_hubble_diagram(z_obs, m_obs, m_err,
     
     # Initial guess
     initial_R0 = 3000  # Mpc, based on previous analyses
-    initial_M_B = -19  # Typical SNIa absolute magnitude
+    initial_M_B = -19.3  # Typical SNIa absolute magnitude
     initial_params = [initial_R0, initial_M_B]
     
     # Bounds

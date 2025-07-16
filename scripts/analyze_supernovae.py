@@ -37,7 +37,10 @@ def analyze_supernova_sample(sn_data, dataset_name="Supernovae"):
     m_err = sn_data['m_err'].values if 'm_err' in sn_data else np.ones_like(m_obs) * 0.15
     
     # Fit UDT model
-    fit_result = fit_supernova_hubble_diagram(z_obs, m_obs, m_err)
+    # Use wider bounds to allow finding R0 ~3000 Mpc as in original analysis
+    fit_result = fit_supernova_hubble_diagram(z_obs, m_obs, m_err, 
+                                            R0_bounds=(100, 10000),
+                                            M_B_bounds=(-22, -17))
     
     if fit_result['success']:
         print(f"  OK Fit successful")
