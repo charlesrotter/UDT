@@ -40,17 +40,17 @@ def analyze_supernova_sample(sn_data, dataset_name="Supernovae"):
     fit_result = fit_supernova_hubble_diagram(z_obs, m_obs, m_err)
     
     if fit_result['success']:
-        print(f"  ✓ Fit successful")
-        print(f"  R₀ = {fit_result['R0']:.0f} Mpc")
+        print(f"  OK Fit successful")
+        print(f"  R0 = {fit_result['R0']:.0f} Mpc")
         print(f"  M_B = {fit_result['M_B']:.2f}")
         print(f"  RMS = {fit_result['rms']:.3f} mag")
-        print(f"  χ²/dof = {fit_result['chi2'] / (len(z_obs) - 2):.2f}")
+        print(f"  chi2/dof = {fit_result['chi2'] / (len(z_obs) - 2):.2f}")
         
         # Calculate effective Hubble parameter
         H_eff = calculate_hubble_parameter(fit_result['R0'])
         print(f"  H_eff = {H_eff:.1f} km/s/Mpc")
     else:
-        print(f"  ✗ Fit failed")
+        print(f"  ERROR Fit failed")
     
     return fit_result
 
@@ -81,8 +81,8 @@ def main():
     print("=" * 60)
     print("SUPERNOVA ANALYSIS - UDT FRAMEWORK")
     print("=" * 60)
-    print(f"Theory: τ(r) = R₀/(R₀ + r)")
-    print(f"Distance: d_L = z × R₀")
+    print(f"Theory: tau(r) = R0/(R0 + r)")
+    print(f"Distance: d_L = z × R0")
     print(f"No expansion - pure temporal geometry")
     print("=" * 60)
     
@@ -131,9 +131,9 @@ def main():
             pantheon_df = load_pantheon_data(pantheon_file)
             if len(pantheon_df) > 0:
                 # Prepare columns
-                pantheon_df['z'] = pantheon_df['zcmb']
-                pantheon_df['m'] = pantheon_df['mb']
-                pantheon_df['m_err'] = pantheon_df['dmb']
+                pantheon_df['z'] = pantheon_df['zCMB']
+                pantheon_df['m'] = pantheon_df['m_b_corr']
+                pantheon_df['m_err'] = pantheon_df['m_b_corr_err_DIAG']
                 
                 # Apply redshift cut
                 pantheon_df = pantheon_df[pantheon_df['z'] <= args.z_max]
@@ -166,8 +166,8 @@ def main():
     for dataset_name, result in results.items():
         if result and result['success']:
             print(f"\n{dataset_name.upper()}:")
-            print(f"  R₀ = {result['R0']:.0f} Mpc")
-            print(f"  Scale ratio to galactic R₀ (~38 kpc): {result['R0']*1000/38:.0f}:1")
+            print(f"  R0 = {result['R0']:.0f} Mpc")
+            print(f"  Scale ratio to galactic R0 (~38 kpc): {result['R0']*1000/38:.0f}:1")
             print(f"  RMS residual: {result['rms']:.3f} mag")
     
     # Comparison with standard cosmology
@@ -185,8 +185,8 @@ def main():
                 )
                 
                 print(f"\n{dataset_name.upper()} comparison:")
-                print(f"  Mean Δm at z<0.05: {np.mean(comparison['delta_m'][z_test < 0.05]):.3f} mag")
-                print(f"  Max |Δm| at z<{args.z_max}: {np.max(np.abs(comparison['delta_m'])):.3f} mag")
+                print(f"  Mean Delta-m at z<0.05: {np.mean(comparison['delta_m'][z_test < 0.05]):.3f} mag")
+                print(f"  Max |Delta-m| at z<{args.z_max}: {np.max(np.abs(comparison['delta_m'])):.3f} mag")
                 
                 if args.plot:
                     # Plot comparison
@@ -197,7 +197,7 @@ def main():
                     ax.plot(z_test, comparison['delta_m'], 'b-', linewidth=2)
                     ax.axhline(y=0, color='k', linestyle='--', alpha=0.5)
                     ax.set_xlabel('Redshift z')
-                    ax.set_ylabel('Δm (UDT - ΛCDM)')
+                    ax.set_ylabel('Delta-m (UDT - LCDM)')
                     ax.set_title(f'{dataset_name.upper()} - UDT vs Standard Cosmology')
                     ax.grid(True, alpha=0.3)
                     ax.set_xscale('log')

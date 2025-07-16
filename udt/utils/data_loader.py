@@ -312,20 +312,45 @@ def load_pantheon_data(pantheon_file):
         DataFrame with supernova data
     """
     try:
-        # Read the file, skipping comment lines
-        df = pd.read_csv(pantheon_file, delim_whitespace=True, comment='#',
-                        names=['name', 'zcmb', 'zhel', 'mb', 'dmb', 'x1', 'dx1', 
-                              'c', 'dc', 'mass', 'ra', 'dec', 'host', 'survey'])
+        # Read the file with proper header handling
+        df = pd.read_csv(pantheon_file, delim_whitespace=True, comment='#')
+        
+        # Use only the columns we need
+        required_columns = ['zCMB', 'm_b_corr', 'm_b_corr_err_DIAG']
+        
+        # Check if required columns exist
+        if not all(col in df.columns for col in required_columns):
+            print(f"Available columns: {list(df.columns)}")
+            print("Required columns not found. Using available columns...")
+            # Try alternative column names
+            if 'zcmb' in df.columns:
+                df = df.rename(columns={'zcmb': 'zCMB'})
+            if 'mb' in df.columns:
+                df = df.rename(columns={'mb': 'm_b_corr'})
+            if 'dmb' in df.columns:
+                df = df.rename(columns={'dmb': 'm_b_corr_err_DIAG'})
+        
+        # Filter for required columns
+        df = df[required_columns].copy()
+        
+        # Convert to numeric and handle errors
+        for col in required_columns:
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+        
+        # Remove rows with NaN values
+        df = df.dropna()
         
         # Filter for quality
-        df = df[(df['zcmb'] > 0.001) & (df['zcmb'] < 2.5)]
-        df = df[df['dmb'] < 0.5]  # Reasonable error cut
+        df = df[(df['zCMB'] > 0.001) & (df['zCMB'] < 2.5)]
+        df = df[df['m_b_corr_err_DIAG'] < 0.5]  # Reasonable error cut
         
         print(f"Loaded {len(df)} supernovae from Pantheon+")
-        print(f"Redshift range: {df['zcmb'].min():.4f} - {df['zcmb'].max():.4f}")
+        print(f"Redshift range: {df['zCMB'].min():.4f} - {df['zCMB'].max():.4f}")
         
         return df
         
     except Exception as e:
         print(f"Error loading Pantheon+ data: {e}")
+        import traceback
+        traceback.print_exc()
         return pd.DataFrame()
