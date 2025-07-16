@@ -85,11 +85,27 @@ When performing model comparisons, it's critical to use raw observational data t
 See `docs/Data Contamination Prevention Guide.md` for complete details.
 
 ### Code Organization
-The project uses standalone analysis scripts rather than a centralized module structure:
-- `temporal_unification_breakthrough.py`: Main SPARC galaxy analysis using temporal framework
-- `csp_udt_temporal.py`: CSP supernova analysis with pure temporal cosmology
-- Individual analysis scripts at root level for specific investigations
-- Results stored in `results/` with subdirectories for different analyses
+The project now uses a proper package structure for better maintainability:
+
+**Package Structure:**
+- `udt/` - Main UDT package
+  - `core/` - Core theory implementations
+    - `temporal_geometry.py` - Fundamental τ(r) = R₀/(R₀ + r) functions
+    - `galactic_dynamics.py` - Galaxy rotation curve analysis
+    - `cosmology.py` - Supernova/cosmological calculations
+  - `analysis/` - Higher-level analysis tools
+  - `utils/` - Utilities (data loading, plotting)
+    - `data_loader.py` - SPARC and supernova data loading
+    - `plotting.py` - Visualization functions
+
+**Analysis Scripts:**
+- `scripts/analyze_sparc_galaxies.py` - Replaces temporal_unification_breakthrough.py
+- `scripts/analyze_supernovae.py` - Replaces csp_udt_temporal.py
+- Scripts import from the udt package for modularity
+
+**Legacy Scripts (for reference):**
+- `temporal_unification_breakthrough.py` - Original SPARC analysis
+- `csp_udt_temporal.py` - Original supernova analysis
 
 ### Validation Status
 - SPARC galaxies: 171/175 successful fits (97.7% success rate)

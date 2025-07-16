@@ -66,30 +66,32 @@ pip install -r requirements.txt
 
 ### Running Analyses
 ```bash
-# Galactic rotation curve analysis
+# Test package imports and functionality
+python test_imports.py
+
+# Galactic rotation curve analysis (new organized script)
+python scripts/analyze_sparc_galaxies.py --plot
+
+# Supernova cosmology analysis (new organized script)
+python scripts/analyze_supernovae.py --dataset csp --plot
+
+# Legacy analysis scripts (for reference)
 python temporal_unification_breakthrough.py
-
-# Supernova cosmology analysis
 python csp_udt_temporal.py
-
-# Run test suite
-python tests/test_galactic_dynamics.py
 ```
 
 ### Core Functions
 ```python
-def pure_temporal_velocity(r, R0_gal, V_scale):
-    """Calculate velocity with temporal enhancement"""
-    tau_r = R0_gal / (R0_gal + r)
-    enhancement = 1 / (tau_r**2)
-    v_base = V_scale * np.sqrt(r / (r + R0_gal/3))
-    return v_base * np.sqrt(enhancement)
+# Import from organized package structure
+from udt.core.temporal_geometry import temporal_dilation_function, enhancement_factor
+from udt.core.galactic_dynamics import pure_temporal_velocity, fit_galaxy_rotation_curve
+from udt.core.cosmology import pure_temporal_magnitude, fit_supernova_hubble_diagram
 
-def pure_temporal_magnitude(z, R0, M_B):
-    """Calculate supernova magnitude using temporal geometry"""
-    d_L_kpc = z * R0
-    d_L_pc = d_L_kpc * 1000
-    return M_B + 5 * np.log10(d_L_pc / 10)
+# Basic usage examples
+tau = temporal_dilation_function(r=50, R0=38)  # kpc
+enhancement = enhancement_factor(r=50, R0=38)
+v_predicted = pure_temporal_velocity(radius, R0_gal=38, V_scale=200)
+m_predicted = pure_temporal_magnitude(z=0.05, R0=3000, M_B=-19)
 ```
 
 ## Data Sources
@@ -125,12 +127,22 @@ When testing UDT against standard models, it's critical to avoid circular reason
 
 ## Project Structure
 ```
-├── temporal_unification_breakthrough.py  # SPARC galaxy analysis
-├── csp_udt_temporal.py                  # Supernova analysis
-├── tests/                               # Unit tests
-├── data/                                # Observational datasets
-├── results/                             # Analysis outputs
-└── docs/                                # Documentation
+├── udt/                                 # Main UDT package
+│   ├── core/                           # Core theory implementations
+│   │   ├── temporal_geometry.py        # Fundamental τ(r) functions
+│   │   ├── galactic_dynamics.py        # Galaxy rotation curves
+│   │   └── cosmology.py                # Supernova/cosmological
+│   ├── analysis/                       # Analysis tools
+│   └── utils/                          # Utilities (data, plotting)
+├── scripts/                            # New organized analysis scripts
+│   ├── analyze_sparc_galaxies.py       # SPARC galaxy analysis
+│   └── analyze_supernovae.py           # Supernova analysis
+├── temporal_unification_breakthrough.py # Legacy SPARC analysis
+├── csp_udt_temporal.py                 # Legacy supernova analysis
+├── test_imports.py                     # Package functionality test
+├── data/                               # Observational datasets
+├── results/                            # Analysis outputs
+└── docs/                               # Documentation
 ```
 
 ## Key Findings
