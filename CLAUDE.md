@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the **Universal Distance Dilation Theory (UDT)** research project, formerly known as Information Curvature Theory. It's a theoretical physics framework proposing a unified temporal geometry for galactic and cosmological phenomena.
 
+**Primary Author: Charles Rotter**
+
 **Fundamental Origin**: UDT originated from extending Einstein's equivalence principles beyond velocity ↔ acceleration to include **distance ↔ temporal dilation**. This core insight leads directly to the position-dependent temporal dilation function τ(r) = R₀/(R₀ + r) that provides an alternative explanation for observations currently attributed to dark matter and dark energy.
 
 ## Key Commands

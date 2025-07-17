@@ -16,8 +16,8 @@ This could provide a deeper theoretical foundation for UDT by connecting
 the temporal geometry function τ(r) = R0/(R0 + r) to fundamental 
 mass-energy distributions across scales.
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

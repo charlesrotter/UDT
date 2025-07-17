@@ -17,8 +17,8 @@ UDT Fundamental Framework:
 - c_eff(r) = c0 × tau(r)
 - All quantum phenomena emerge from temporal geometry
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

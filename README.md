@@ -1,5 +1,7 @@
 # Universal Distance Dilation Theory (UDT)
 
+**Author: Charles Rotter**
+
 A theoretical physics framework derived from extending Einstein's equivalence principles to include distance ↔ temporal dilation. UDT proposes a unified temporal geometry for galactic and cosmological phenomena through the position-dependent temporal dilation function τ(r) = R₀/(R₀ + r), providing an alternative explanation for observations currently attributed to dark matter and dark energy.
 
 ## Overview

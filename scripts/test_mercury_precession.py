@@ -18,8 +18,8 @@ Key Physics:
 - Newtonian + other effects: ~531 arcsec/century
 - UDT test: Can temporal enhancement explain the GR contribution?
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

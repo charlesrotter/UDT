@@ -9,6 +9,9 @@ Run with --dry-run first to see what would be deleted.
 Usage:
     python scripts/cleanup_experimental.py --dry-run
     python scripts/cleanup_experimental.py --confirm
+
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import os

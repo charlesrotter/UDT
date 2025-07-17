@@ -17,8 +17,8 @@ Framework:
 - z = r/R0: Direct temporal redshift (no expansion)
 - d_L = r = z * R0: Pure geometric distance
 
-Author: Temporal Universe Research Team
-Date: 2025
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

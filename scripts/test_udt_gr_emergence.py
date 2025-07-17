@@ -12,7 +12,7 @@ This script provides rigorous mathematical verification that:
 3. UDT field equations contain Einstein field equations
 4. Numerical convergence rates are as predicted
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 """
 

@@ -5,6 +5,9 @@ SPARC Galaxy Analysis using UDT Framework
 
 Analyzes SPARC galaxy rotation curves using the Universal Distance Dilation Theory.
 This script replaces temporal_unification_breakthrough.py with a cleaner structure.
+
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import os

@@ -16,8 +16,8 @@ Mathematical Framework:
 - GR: Schwarzschild metric with spacetime curvature
 - Limit: r << R0 (solar system scales)
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

@@ -16,8 +16,8 @@ Proven Framework from Supernova Success:
 Expected: Same temporal geometry eliminates dark matter in galaxies
 using identical mathematical framework that outperformed ΛCDM.
 
-Author: Temporal Universe Research Team
-Date: 2025
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

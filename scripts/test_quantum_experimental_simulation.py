@@ -15,8 +15,8 @@ and uncertainties for:
 The simulated data allows validation of UDT predictions against
 "experimental" results in a controlled environment.
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

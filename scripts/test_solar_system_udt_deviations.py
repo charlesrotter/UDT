@@ -14,7 +14,7 @@ This script calculates:
 
 These represent the most precise tests of UDT vs GR.
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 """
 

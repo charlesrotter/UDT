@@ -5,6 +5,9 @@ Supernova Analysis using UDT Framework
 
 Analyzes Type Ia supernovae using the Universal Distance Dilation Theory.
 This script replaces csp_udt_temporal.py with a cleaner structure.
+
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import os

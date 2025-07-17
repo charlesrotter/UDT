@@ -19,8 +19,8 @@ UDT Quantum Framework:
 - Enhanced quantum interactions: 1/tau^2 factor
 - Quantum-classical correspondence as R0 --> infinity
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np

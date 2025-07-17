@@ -17,8 +17,8 @@ Key Questions:
 - How do different scale domains connect or transition?
 - What physical mechanism determines when to use which R0?
 
-Author: UDT Research Team
-Date: 2025-01-16
+Author: Charles Rotter
+Date: 2025-01-17
 """
 
 import numpy as np
