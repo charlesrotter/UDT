@@ -9,7 +9,7 @@ mechanics from standard quantum mechanics.
 This script provides a roadmap for experimental validation of UDT
 as the fundamental quantum theory.
 
-Author: UDT Research Team  
+Author: Charles Rotter
 Date: 2025-01-17
 """
 

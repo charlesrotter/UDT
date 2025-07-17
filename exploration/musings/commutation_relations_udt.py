@@ -17,7 +17,7 @@ APPROACH:
 4. Connect to uncertainty principle
 5. Predict deviations from standard commutation relations
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 Status: ADVANCED QUANTUM FOUNDATION DEVELOPMENT
 """

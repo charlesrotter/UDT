@@ -12,7 +12,7 @@ Validates the emergence of quantum mechanics from UDT temporal geometry:
 This script demonstrates that quantum mechanics is not fundamental
 but emerges from UDT's temporal geometry principles.
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 """
 

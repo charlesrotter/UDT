@@ -16,7 +16,7 @@ APPROACH:
 3. Compare with standard quantum tunneling predictions
 4. Derive new experimental predictions for UDT quantum mechanics
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 Status: ADVANCED QUANTUM FOUNDATION DEVELOPMENT
 """

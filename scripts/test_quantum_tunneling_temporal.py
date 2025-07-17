@@ -11,7 +11,7 @@ Key predictions:
 2. Resonance tunneling from temporal geometry eigenstates
 3. Novel experimental signatures for UDT quantum mechanics
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 """
 

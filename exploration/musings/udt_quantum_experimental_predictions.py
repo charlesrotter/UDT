@@ -16,7 +16,7 @@ This compilation brings together all our quantum emergence work:
 GOAL: Provide a clear roadmap for experimental tests that could
 validate or refute UDT as the fundamental quantum theory.
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 Status: COMPREHENSIVE EXPERIMENTAL FRAMEWORK
 """

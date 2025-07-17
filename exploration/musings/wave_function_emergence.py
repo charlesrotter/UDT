@@ -17,7 +17,7 @@ APPROACH:
 4. Connect to standard quantum mechanical formalism
 5. Predict observable deviations from standard QM
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 Status: ADVANCED QUANTUM FOUNDATION DEVELOPMENT
 """

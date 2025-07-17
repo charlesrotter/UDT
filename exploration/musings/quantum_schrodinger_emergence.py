@@ -17,7 +17,7 @@ APPROACH:
 4. Show emergence of ℏ and quantum commutation relations
 5. Connect to standard Schrödinger equation
 
-Author: UDT Research Team
+Author: Charles Rotter
 Date: 2025-01-17
 Status: ADVANCED QUANTUM FOUNDATION DEVELOPMENT
 """
