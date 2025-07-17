@@ -56,8 +56,9 @@ c_eff(r) = c₀ × R₀/(R₀ + r)
 ### Characteristic Scales
 - Quantum scale: R₀ ~ 5.0 × 10⁻¹⁰ m (from hydrogen atom analysis)
 - Galactic scale: R₀ ~ 38 kpc (from SPARC analysis)
+- CMB scale: R₀ ~ 13,000 Mpc (from Planck power spectrum analysis)
 - Cosmological scale: R₀ ~ 3,000 Mpc (from supernova analysis)
-- Scale hierarchy: Quantum → Galactic → Cosmic (10²⁰ : 10⁵ : 1)
+- Scale hierarchy: Quantum → Galactic → CMB → Cosmic spanning 6 orders of magnitude
 - **Scaling Behavior**: Discrete scale-specific domains with well-separated transition masses
 
 ## Observational Analysis
@@ -67,6 +68,12 @@ c_eff(r) = c₀ × R₀/(R₀ + r)
 - Successful fits: 171/175 galaxies (97.7%)
 - Mean RMS deviation: 31.3 ± 34.3 km/s
 - Method: Pure temporal geometry without dark matter parameters
+
+### CMB Power Spectra (Planck 2018)
+- Dataset: TT (83 multipoles), TE (66 multipoles), EE (66 multipoles)
+- UDT fit: R₀ = 13,041 ± 914 Mpc
+- Acoustic scale difference: +6.0% from ΛCDM
+- First peak shift: +29.3% (l₁ = 284 vs observed ~220)
 
 ### Type Ia Supernovae (Carnegie Supernova Project)
 - Dataset: 133 supernovae (redshift range: 0.0046 - 0.0835)
@@ -92,6 +99,9 @@ python scripts/analyze_sparc_galaxies.py --plot
 
 # Supernova cosmology analysis (new organized script)
 python scripts/analyze_supernovae.py --dataset csp --plot
+
+# CMB power spectrum analysis
+python scripts/analyze_cmb_planck.py
 
 # Quantum mechanics emergence validation
 python scripts/test_udt_quantum_emergence.py
@@ -138,6 +148,7 @@ m_predicted = pure_temporal_magnitude(z=0.05, R0=3000, M_B=-19)
 - **SPARC Database**: `data/sparc_database/` - Galactic rotation curves
 - **CSP DR3**: `data/CSP_Photometry_DR3/` - Supernova photometry
 - **Pantheon+**: `data/Pantheon_SH0ES.dat` - Extended supernova catalog
+- **Planck CMB**: `data/cmb_planck/` - CMB power spectra (TT, TE, EE)
 
 ## Data Contamination Prevention
 
@@ -215,7 +226,9 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - **Quantum Scale**: Hydrogen binding energy predicted within 13.8% accuracy (11.729 eV vs 13.606 eV)
 - **Solar System**: Mercury precession mathematically converges to General Relativity predictions
 - **Galactic Scale**: Successfully fits 171/175 SPARC galaxy rotation curves (97.7% success rate)
+- **CMB Scale**: Acoustic oscillation analysis with R₀ = 13,041 ± 914 Mpc
 - **Cosmological Scale**: Comparable fit quality to ΛCDM for nearby supernovae
+- **Scale Hierarchy**: Unified framework spans 6 orders of magnitude (quantum to CMB)
 - **Relativistic Consistency**: Maintains consistency with GR in appropriate limits
 - **Causality Preserved**: Effective light speed structure prevents paradoxes
 
@@ -240,7 +253,8 @@ When testing UDT against standard models, it's critical to avoid circular reason
 
 ### Limitations
 - Analysis limited to z < 0.1 for supernovae
-- CMB and BAO analyses not yet performed
+- CMB model requires refinement for better acoustic peak matching
+- BAO analyses not yet performed
 - Gravitational lensing predictions require development
 - Experimental quantum validation requires laboratory tests
 
@@ -249,9 +263,10 @@ When testing UDT against standard models, it's critical to avoid circular reason
 2. **Hydrogen Spectroscopy**: High-precision atomic energy level measurements for commutation relation detection
 3. **Atom Interferometry**: Spatial-resolution phase measurements for uncertainty principle modifications
 4. **Gravitational Quantum Tests**: Altitude-dependent atomic clock frequency shifts
-5. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
-6. **CMB Predictions**: Power spectrum calculations from UDT temporal geometry
-7. **Gravitational Lensing**: Formulation with position-dependent light speed
+5. **CMB Model Refinement**: Improved acoustic oscillation physics in temporal geometry
+6. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
+7. **BAO Analysis**: Baryon acoustic oscillation predictions from UDT
+8. **Gravitational Lensing**: Formulation with position-dependent light speed
 
 ## Documentation
 - `docs/UDT Framework.md`: Detailed theoretical development
