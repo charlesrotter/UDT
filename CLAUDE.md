@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Universal Distance Dilation Theory (UDT)** research project, formerly known as Information Curvature Theory. It's a theoretical physics framework proposing a unified temporal geometry for galactic and cosmological phenomena. UDT introduces a position-dependent temporal dilation function that provides an alternative explanation for observations currently attributed to dark matter and dark energy.
+This is the **Universal Distance Dilation Theory (UDT)** research project, formerly known as Information Curvature Theory. It's a theoretical physics framework proposing a unified temporal geometry for galactic and cosmological phenomena.
+
+**Fundamental Origin**: UDT originated from extending Einstein's equivalence principles beyond velocity ↔ acceleration to include **distance ↔ temporal dilation**. This core insight leads directly to the position-dependent temporal dilation function τ(r) = R₀/(R₀ + r) that provides an alternative explanation for observations currently attributed to dark matter and dark energy.
 
 ## Key Commands
 
@@ -55,6 +57,12 @@ python scripts/analyze_r0_scaling_continuity.py
 - **Enhancement Factor**: 1/τ² = (1 + r/R₀)² for galactic dynamics
 
 ### Key Theoretical Framework
+
+**Fundamental Derivation from Equivalence Principle Extension:**
+- Einstein's equivalences: Velocity ↔ Acceleration, Mass ↔ Energy
+- **UDT's extension**: Distance ↔ Temporal Dilation
+- This leads to τ(r) = R₀/(R₀ + r) as the universal temporal geometry function
+
 The project implements a temporal geometry model where:
 - **Quantum Foundation**: UDT provides the fundamental framework from which quantum mechanics emerges
 - **Position-dependent effective speed of light**: c_eff(r) = c₀ × R₀/(R₀ + r)
@@ -153,7 +161,7 @@ The project now uses a proper package structure for better maintainability:
 
 5. **Theory evolution**: The project has evolved from "Information Curvature Theory" to "Universal Distance Dilation Theory" - some documentation may still reference the old name.
 
-6. **Current focus**: The theory now emphasizes a unified temporal geometry function τ(r) = R₀/(R₀ + r) applied across quantum, galactic, and cosmological scales, with position-dependent effective light speed maintaining causal consistency.
+6. **Current focus**: The theory emphasizes its origin from extending Einstein's equivalence principles to include distance ↔ temporal dilation, leading to the unified temporal geometry function τ(r) = R₀/(R₀ + r) applied across quantum, galactic, and cosmological scales, with position-dependent effective light speed maintaining causal consistency.
 
 7. **Quantum breakthrough**: UDT has been demonstrated to serve as the fundamental framework from which quantum mechanics emerges, rather than being a modification of existing quantum theory. This represents a paradigm shift where c_eff(r) approaching c₀ explains quantum weirdness naturally.
 

@@ -1,17 +1,31 @@
 # Universal Distance Dilation Theory (UDT)
 
-A theoretical physics framework proposing a unified temporal geometry for galactic and cosmological phenomena. UDT introduces a position-dependent temporal dilation function that provides an alternative explanation for observations currently attributed to dark matter and dark energy.
+A theoretical physics framework derived from extending Einstein's equivalence principles to include distance ↔ temporal dilation. UDT proposes a unified temporal geometry for galactic and cosmological phenomena through the position-dependent temporal dilation function τ(r) = R₀/(R₀ + r), providing an alternative explanation for observations currently attributed to dark matter and dark energy.
 
 ## Overview
 
 The Universal Distance Dilation Theory presents a geometric framework based on temporal dilation:
-- Single temporal geometry function τ(r) = R₀/(R₀ + r) applied across multiple scales
+- **Fundamental Origin**: Extension of Einstein's equivalence principles (velocity ↔ acceleration) to include distance
+- **Core Innovation**: Position-dependent temporal dilation τ(r) = R₀/(R₀ + r) derived from distance equivalence
+- Single temporal geometry function applied across multiple scales (quantum to cosmic)
 - Analysis of 175 SPARC galaxies with 171 successful fits (97.7% success rate)
 - Comparison with standard cosmology using 133 Type Ia supernovae data
 - Position-dependent effective speed of light maintaining causal consistency
-- Extension of equivalence principles to include temporal-spatial relationships
 
 ## Theoretical Framework
+
+### Fundamental Derivation
+
+**Einstein's Equivalence Principle Extension:**
+Einstein established equivalences between:
+- **Velocity ↔ Acceleration**: Uniform motion equivalent to gravitational field
+- **Mass ↔ Energy**: E = mc² equivalence
+
+**UDT's Key Innovation:**
+Extension to include:
+- **Distance ↔ Temporal Dilation**: Position-dependent time flow equivalent to gravitational effects
+
+This leads directly to the universal temporal geometry function τ(r) = R₀/(R₀ + r), where distance from a reference point determines the local temporal dilation, creating the position-dependent effective speed of light that underlies all UDT phenomena.
 
 ### Core Equations
 
@@ -168,6 +182,8 @@ When testing UDT against standard models, it's critical to avoid circular reason
 ## Key Findings
 
 ### Theoretical Implications
+- **Equivalence Principle Foundation**: Extension of Einstein's equivalence principles to distance creates temporal geometry
+- **Distance-Temporal Dilation Equivalence**: Position-dependent time flow as fundamental geometric principle
 - **Quantum Foundation**: UDT provides the fundamental framework from which quantum mechanics emerges
 - **Quantum Weirdness Explained**: Wave-particle duality and quantum behavior emerge from c_eff(r) transitions
 - **Scale Unification**: Single temporal geometry function τ(r) = R₀/(R₀ + r) spans quantum to cosmic scales
@@ -176,7 +192,6 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - **Hybrid Scaling Theory**: Continuous variation within domains, discrete transitions between scales
 - **Geometric Origin**: Explains galactic rotation curves and cosmological redshift through temporal geometry
 - **Position-Dependent Light Speed**: c_eff(r) = c₀ × R₀/(R₀ + r) maintains causal consistency
-- **Equivalence Principle Extension**: Temporal-spatial relationships unified across all scales
 
 ### Observational Correspondence
 - **Quantum Scale**: Hydrogen binding energy predicted within 13.8% accuracy (11.729 eV vs 13.606 eV)
