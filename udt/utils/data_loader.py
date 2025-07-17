@@ -320,8 +320,8 @@ def load_pantheon_data(pantheon_file):
         # Read the file with proper header handling
         df = pd.read_csv(pantheon_file, delim_whitespace=True, comment='#')
         
-        # Use only the columns we need
-        required_columns = ['zCMB', 'm_b_corr', 'm_b_corr_err_DIAG']
+        # Use only the columns we need (including raw mB for contamination prevention)
+        required_columns = ['zCMB', 'm_b_corr', 'm_b_corr_err_DIAG', 'mB', 'mBERR']
         
         # Check if required columns exist
         if not all(col in df.columns for col in required_columns):
@@ -335,11 +335,12 @@ def load_pantheon_data(pantheon_file):
             if 'dmb' in df.columns:
                 df = df.rename(columns={'dmb': 'm_b_corr_err_DIAG'})
         
-        # Filter for required columns
-        df = df[required_columns].copy()
+        # Filter for available columns from required list
+        available_columns = [col for col in required_columns if col in df.columns]
+        df = df[available_columns].copy()
         
         # Convert to numeric and handle errors
-        for col in required_columns:
+        for col in available_columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
         
         # Remove rows with NaN values
