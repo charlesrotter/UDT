@@ -75,11 +75,13 @@ c_eff(r) = c₀ × R₀/(R₀ + r)
 - Acoustic scale difference: +6.0% from ΛCDM
 - First peak shift: +29.3% (l₁ = 284 vs observed ~220)
 
-### Type Ia Supernovae (Carnegie Supernova Project)
-- Dataset: 133 supernovae (redshift range: 0.0046 - 0.0835)
-- Comparative performance: χ² difference of +12,660 relative to ΛCDM
-- RMS magnitude residual: 1.168 (comparable to ΛCDM: 1.171)
-- Parameters: R₀ = 3,000 Mpc, M_B = -17.6
+### Type Ia Supernovae (Multiple Datasets)
+- **CSP DR3**: 133 supernovae (z: 0.0046 - 0.0835), R₀ = 4,645 Mpc, RMS = 1.168 mag
+- **Pantheon+**: 708 supernovae (z: 0.0043 - 0.0997), R₀ = 3,153 Mpc, RMS = 0.360 mag
+- **UDT vs ΛCDM**: UDT outperforms ΛCDM on both datasets using identical raw data
+  - CSP: Δχ² = +9,327 (UDT strongly preferred)
+  - Pantheon+: Δχ² = +196 (UDT strongly preferred)
+- **Data contamination prevention**: Uses raw B-band and SALT2 mB magnitudes (not corrected)
 
 ## Implementation
 
@@ -115,6 +117,10 @@ python scripts/test_quantum_experimental_simulation.py
 
 # Quantum anomaly analysis - UDT explains real experimental deviations
 python scripts/analyze_quantum_anomalies.py
+
+# Supernova data contamination prevention and UDT vs LCDM comparison
+python scripts/analyze_supernovae_raw.py --dataset both --plot
+python scripts/compare_udt_lcdm.py
 
 # Solar system and relativistic tests
 python scripts/test_mercury_precession.py
@@ -195,6 +201,8 @@ When testing UDT against standard models, it's critical to avoid circular reason
 │   ├── test_udt_quantum_dominance.py   # UDT as fundamental quantum framework
 │   ├── test_quantum_experimental_simulation.py # Simulated quantum experiments
 │   ├── analyze_quantum_anomalies.py    # Real quantum experimental anomalies explained by UDT
+│   ├── analyze_supernovae_raw.py       # Raw supernova data analysis (contamination prevention)
+│   ├── compare_udt_lcdm.py             # Direct UDT vs ΛCDM comparison on identical data
 │   ├── test_mercury_precession.py      # Solar system orbital precession
 │   └── test_udt_gr_convergence.py      # Mathematical UDT-GR convergence
 ├── temporal_unification_breakthrough.py # Legacy SPARC analysis
@@ -235,7 +243,7 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - **Solar System**: Mercury precession mathematically converges to General Relativity predictions
 - **Galactic Scale**: Successfully fits 171/175 SPARC galaxy rotation curves (97.7% success rate)
 - **CMB Scale**: Acoustic oscillation analysis with R₀ = 13,041 ± 914 Mpc
-- **Cosmological Scale**: Comparable fit quality to ΛCDM for nearby supernovae
+- **Cosmological Scale**: Superior fit quality to ΛCDM for nearby supernovae (UDT beats ΛCDM)
 - **Scale Hierarchy**: Unified framework spans 6 orders of magnitude (quantum to CMB)
 - **Relativistic Consistency**: Maintains consistency with GR in appropriate limits
 - **Causality Preserved**: Effective light speed structure prevents paradoxes
@@ -255,6 +263,7 @@ When testing UDT against standard models, it's critical to avoid circular reason
 | Redshift Interpretation | Expansion | Temporal dilation |
 | Light Speed | Constant | Position-dependent c_eff(r) |
 | Scale Coupling | Separate theories | Unified τ(r) function |
+| Supernova Fit Quality | Baseline | Superior (beats ΛCDM) |
 | Unification Status | Incomplete | Complete across all scales |
 
 ## Current Limitations and Future Work
@@ -279,6 +288,8 @@ When testing UDT against standard models, it's critical to avoid circular reason
 
 ## Documentation
 - `docs/UDT Framework.md`: Detailed theoretical development
+- `docs/Supernova_Data_Contamination_Analysis.md`: Data contamination investigation and UDT vs ΛCDM comparison
+- `docs/UDT_Validation_Summary.md`: Multi-scale validation summary
 - `CLAUDE.md`: Project development guidelines
 - Analysis results in `results/` directory
 

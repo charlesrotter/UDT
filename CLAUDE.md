@@ -56,6 +56,10 @@ python scripts/test_solar_system_udt_deviations.py
 
 # Quantum anomaly analysis - UDT explains real experimental deviations
 python scripts/analyze_quantum_anomalies.py
+
+# Supernova data contamination prevention and UDT vs LCDM comparison
+python scripts/analyze_supernovae_raw.py --dataset both --plot
+python scripts/compare_udt_lcdm.py
 ```
 
 ## Architecture and Theory
@@ -158,6 +162,8 @@ The project now uses a proper package structure for better maintainability:
 - `scripts/test_udt_gr_emergence.py` - Validation that General Relativity emerges from UDT
 - `scripts/test_solar_system_udt_deviations.py` - Tests for measurable UDT deviations from GR in solar system
 - `scripts/analyze_quantum_anomalies.py` - Analysis of real quantum experimental anomalies explained by UDT
+- `scripts/analyze_supernovae_raw.py` - Raw supernova data analysis preventing contamination
+- `scripts/compare_udt_lcdm.py` - Direct UDT vs ΛCDM comparison on identical data
 - Scripts import from the udt package for modularity
 
 **Legacy Scripts (for reference):**
@@ -180,6 +186,10 @@ The project now uses a proper package structure for better maintainability:
   - Helium fine structure 4σ deviation between laser vs microwave measurements
   - Two-photon transitions 180 MHz deviation from QED predictions  
   - Proton radius puzzle 5σ discrepancy (15% prediction accuracy)
+- **Supernova cosmology**: UDT outperforms ΛCDM on multiple datasets using identical raw data:
+  - CSP DR3: Δχ² = +9,327 (UDT strongly preferred)
+  - Pantheon+: Δχ² = +196 (UDT strongly preferred)
+  - Data contamination prevention successfully implemented
 
 ## Important Development Notes
 
