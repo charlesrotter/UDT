@@ -91,6 +91,11 @@ python scripts/analyze_sparc_galaxies.py --plot
 # Supernova cosmology analysis (new organized script)
 python scripts/analyze_supernovae.py --dataset csp --plot
 
+# Quantum mechanics emergence validation
+python scripts/test_udt_quantum_emergence.py
+python scripts/test_quantum_tunneling_temporal.py
+python scripts/test_udt_quantum_experimental_predictions.py
+
 # Quantum-scale validation tests
 python scripts/test_quantum_temporal_geometry.py
 python scripts/test_udt_quantum_dominance.py
@@ -192,7 +197,11 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - **Rigorous Mathematical Derivation**: UDT metric, Christoffel symbols, and field equations derived from first principles
 - **Einstein Field Equations Emergence**: UDT field equations reduce to Einstein equations in appropriate limits
 - **Quantum Foundation**: UDT provides the fundamental framework from which quantum mechanics emerges
-- **Quantum Weirdness Explained**: Wave-particle duality and quantum behavior emerge from c_eff(r) transitions
+- **Quantum Mechanics Emergence**: Modified Schrödinger equation with position-dependent commutation relations [x,p] = iℏτ(r)
+- **Temporal Tunneling**: Quantum tunneling occurs through temporal geometry barriers rather than potential barriers
+- **Uncertainty Principle Modification**: Δx×Δp ≥ ℏτ(r)/2 creates position-dependent measurement precision
+- **Wave Function Geometry**: Wave functions emerge from matter fields in temporal geometry with Born rule τ(r) weighting
+- **Quantum Experimental Predictions**: 75% discovery potential through STM tunneling, hydrogen spectroscopy, and interferometry
 - **Scale Unification**: Single temporal geometry function τ(r) = R₀/(R₀ + r) spans quantum to cosmic scales
 - **Discrete Scaling Framework**: R₀ operates as discrete scale-specific domains rather than continuous function
 - **R₀ Emergence**: Characteristic scales emerge naturally from mass/volume relationships at each scale
@@ -234,12 +243,13 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - Experimental quantum validation requires laboratory tests
 
 ### Proposed Extensions
-1. **Quantum Experiments**: Laboratory tests of hydrogen binding energy modifications
-2. **Tunneling Studies**: Experimental validation of temporal barrier effects
-3. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
-4. **CMB Predictions**: Power spectrum calculations from UDT temporal geometry
-5. **Gravitational Lensing**: Formulation with position-dependent light speed
-6. **Atomic Precision**: Spectroscopic tests of c_eff(r) variations
+1. **Quantum Experimental Validation**: STM tunneling measurements (highest priority - 4.3x enhancement predicted)
+2. **Hydrogen Spectroscopy**: High-precision atomic energy level measurements for commutation relation detection
+3. **Atom Interferometry**: Spatial-resolution phase measurements for uncertainty principle modifications
+4. **Gravitational Quantum Tests**: Altitude-dependent atomic clock frequency shifts
+5. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
+6. **CMB Predictions**: Power spectrum calculations from UDT temporal geometry
+7. **Gravitational Lensing**: Formulation with position-dependent light speed
 
 ## Documentation
 - `docs/UDT Framework.md`: Detailed theoretical development
