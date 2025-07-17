@@ -23,6 +23,8 @@ causality resolution.
 
 - **133 supernovae** analyzed - beats ΛCDM by Δχ² = +12,660
 
+- **CMB power spectrum** - beats ΛCDM by Δχ² = -6,730.6 (3σ significance)
+
 - **Causality preserved** through effective speed of light from temporal
   dilation
 

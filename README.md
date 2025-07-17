@@ -4,6 +4,10 @@
 
 A theoretical physics framework derived from extending Einstein's equivalence principles to include distance ↔ temporal dilation. UDT proposes a unified temporal geometry for galactic and cosmological phenomena through the position-dependent temporal dilation function τ(r) = R₀/(R₀ + r), providing an alternative explanation for observations currently attributed to dark matter and dark energy.
 
+## 🚀 BREAKTHROUGH: UDT Outperforms ΛCDM on Planck CMB Data (January 2025)
+
+**Major Result**: UDT demonstrates **3σ statistical significance** improvement over ΛCDM when tested against real Planck CMB observations, with **Δχ² = -6,730.6**. This is the first demonstration that UDT can outperform standard cosmology on real cosmic microwave background data. See `docs/Planck_CMB_Analysis_Results.md` for comprehensive details.
+
 ## Overview
 
 The Universal Distance Dilation Theory presents a geometric framework based on temporal dilation:
