@@ -66,3 +66,11 @@ Thumbs.db
 *.tmp
 *.temp
 .cache/
+
+# Experimental work archives
+exploration_archive*.tar.gz
+exploration_backup/
+
+# Personal/local notes
+personal_notes/
+local_notes/
