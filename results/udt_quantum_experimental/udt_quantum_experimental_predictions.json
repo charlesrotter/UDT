@@ -1,0 +1,134 @@
+{
+  "theoretical_framework": {
+    "framework": "temporal_geometry_quantum_mechanics",
+    "key_modifications": [
+      "position_dependent_light_speed",
+      "modified_schrodinger_equation",
+      "position_dependent_commutators",
+      "modified_uncertainty_principle",
+      "temporal_tunneling_barriers",
+      "geometric_probability_interpretation"
+    ]
+  },
+  "spectroscopy": {
+    "experiment_type": "hydrogen_spectroscopy",
+    "energy_corrections_percent": [
+      -9.571004846994136,
+      -29.743705035971225,
+      -48.78518457819479,
+      -62.87275751455388,
+      -72.5726823916621
+    ],
+    "required_precision": 0.0725726823916621,
+    "feasible": true,
+    "target_transitions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "tunneling": {
+    "experiment_type": "scanning_tunneling_microscopy",
+    "enhancement_factors": [
+      21.594068488179676,
+      466.3037938721945,
+      217439.22817960204,
+      22046758484296.992
+    ],
+    "barrier_widths_nm": [
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "detectable": "True",
+    "max_enhancement": 22046758484296.992
+  },
+  "interferometry": {
+    "experiment_type": "atom_interferometry",
+    "phase_shifts_mrad": [
+      66.50123329118968,
+      665.012332911887,
+      3325.0616645594378,
+      6650.1233291188755
+    ],
+    "uncertainty_modifications": [
+      0.9895268478424356,
+      0.9042899515300586,
+      0.6539366989275438,
+      0.48581422464049745
+    ],
+    "detectable": "True",
+    "spatial_resolution_required_nm": 1e-09
+  },
+  "gravitational": {
+    "experiment_type": "gravitational_quantum_tests",
+    "frequency_shifts": [
+      0.0,
+      1.1049561265963348e-15,
+      1.0435696751187606e-14,
+      1.0447974041483121e-13
+    ],
+    "altitudes_m": [
+      0,
+      100,
+      1000,
+      10000
+    ],
+    "detectable": "True",
+    "required_precision": 1.0447974041483121e-14
+  },
+  "molecular": {
+    "experiment_type": "molecular_quantum_chemistry",
+    "molecules_tested": [
+      "H2",
+      "O2",
+      "N2",
+      "CO"
+    ],
+    "isotope_effects": {
+      "reaction_rate_change": 0.14135118934822843,
+      "equilibrium_constant_change": 0.1
+    },
+    "precision_required": "sub_percent_energy_calculations"
+  },
+  "summary": {
+    "priority_ranking": [
+      [
+        "STM Tunneling",
+        "True",
+        22046758484296.992
+      ],
+      [
+        "Gravitational Tests",
+        "True",
+        104479.7404148312
+      ],
+      [
+        "Atom Interferometry",
+        "True",
+        6650.1233291188755
+      ],
+      [
+        "Hydrogen Spectroscopy",
+        true,
+        72.5726823916621
+      ],
+      [
+        "Molecular Orbital",
+        true,
+        0.5
+      ]
+    ],
+    "discovery_potential": 0.8,
+    "recommended_sequence": [
+      "STM_tunneling",
+      "hydrogen_spectroscopy",
+      "atom_interferometry",
+      "gravitational_tests",
+      "molecular_orbital"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "curvature": {
+    "Hydrogen atom": {
+      "R0_observed": 5e-10,
+      "schwarzschild_scale": 1.2422782633385566e-54,
+      "ricci_scale": 7.091780988242028e-12,
+      "geometric_scale": 8.10810493863248e-33,
+      "geometric_factor": 4.024863146653445e+44,
+      "mass": 1.673e-27,
+      "length_scale": 5.292e-11
+    },
+    "Milky Way galaxy": {
+      "R0_observed": 1.17268e+21,
+      "schwarzschild_scale": 1476922573688218.0,
+      "ricci_scale": 3.341786688412926e-27,
+      "geometric_scale": 1.1693309705641736e+19,
+      "geometric_factor": 794002.3538752923,
+      "mass": 1.9889999999999998e+42,
+      "length_scale": 9.258e+22
+    },
+    "Observable universe": {
+      "R0_observed": 9.258e+25,
+      "schwarzschild_scale": 1.113817928874976e+26,
+      "ricci_scale": 2.801545848692795e-27,
+      "geometric_scale": 2.2136150552128657e+26,
+      "geometric_factor": 0.831195095714714,
+      "mass": 1.5e+53,
+      "length_scale": 4.399365e+26
+    }
+  },
+  "formula": {
+    "best_exponents": [
+      0.5,
+      -0.5,
+      0.5
+    ],
+    "rms_deviation": 1.2922016036819617,
+    "predictions": [
+      5.292e-11,
+      9.257999999999998e+22,
+      4.399365e+26
+    ],
+    "observations": [
+      5e-10,
+      1.17268e+21,
+      9.258e+25
+    ],
+    "success": "False"
+  },
+  "balance": {
+    "Hydrogen atom": {
+      "gravitational_energy": 3.529866240740741e-54,
+      "kinetic_energy": 1.7649331203703704e-54,
+      "temporal_energy": 1.19593770740235e+31,
+      "balance_ratio": 3.3880538973379994e+84
+    },
+    "Milky Way galaxy": {
+      "gravitational_energy": 2.8519282300712882e+51,
+      "kinetic_energy": 1.4259641150356441e+51,
+      "temporal_energy": 1.1640765859691494e+70,
+      "balance_ratio": 4.0817176733092316e+18
+    },
+    "Observable universe": {
+      "gravitational_energy": 3.413333515177758e+69,
+      "kinetic_energy": 1.706666757588879e+69,
+      "temporal_energy": 2.0041244877496104e+71,
+      "balance_ratio": 58.71458147403567
+    }
+  },
+  "planck": {
+    "Hydrogen atom": {
+      "R0_planck_ratio": 3.0931295936190216e+25,
+      "M_planck_ratio": 7.685055319684266e-20,
+      "L_planck_ratio": 3.2737683618863725e+24
+    },
+    "Milky Way galaxy": {
+      "R0_planck_ratio": 7.254502423690308e+55,
+      "M_planck_ratio": 9.136625840317994e+49,
+      "L_planck_ratio": 5.727238755544979e+57
+    },
+    "Observable universe": {
+      "R0_planck_ratio": 5.72723875554498e+60,
+      "M_planck_ratio": 6.89036639541327e+60,
+      "L_planck_ratio": 2.721561214926349e+61
+    }
+  }
+}
