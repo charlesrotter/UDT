@@ -32,11 +32,22 @@ After comprehensive analysis, developed a working framework for UDT with:
 3. **Mathematical incompleteness** - descriptive spacetime analysis, not rigorous field equations
 4. **Missing critical tests** - no solar system, nucleosynthesis, or precision relativity tests
 
-### NEW PRIORITY: FUNDAMENTAL DERIVATION
-**Next phase must start with fundamental postulates and derive τ(r) from first principles**
-- No more "easy paths" or phenomenological approaches
-- Must derive temporal geometry from quantum field theory or fundamental physics
-- Establish proper mathematical foundations before any observational testing
+### NEW PRIORITY: DUAL APPROACH STRATEGY
+**Analysis reveals two viable paths for scientific rigor:**
+
+**Path A: Postulate-Based Approach (RECOMMENDED START)**
+- Treat τ(r) = R₀/(R₀ + r) as fundamental geometric postulate
+- Derive all spacetime physics from this single assumption
+- Follows Einstein's successful methodology (equivalence principle, light speed constancy)
+- Faster path to testable predictions and mathematical framework
+
+**Path B: First-Principles Derivation (PARALLEL DEVELOPMENT)**
+- Derive τ(r) from fundamental physics (thermodynamics, QFT, information theory)
+- Provides physical mechanism and theoretical understanding
+- More complex but connects to established physics
+- Supports and validates postulate approach
+
+**Recommended Strategy: Hybrid approach starting with postulate-based development**
 
 ## Key Commands
 
@@ -47,7 +58,8 @@ python mathematical_development/udt_pure_geometry_sparc.py         # Pure geomet
 python mathematical_development/udt_refined_base_profile.py        # Statistical improvement
 python mathematical_development/udt_spacetime_structure.py         # Spacetime framework
 
-# NEXT PRIORITY: Fundamental derivation (TO BE DEVELOPED)
+# DUAL APPROACH STRATEGY (CURRENT PRIORITY)
+python mathematical_development/udt_postulate_approach_clean.py    # Postulate-based approach analysis
 python mathematical_development/udt_fundamental_derivation.py      # Derive τ(r) from first principles
 
 # Historical analysis (original audit work)
@@ -148,12 +160,20 @@ Starting with generally covariant temporal field φ(x^μ):
 
 ## Current Development Status
 
-### Phase 1: Fundamental Derivation (URGENT PRIORITY)
-- [ ] **Derive τ(r) from first principles** - NO phenomenological assumptions
-- [ ] Establish physical postulates (quantum field theory, thermodynamics, information theory)
-- [ ] Develop rigorous mathematical framework
-- [ ] Ensure general covariance and physical consistency
-- [ ] Verify mathematical self-consistency and limiting cases
+### Phase 1: Dual Approach Development (CURRENT PRIORITY)
+**Path A: Postulate-Based (RECOMMENDED START)**
+- [ ] **Derive complete metric from τ(r) postulate** - treat as fundamental geometric assumption
+- [ ] Work out field equations with constraint enforcement
+- [ ] Establish matter coupling rules from temporal geometry
+- [ ] Verify mathematical consistency and general covariance
+- [ ] Develop observable predictions for immediate testing
+
+**Path B: First-Principles Derivation (PARALLEL)**
+- [ ] **Derive τ(r) from thermodynamics** - most accessible approach
+- [ ] Explore quantum field theory derivation
+- [ ] Investigate information-theoretic origins
+- [ ] Develop physical mechanism explanations
+- [ ] Validate consistency with postulate approach
 
 ### Phase 2: Real Data Validation (After Phase 1)
 - [ ] Test with actual SPARC rotation curve data (not synthetic)
