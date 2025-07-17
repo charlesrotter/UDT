@@ -24,7 +24,8 @@
       "Bash(curl:*)",
       "Bash(head:*)",
       "WebFetch(domain:irsa.ipac.caltech.edu)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(unzip:*)"
     ],
     "deny": []
   }
