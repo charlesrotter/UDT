@@ -22,7 +22,9 @@
       "Bash(PYTHONPATH=. python scripts/analyze_r0_scaling_continuity.py)",
       "WebFetch(domain:pla.esac.esa.int)",
       "Bash(curl:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "WebFetch(domain:irsa.ipac.caltech.edu)",
+      "Bash(pip install:*)"
     ],
     "deny": []
   }
