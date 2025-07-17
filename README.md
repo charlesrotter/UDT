@@ -104,6 +104,10 @@ python scripts/test_udt_gr_convergence.py
 python scripts/test_r0_emergence_from_mass_volume.py
 python scripts/analyze_r0_scaling_continuity.py
 
+# Theoretical foundation validation
+python scripts/test_udt_gr_emergence.py
+python scripts/test_solar_system_udt_deviations.py
+
 # Legacy analysis scripts (for reference)
 python temporal_unification_breakthrough.py
 python csp_udt_temporal.py
@@ -184,13 +188,16 @@ When testing UDT against standard models, it's critical to avoid circular reason
 ### Theoretical Implications
 - **Equivalence Principle Foundation**: Extension of Einstein's equivalence principles to distance creates temporal geometry
 - **Distance-Temporal Dilation Equivalence**: Position-dependent time flow as fundamental geometric principle
+- **UDT More Fundamental than GR**: General Relativity emerges as the R₀ → ∞ limit of UDT temporal geometry
+- **Rigorous Mathematical Derivation**: UDT metric, Christoffel symbols, and field equations derived from first principles
+- **Einstein Field Equations Emergence**: UDT field equations reduce to Einstein equations in appropriate limits
 - **Quantum Foundation**: UDT provides the fundamental framework from which quantum mechanics emerges
 - **Quantum Weirdness Explained**: Wave-particle duality and quantum behavior emerge from c_eff(r) transitions
 - **Scale Unification**: Single temporal geometry function τ(r) = R₀/(R₀ + r) spans quantum to cosmic scales
 - **Discrete Scaling Framework**: R₀ operates as discrete scale-specific domains rather than continuous function
 - **R₀ Emergence**: Characteristic scales emerge naturally from mass/volume relationships at each scale
 - **Hybrid Scaling Theory**: Continuous variation within domains, discrete transitions between scales
-- **Geometric Origin**: Explains galactic rotation curves and cosmological redshift through temporal geometry
+- **Quantum Gravity Pathway**: Natural bridge from quantum to cosmic scales through temporal geometry
 - **Position-Dependent Light Speed**: c_eff(r) = c₀ × R₀/(R₀ + r) maintains causal consistency
 
 ### Observational Correspondence
@@ -206,6 +213,9 @@ When testing UDT against standard models, it's critical to avoid circular reason
 | Aspect | Standard QM/ΛCDM | UDT |
 |--------|------------------|-----|
 | Fundamental Framework | Quantum mechanics + General Relativity | Unified temporal geometry |
+| Theoretical Foundation | Collection of separate theories | Single principle: distance ↔ temporal dilation |
+| General Relativity | Fundamental theory | Emerges as R₀ → ∞ limit |
+| Mathematical Rigor | Multiple postulates | Derived from action principle |
 | Quantum Behavior | Ad hoc postulates | Emerges from c_eff(r) transitions |
 | Free Parameters | Multiple | Single scale parameter per scale |
 | Dark Matter | Required | Not required |
@@ -213,6 +223,7 @@ When testing UDT against standard models, it's critical to avoid circular reason
 | Redshift Interpretation | Expansion | Temporal dilation |
 | Light Speed | Constant | Position-dependent c_eff(r) |
 | Scale Coupling | Separate theories | Unified τ(r) function |
+| Unification Status | Incomplete | Complete across all scales |
 
 ## Current Limitations and Future Work
 

@@ -42,6 +42,10 @@ python scripts/test_udt_gr_convergence.py
 # R₀ emergence and scaling analysis
 python scripts/test_r0_emergence_from_mass_volume.py
 python scripts/analyze_r0_scaling_continuity.py
+
+# Theoretical foundation validation
+python scripts/test_udt_gr_emergence.py
+python scripts/test_solar_system_udt_deviations.py
 ```
 
 ## Architecture and Theory
@@ -133,6 +137,8 @@ The project now uses a proper package structure for better maintainability:
 - `scripts/test_udt_gr_convergence.py` - Mathematical UDT-GR convergence proof
 - `scripts/test_r0_emergence_from_mass_volume.py` - R₀ emergence from fundamental mass/volume relationships
 - `scripts/analyze_r0_scaling_continuity.py` - Analysis of continuous vs discrete R₀ scaling behavior
+- `scripts/test_udt_gr_emergence.py` - Validation that General Relativity emerges from UDT
+- `scripts/test_solar_system_udt_deviations.py` - Tests for measurable UDT deviations from GR in solar system
 - Scripts import from the udt package for modularity
 
 **Legacy Scripts (for reference):**
@@ -172,3 +178,9 @@ The project now uses a proper package structure for better maintainability:
 10. **Discrete scaling behavior**: R₀ operates as discrete scale-specific domains (quantum/galactic/cosmic) with well-separated transition masses (~10³³ kg and ~4×10⁵⁰ kg), rather than following a continuous universal function.
 
 11. **Hybrid scaling framework**: UDT uses a hybrid continuous-discrete approach with continuous variation within scale domains and discrete transitions between domains.
+
+12. **UDT more fundamental than GR**: Theoretical breakthrough demonstrates that General Relativity emerges as the R₀ → ∞ limit of UDT, making UDT the more fundamental theory.
+
+13. **Complete action principle**: UDT has well-defined Lagrangian formulation S_UDT = S_geometry + S_tau_field + S_matter that reduces to Einstein-Hilbert action in appropriate limits.
+
+14. **Testable GR deviations**: UDT predicts specific measurable deviations from GR in solar system that could distinguish the theories and measure characteristic scales.
