@@ -19,7 +19,9 @@
       "Bash(PYTHONPATH=. python scripts/test_quantum_experimental_simulation.py)",
       "Bash(PYTHONPATH=. python scripts/test_udt_quantum_dominance.py)",
       "Bash(PYTHONPATH=. python scripts/test_r0_emergence_from_mass_volume.py)",
-      "Bash(PYTHONPATH=. python scripts/analyze_r0_scaling_continuity.py)"
+      "Bash(PYTHONPATH=. python scripts/analyze_r0_scaling_continuity.py)",
+      "WebFetch(domain:pla.esac.esa.int)",
+      "Bash(curl:*)"
     ],
     "deny": []
   }
