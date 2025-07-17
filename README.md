@@ -113,6 +113,9 @@ python scripts/test_quantum_temporal_geometry.py
 python scripts/test_udt_quantum_dominance.py
 python scripts/test_quantum_experimental_simulation.py
 
+# Quantum anomaly analysis - UDT explains real experimental deviations
+python scripts/analyze_quantum_anomalies.py
+
 # Solar system and relativistic tests
 python scripts/test_mercury_precession.py
 python scripts/test_udt_gr_convergence.py
@@ -191,6 +194,7 @@ When testing UDT against standard models, it's critical to avoid circular reason
 │   ├── test_quantum_temporal_geometry.py # Quantum-scale UDT predictions
 │   ├── test_udt_quantum_dominance.py   # UDT as fundamental quantum framework
 │   ├── test_quantum_experimental_simulation.py # Simulated quantum experiments
+│   ├── analyze_quantum_anomalies.py    # Real quantum experimental anomalies explained by UDT
 │   ├── test_mercury_precession.py      # Solar system orbital precession
 │   └── test_udt_gr_convergence.py      # Mathematical UDT-GR convergence
 ├── temporal_unification_breakthrough.py # Legacy SPARC analysis
@@ -224,6 +228,10 @@ When testing UDT against standard models, it's critical to avoid circular reason
 
 ### Observational Correspondence
 - **Quantum Scale**: Hydrogen binding energy predicted within 13.8% accuracy (11.729 eV vs 13.606 eV)
+- **Quantum Anomalies**: UDT explains 2/3 major experimental deviations unexplained by QED:
+  - Helium fine structure: 4σ deviation between laser vs microwave measurements
+  - Two-photon transitions: 180 MHz deviation from QED predictions
+  - Proton radius puzzle: 5σ discrepancy between muonic and electronic hydrogen
 - **Solar System**: Mercury precession mathematically converges to General Relativity predictions
 - **Galactic Scale**: Successfully fits 171/175 SPARC galaxy rotation curves (97.7% success rate)
 - **CMB Scale**: Acoustic oscillation analysis with R₀ = 13,041 ± 914 Mpc
@@ -259,14 +267,15 @@ When testing UDT against standard models, it's critical to avoid circular reason
 - Experimental quantum validation requires laboratory tests
 
 ### Proposed Extensions
-1. **Quantum Experimental Validation**: STM tunneling measurements (highest priority - 4.3x enhancement predicted)
-2. **Hydrogen Spectroscopy**: High-precision atomic energy level measurements for commutation relation detection
-3. **Atom Interferometry**: Spatial-resolution phase measurements for uncertainty principle modifications
-4. **Gravitational Quantum Tests**: Altitude-dependent atomic clock frequency shifts
-5. **CMB Model Refinement**: Improved acoustic oscillation physics in temporal geometry
-6. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
-7. **BAO Analysis**: Baryon acoustic oscillation predictions from UDT
-8. **Gravitational Lensing**: Formulation with position-dependent light speed
+1. **Extended Quantum Anomaly Analysis**: Follow up on helium fine structure and two-photon transition explanations
+2. **Quantum Experimental Validation**: STM tunneling measurements (highest priority - 4.3x enhancement predicted)
+3. **Hydrogen Spectroscopy**: High-precision atomic energy level measurements for commutation relation detection
+4. **Atom Interferometry**: Spatial-resolution phase measurements for uncertainty principle modifications
+5. **Gravitational Quantum Tests**: Altitude-dependent atomic clock frequency shifts
+6. **CMB Model Refinement**: Improved acoustic oscillation physics in temporal geometry
+7. **High-redshift Analysis**: Extended supernova analysis to z > 0.1
+8. **BAO Analysis**: Baryon acoustic oscillation predictions from UDT
+9. **Gravitational Lensing**: Formulation with position-dependent light speed
 
 ## Documentation
 - `docs/UDT Framework.md`: Detailed theoretical development
