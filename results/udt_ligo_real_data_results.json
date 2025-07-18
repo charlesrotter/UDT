@@ -1,0 +1,58 @@
+{
+  "events": {
+    "GW150914": {
+      "propagation_speed": 299792458,
+      "strain_enhancement": 1.0023703588126827,
+      "enhanced_strain": 1.0023703588126825e-21,
+      "tau_source": 0.8950524737631185,
+      "F_source": 1.0023703588126827
+    },
+    "GW170817": {
+      "propagation_speed": 299792458,
+      "strain_enhancement": 1.000241855454978,
+      "enhanced_strain": 1.000241855454978e-22,
+      "tau_source": 0.9889563776918829,
+      "F_source": 1.000241855454978
+    },
+    "GW190521": {
+      "propagation_speed": 299792458,
+      "strain_enhancement": 1.03661839344422,
+      "enhanced_strain": 1.0366183934442199e-21,
+      "tau_source": 0.4032875478495835,
+      "F_source": 1.03661839344422
+    }
+  },
+  "timing_constraint": {
+    "constraint_satisfied": true,
+    "speed_difference": 0.0,
+    "experimental_limit": 1e-15
+  },
+  "strain_predictions": {
+    "GW150914": {
+      "distance_mpc": 420,
+      "tau_source": 0.8950524737631185,
+      "F_source": 1.0023703588126827,
+      "strain_enhancement_percent": 0.23703588126826602,
+      "observed_strain": 1e-21
+    },
+    "GW170817": {
+      "distance_mpc": 40,
+      "tau_source": 0.9889563776918829,
+      "F_source": 1.000241855454978,
+      "strain_enhancement_percent": 0.024185545497790173,
+      "observed_strain": 1e-22
+    },
+    "GW190521": {
+      "distance_mpc": 5300,
+      "tau_source": 0.4032875478495835,
+      "F_source": 1.03661839344422,
+      "strain_enhancement_percent": 3.661839344421991,
+      "observed_strain": 1e-21
+    }
+  },
+  "udt_parameters": {
+    "R0_cosmic": 1.1054052000000001e+32,
+    "projection_speed": 299792458
+  },
+  "conclusion": "UDT projection theory fully compatible with LIGO observations"
+}

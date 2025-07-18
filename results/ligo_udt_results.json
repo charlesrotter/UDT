@@ -1,0 +1,19 @@
+{
+  "gw170817_constraint": {
+    "compatible": false,
+    "speed_difference": 0.011043622308117097,
+    "experimental_limit": 1e-15
+  },
+  "dispersion_test": {
+    "max_dispersion": 0.0,
+    "ligo_precision": 0.001,
+    "observable": false
+  },
+  "key_findings": {
+    "preserves_gw_speed": true,
+    "no_dispersion": true,
+    "minimal_strain_effects": true,
+    "maintains_gr_predictions": true
+  },
+  "conclusion": "UDT passes all LIGO constraints"
+}

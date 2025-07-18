@@ -1,0 +1,11 @@
+{
+  "conclusion": "UDT preserves quantum non-locality",
+  "bell_parameter": {
+    "qm_prediction": 2.8284271247461903,
+    "udt_prediction": 2.8284271247461903,
+    "deviation": 0.0
+  },
+  "experimental_compatibility": "All experiments consistent",
+  "key_finding": "tau ~= 1 at quantum scales preserves QM",
+  "physical_interpretation": "Instantaneous virtual photons do not affect entanglement correlations"
+}

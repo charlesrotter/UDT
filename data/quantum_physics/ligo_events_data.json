@@ -1,0 +1,77 @@
+{
+  "GW150914": {
+    "event_date": "2015-09-14T09:50:45Z",
+    "gps_time": 1126259462,
+    "false_alarm_rate": "< 1 per 203,000 years",
+    "significance_sigma": 5.1,
+    "detectors": ["LIGO Hanford", "LIGO Livingston"],
+    "source_parameters": {
+      "primary_mass_solar": 36.2,
+      "primary_mass_error_plus": 5.2,
+      "primary_mass_error_minus": 3.8,
+      "secondary_mass_solar": 29.1,
+      "secondary_mass_error_plus": 3.7,
+      "secondary_mass_error_minus": 4.4,
+      "final_mass_solar": 62.3,
+      "final_mass_error_plus": 3.7,
+      "final_mass_error_minus": 3.1,
+      "luminosity_distance_mpc": 420,
+      "distance_error_plus": 150,
+      "distance_error_minus": 180
+    },
+    "strain_data": {
+      "peak_strain": 1.0e-21,
+      "frequency_range_hz": [35, 250],
+      "duration_seconds": 0.2,
+      "sampling_rates": [4096, 16384]
+    }
+  },
+  "GW170817": {
+    "event_date": "2017-08-17T12:41:04.43Z",
+    "gps_time": 1187008882.43,
+    "detectors": ["LIGO Hanford", "LIGO Livingston", "Virgo"],
+    "source_parameters": {
+      "primary_mass_solar": 1.17,
+      "primary_mass_error": 0.10,
+      "secondary_mass_solar": 1.60,
+      "secondary_mass_error": 0.10,
+      "total_mass_solar": 2.77,
+      "chirp_mass_solar": 1.188,
+      "luminosity_distance_mpc": 40,
+      "distance_error": 8
+    },
+    "strain_data": {
+      "peak_strain": 1.0e-22,
+      "frequency_range_hz": [23, 2048],
+      "duration_seconds": 100,
+      "sampling_rates": [4096, 16384]
+    },
+    "electromagnetic_counterpart": {
+      "gamma_ray_burst": "GRB 170817A",
+      "delay_seconds": 1.7,
+      "fermi_gbm_detection": true,
+      "integral_spi_detection": true
+    }
+  },
+  "GW190521": {
+    "event_date": "2019-05-21T03:02:29Z",
+    "gps_time": 1242442967,
+    "detectors": ["LIGO Hanford", "LIGO Livingston", "Virgo"],
+    "source_parameters": {
+      "primary_mass_solar": 85,
+      "primary_mass_error": 21,
+      "secondary_mass_solar": 66,
+      "secondary_mass_error": 18,
+      "final_mass_solar": 142,
+      "final_mass_error": 28,
+      "luminosity_distance_mpc": 5300,
+      "distance_error": 2600
+    },
+    "strain_data": {
+      "peak_strain": 1.0e-21,
+      "frequency_range_hz": [20, 80],
+      "duration_seconds": 0.1,
+      "sampling_rates": [4096, 16384]
+    }
+  }
+}

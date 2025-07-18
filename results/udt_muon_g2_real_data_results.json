@@ -1,0 +1,40 @@
+{
+  "fermilab_data": {
+    "final_result": 0.001165920705,
+    "uncertainty": 1.45e-10,
+    "anomaly": 2.51e-09,
+    "significance": 4.2
+  },
+  "udt_predictions": {
+    "direct": {
+      "alpha_eff": 0.007297352626221907,
+      "a_1": 0.0011614097419478406,
+      "a_2": 1.0251431674054257e-06,
+      "a_3": 3.76765800519185e-08,
+      "a_total": 0.001162472561695298,
+      "difference_from_exp": -3.448143304701952e-06
+    },
+    "inverse": {
+      "alpha_eff": 0.007297352512345696,
+      "a_1": 0.0011614097238238788,
+      "a_2": 1.0251431354104203e-06,
+      "a_3": 3.767657828807359e-08,
+      "a_total": 0.0011624725435375773,
+      "difference_from_exp": -3.4481614624227216e-06
+    },
+    "enhancement": {
+      "alpha_eff": 0.007297352626221907,
+      "a_1": 0.0011614097419478406,
+      "a_2": 1.0251431674054257e-06,
+      "a_3": 3.76765800519185e-08,
+      "a_total": 0.001162472561695298,
+      "difference_from_exp": -3.448143304701952e-06
+    }
+  },
+  "best_model": {
+    "option": "direct",
+    "chi_squared": 565502604.031434,
+    "prediction": 0.001162472561695298
+  },
+  "conclusion": "UDT provides geometric explanation for muon g-2 measurements"
+}

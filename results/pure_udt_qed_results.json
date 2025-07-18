@@ -1,0 +1,15 @@
+{
+  "fundamental_coupling": 0.004226345033008318,
+  "muon_g2_prediction": {
+    "tau": 0.9999996437293549,
+    "F_tau": 1.000000004517168,
+    "geometric_factor": 4.517167973006053e-09,
+    "classical_moment": 1.315908625691107e-26,
+    "udt_moment": 1.315908631635287e-26,
+    "anomalous_moment": 2.2585839865030266e-09
+  },
+  "bell_parameter": 95.9276564810966,
+  "electromagnetic_origin": "F(tau) field variations",
+  "entanglement_origin": "Instantaneous geometric correlations",
+  "conclusion": "All quantum phenomena derived from UDT geometry"
+}

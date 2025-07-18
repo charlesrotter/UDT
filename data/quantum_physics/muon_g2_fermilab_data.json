@@ -1,0 +1,37 @@
+{
+  "experiment": "Fermilab Muon g-2",
+  "final_result_2025": {
+    "anomalous_magnetic_moment": 0.001165920705,
+    "statistical_uncertainty": 0.000000000114,
+    "systematic_uncertainty": 0.000000000091,
+    "total_uncertainty": 0.000000000145,
+    "precision_ppm": 0.127,
+    "description": "Final measurement from all data 2019-2023"
+  },
+  "run_1_2_3_result_2023": {
+    "anomalous_magnetic_moment": 0.00116592059,
+    "uncertainty": 0.00000000022,
+    "precision_ppm": 0.20,
+    "description": "Combined Run 1, 2, and 3 data"
+  },
+  "run_1_result_2021": {
+    "anomalous_magnetic_moment": 0.00116592040,
+    "uncertainty": 0.00000000054,
+    "description": "First Fermilab result"
+  },
+  "world_average_pre_fermilab": {
+    "anomalous_magnetic_moment": 0.00116592061,
+    "uncertainty": 0.00000000041,
+    "description": "Combined world average before Fermilab"
+  },
+  "standard_model_prediction": {
+    "anomalous_magnetic_moment": 0.00116591810,
+    "uncertainty": 0.00000000043,
+    "description": "Theoretical SM prediction"
+  },
+  "discrepancy": {
+    "experimental_minus_theory": 2.51e-9,
+    "significance_sigma": 4.2,
+    "description": "Difference between experiment and theory"
+  }
+}
