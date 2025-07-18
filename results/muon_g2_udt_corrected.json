@@ -1,0 +1,23 @@
+{
+  "experiment": {
+    "value": 0.00116592061,
+    "error": 4.1e-10
+  },
+  "standard_model": {
+    "value": 0.0011659181,
+    "error": 4.3e-10
+  },
+  "udt_correction": {
+    "value": 9.061980983313123e-12,
+    "uncertainty": 1.7741702554227714e-11
+  },
+  "udt_prediction": {
+    "value": 0.001165918109061981
+  },
+  "fraction_explained": 0.003610350989446609,
+  "parameters": {
+    "R0_quantum": 5.24e-09,
+    "tau_muon": 0.9999996435889974,
+    "lambda_mu": 1.867594319274711e-15
+  }
+}

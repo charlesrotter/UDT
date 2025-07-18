@@ -1,0 +1,27 @@
+{
+  "experiment": {
+    "value": 0.00116592061,
+    "error": 4.1e-10,
+    "units": "10^-11"
+  },
+  "standard_model": {
+    "value": 0.0011659181,
+    "error": 4.3e-10,
+    "units": "10^-11"
+  },
+  "udt_prediction": {
+    "value": 0.0022526861321874874,
+    "components": {
+      "qed": 0.002252615222187198,
+      "hadronic": 6.937000028981902e-08,
+      "electroweak": 1.5400000000128679e-09
+    },
+    "units": "10^-11"
+  },
+  "analysis": {
+    "delta_udt_sm": 0.0010867680321874874,
+    "fraction_explained": 432975.3116379349,
+    "R0_quantum": 5.24e-09,
+    "tau_muon": 0.9999996435889974
+  }
+}
