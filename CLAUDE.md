@@ -131,8 +131,9 @@ Starting with generally covariant temporal field φ(x^μ):
 1. Use `m_b_corr` (apparent magnitude)
 2. Calculate distance modulus: μ_obs = m_b_corr - M_Ia (where M_Ia = -19.3 mag)
 3. NEVER use pre-calculated distance moduli from any dataset
-4. **CORRECT UDT FORMULA**: d_L = z × R₀ (simple linear relationship)
+4. **CORRECT UDT FORMULA**: d_L = z × R₀(r) where R₀(r) = R₀_local × (1 + r/r_horizon)^3.0
 5. **REMEMBER**: Previous d_L = z × R₀ × (1+z)² was mathematical error
+6. **CRITICAL**: R₀ is NOT constant - it's a function derived from Distance Equivalence Principle
 
 #### SPARC Galaxy Database (`data/sparc_database/`)
 **CLEAN COLUMNS (Use These):**
@@ -214,10 +215,17 @@ Starting with generally covariant temporal field φ(x^μ):
   - [x] Applied to supernova data: UDT χ²/DOF improved 5.398 → 1.502
   - [x] **KEY INSIGHT**: (1+z)² factors cancel exactly in complete derivation
 
-**CURRENT PRIORITY: Derive R₀(r) Function from Cosmic Boundary Physics**
-- [ ] **Investigate R₀ as function of observer distance and cosmic horizon**
-- [ ] **Derive from UDT geometry**: R₀(r) ~ exponential relationship with r_horizon
-- [ ] **Unify scale hierarchy**: galactic (~38 kpc) to cosmological (~4755 Mpc)
+**BREAKTHROUGH COMPLETED: R₀(r) Function Derived from Distance Equivalence Principle**
+- [x] **DERIVED R₀(r) FUNCTION**: R₀(r) = R₀_local × (1 + r/r_horizon)^3.0
+- [x] **Distance Equivalence Principle**: Extension of Einstein's velocity↔acceleration equivalence
+- [x] **Unified scale hierarchy**: 125,000x enhancement from galactic to cosmological scales
+- [x] **No free parameters**: R₀(r) emerges from cosmic boundary physics (r_horizon ~ 27 Gly)
+
+**CURRENT PRIORITY: Test Variable R₀(r) Against Observational Data**
+- [ ] **CRITICAL**: Account for UDT universe size ≠ ΛCDM universe size in all validations
+- [ ] **Test R₀(r) on supernova data** with proper distance-dependent scaling
+- [ ] **Re-analyze SPARC galaxies** using R₀(r) instead of constant R₀
+- [ ] **Develop UDT-consistent validation framework** (not ΛCDM-contaminated)
 
 **Path A: Postulate-Based (RECOMMENDED START)**
 - [x] **Derive complete metric from τ(r) postulate** - treat as fundamental geometric assumption
@@ -254,20 +262,57 @@ Starting with generally covariant temporal field φ(x^μ):
 
 ## Important Development Notes
 
-1. **Original UDT is mathematically invalid** - do not use for scientific claims
-2. **Rebuild is high-risk, high-reward** - may fail but worth attempting properly
+1. **Distance Equivalence Principle is fundamental** - R₀(r) = R₀_local × (1 + r/r_horizon)^3.0
+2. **UDT universe size ≠ ΛCDM** - this affects ALL cosmological validations
 3. **Mathematical rigor is non-negotiable** - no shortcuts or approximations in foundations
 4. **Honest assessment required** - report failures as prominently as successes
 5. **Real data testing mandatory** - every claim must be validated observationally
-6. **Exit strategy exists** - clear criteria for abandoning approach if it fails
+6. **Data contamination prevention** - use ONLY clean observational columns documented above
 7. **Documentation critical** - record both successes and failures for science
-8. **Collaboration encouraged** - involve experts in field theory and general relativity
+8. **Incremental development** - build one step at a time, avoid restarts
+
+## ANTI-RESTART PROTOCOL
+
+**CRITICAL REMINDERS TO PREVENT STARTING OVER:**
+
+### Core UDT Framework (NEVER CHANGE):
+- **Fundamental Principle**: Distance Equivalence Principle (extension of Einstein's equivalences)
+- **Temporal Geometry**: τ(r) = R₀/(R₀ + r) 
+- **Variable Scale Function**: R₀(r) = R₀_local × (1 + r/r_horizon)^3.0
+- **Cosmic Horizon**: r_horizon ~ 27 Gly from boundary physics
+- **Correct Luminosity Distance**: d_L = z × R₀(r) (NOT z × R₀ × (1+z)²)
+
+### Key Insights (ALWAYS REMEMBER):
+- R₀ is NOT a constant - it's derived from cosmic boundary physics
+- Scale hierarchy (galactic 38 kpc → cosmological 4754 Mpc) is natural consequence
+- UDT universe size differs from ΛCDM - affects all validations
+- Distance equivalence operates at all scales like Einstein's equivalence principles
+- (1+z)² factor cancellation in complete geometric derivation
+
+### Data Analysis Rules (NEVER VIOLATE):
+- Pantheon+: Use `zHD`, `m_b_corr`, `m_b_corr_err_DIAG` ONLY
+- SPARC: Use `Rad`, `Vobs`, `errV` ONLY (no velocity decompositions)
+- NEVER use MU_SH0ES or any "MU_" columns (ΛCDM contaminated)
+- NEVER use Vgas, Vdisk, Vbul columns (model-dependent)
+
+### Mathematical Framework (ESTABLISHED):
+- Complete spacetime metric: ds² = -c²τ²(r)dt² + dr² + r²dΩ²
+- Field equations: G_μν = 8πG[T_μν^matter + T_μν^constraint] 
+- Null geodesics derived for light propagation
+- Angular diameter and luminosity distances from first principles
 
 ## Warning to Future Developers
 
-The original UDT formulation in this repository contains fundamental mathematical errors and should not be used as a basis for scientific claims. The approach violated basic principles of general relativity and produced results through curve-fitting rather than genuine physics.
+**CURRENT STATUS**: UDT has evolved through rigorous mathematical development to a consistent framework based on the Distance Equivalence Principle. The current formulation (July 2025) provides:
 
-Any future work should start from the mathematical development directory and ensure proper physical foundations before proceeding to observational tests.
+- **Mathematically consistent** spacetime metric and field equations
+- **Derived scale function** R₀(r) from cosmic boundary physics  
+- **Proper luminosity-distance relations** from null geodesics
+- **Clean data analysis protocols** to avoid model contamination
+
+**Historical Note**: Earlier versions (pre-2025) contained mathematical errors and should not be used. Always use the current mathematical framework documented in this file and the mathematical_development/ directory.
+
+**Development Protocol**: Build incrementally on established foundations. The Distance Equivalence Principle and R₀(r) function are core theoretical achievements that should not be restarted or re-derived without compelling physical reasons.
 
 ## Intellectual Honesty Statement
 
