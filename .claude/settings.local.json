@@ -28,7 +28,8 @@
       "Bash(unzip:*)",
       "WebFetch(domain:chatgpt.com)",
       "WebFetch(domain:muon-g-2.fnal.gov)",
-      "WebFetch(domain:gwosc.org)"
+      "WebFetch(domain:gwosc.org)",
+      "Bash(pdflatex:*)"
     ],
     "deny": []
   }
