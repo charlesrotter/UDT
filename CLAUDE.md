@@ -219,11 +219,12 @@ Starting with generally covariant temporal field φ(x^μ):
 - [x] **Unified scale hierarchy**: 125,000x enhancement from galactic to cosmological scales
 - [x] **No free parameters**: R₀(r) emerges from cosmic boundary physics (r_horizon ~ 27 Gly)
 
-**CURRENT PRIORITY: Test Variable R₀(r) Against Observational Data**
-- [ ] **CRITICAL**: Account for UDT universe size ≠ ΛCDM universe size in all validations
-- [ ] **Test R₀(r) on supernova data** with proper distance-dependent scaling
-- [ ] **Re-analyze SPARC galaxies** using R₀(r) instead of constant R₀
-- [ ] **Develop UDT-consistent validation framework** (not ΛCDM-contaminated)
+**CURRENT PRIORITY: Implement Correct Mass Enhancement Physics**
+- [x] **BREAKTHROUGH**: Fixed UDT distance calculation - now gives realistic distances (1.113× ΛCDM)
+- [x] **COMPLETED**: Redshift → UDT distance → rotation prediction approach working
+- [ ] **CRITICAL NEXT**: Apply mass enhancement using UDT distance to galaxy (not galactocentric radius)
+- [ ] **KEY INSIGHT**: Galaxy mass enhanced by cosmological distance: M_eff = M_galaxy × (1/τ_cosmo)²
+- [ ] **VALIDATE**: This should restore χ²/DOF ~ 3.13 performance with proper physics
 
 **Path A: Postulate-Based (RECOMMENDED START)**
 - [x] **Derive complete metric from τ(r) postulate** - treat as fundamental geometric assumption
