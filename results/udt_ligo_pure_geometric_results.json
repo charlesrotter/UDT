@@ -1,0 +1,21 @@
+{
+  "method": "UDT Pure Geometric Analysis - Zero Standard Model Contamination",
+  "projection_theory_parameters": {
+    "tau_gw_source": 0.9728408473655621,
+    "tau_earth": 1.0,
+    "tau_ligo": 1.0,
+    "F_gw_source": 1.0001681426603195,
+    "F_earth": 1.0,
+    "F_ligo": 1.0,
+    "geometric_enhancement": 0.0,
+    "projection_speed": 299792458
+  },
+  "gw150914_analysis": {
+    "h1_peak_strain": -2.0574574104235033e-20,
+    "l1_peak_strain": 5.60076623658712e-20,
+    "timing_difference_ms": 31997.55859375,
+    "expected_projection_time_ms": 10.00692285594456,
+    "timing_agreement_ratio": 3197.5422469397786,
+    "geometric_enhancement": 0.0,
+    "base_strain": 5.60076623658712e-20,
+    "projection_theory_validation": 

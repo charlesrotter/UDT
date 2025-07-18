@@ -1,0 +1,24 @@
+{
+  "method": "UDT LIGO Improved Analysis - Coherent Signal Focus",
+  "coherent_signal_analysis": {
+    "h1_peak_strain": 0.39564485875267846,
+    "l1_peak_strain": 0.4802969053984528,
+    "timing_difference_ms": 961.669921875,
+    "cross_correlation_peak": 300.552823810595
+  },
+  "udt_projection_theory_test": {
+    "detector_separation_km": 3000.0,
+    "expected_projection_time_ms": 10.00692285594456,
+    "observed_timing_difference_ms": 961.669921875,
+    "timing_agreement_ratio": 96.1004632211914,
+    "assessment": "CHALLENGING",
+    "validation": false,
+    "tau_ligo": 1.0,
+    "F_ligo": 1.0,
+    "geometric_enhancement": 0.0,
+    "peak_strain": 0.4802969053984528
+  },
+  "data_source": "Real LIGO GW150914 strain data",
+  "overall_assessment": "CHALLENGING",
+  "projection_theory_validated": false
+}

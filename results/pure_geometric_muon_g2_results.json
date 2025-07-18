@@ -1,0 +1,12 @@
+{
+  "geometric_coupling": 0.0020591869890231604,
+  "muon_tau": 0.48557764544161824,
+  "geometric_effect": 0.010509571247200632,
+  "udt_anomaly": 1.0509571247200632e-08,
+  "experimental_discrepancy": 2.51e-09,
+  "agreement_ratio": 4.187080178167583,
+  "agreement_percent": 418.7080178167583,
+  "significance": 55.169456877245736,
+  "method": "Pure UDT geometry - zero Standard Model contamination",
+  "data_source": "Real Fermilab experimental data"
+}
