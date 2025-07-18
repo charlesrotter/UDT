@@ -110,10 +110,47 @@ Starting with generally covariant temporal field φ(x^μ):
 - **Mathematical consistency**: Bianchi identities, conservation laws verified
 
 ## Data Sources (Available for Rebuild Testing)
-- **SPARC Database**: Galaxy rotation curves in `data/sparc_database/`
-- **CSP DR3**: Supernova photometry in `data/CSP_Photometry_DR3/`
-- **Pantheon+**: Supernova data in `data/Pantheon_SH0ES.dat`
-- **Planck CMB**: SMICA temperature map data
+
+### **CRITICAL DATA CONTAMINATION WARNINGS**
+
+#### Pantheon+ Supernova Data (`data/Pantheon_SH0ES.dat`)
+**CLEAN COLUMNS (Use These):**
+- `zHD`: Heliocentric redshift
+- `m_b_corr`: Corrected apparent B-band magnitude 
+- `m_b_corr_err_DIAG`: Magnitude uncertainty
+
+**CONTAMINATED COLUMNS (NEVER USE):**
+- `MU_SH0ES`: **ΛCDM-processed distance modulus** - contains model assumptions
+- Any column with "MU_" prefix - these are model-dependent
+
+**PROPER ANALYSIS PROCEDURE:**
+1. Use `m_b_corr` (apparent magnitude)
+2. Calculate distance modulus: μ_obs = m_b_corr - M_Ia (where M_Ia = -19.3 mag)
+3. NEVER use pre-calculated distance moduli from any dataset
+
+#### SPARC Galaxy Database (`data/sparc_database/`)
+**CLEAN COLUMNS (Use These):**
+- Individual `*_rotmod.dat` files:
+  - Column 1: `Rad` - Radius in kpc  
+  - Column 2: `Vobs` - Observed rotation velocity (km/s)
+  - Column 3: `errV` - Velocity uncertainty (km/s)
+- Main table `SPARC_Lelli2016c.mrt`:
+  - Distance, inclination, effective radius (geometric properties)
+
+**CONTAMINATED COLUMNS (NEVER USE):**
+- `Vgas` - Gas contribution (model-dependent)
+- `Vdisk` - Disk contribution (assumes mass-to-light ratio)
+- `Vbul` - Bulge contribution (model-dependent)
+- `SBdisk`, `SBbul` - Surface brightness (derived quantities)
+
+**PROPER ANALYSIS PROCEDURE:**
+1. Use only `Rad`, `Vobs`, `errV` from rotation curve files
+2. Load geometric properties from main table
+3. NEVER use velocity decomposition columns (Vgas, Vdisk, Vbul)
+
+#### Other Data Sources
+- **CSP DR3**: Supernova photometry in `data/CSP_Photometry_DR3/` - **CHECK FOR CONTAMINATION**
+- **Planck CMB**: SMICA temperature map data - **CLEAN RAW DATA**
 
 ## Code Organization
 
@@ -160,13 +197,22 @@ Starting with generally covariant temporal field φ(x^μ):
 
 ## Current Development Status
 
-### Phase 1: Dual Approach Development (CURRENT PRIORITY)
+### Phase 1: Complete UDT Geometric Framework (CURRENT PRIORITY)
+**URGENT: Fix Supernova Analysis Methodology**
+- [x] **Identified data contamination error** - used ΛCDM-processed distance moduli
+- [x] **Fixed fundamental analysis error** - proper distance modulus calculation
+- [ ] **CRITICAL NEXT STEP: Derive complete UDT luminosity-distance relation**
+  - Solve null geodesics in UDT metric: ds² = -c²τ²(r)dt² + dr² + r²dΩ²
+  - Calculate geometric luminosity corrections (solid angle, time dilation)
+  - Apply to supernova apparent magnitudes consistently
+  - Test against observations with full geometric treatment
+
 **Path A: Postulate-Based (RECOMMENDED START)**
-- [ ] **Derive complete metric from τ(r) postulate** - treat as fundamental geometric assumption
-- [ ] Work out field equations with constraint enforcement
-- [ ] Establish matter coupling rules from temporal geometry
-- [ ] Verify mathematical consistency and general covariance
-- [ ] Develop observable predictions for immediate testing
+- [x] **Derive complete metric from τ(r) postulate** - treat as fundamental geometric assumption
+- [x] Work out field equations with constraint enforcement
+- [x] Establish matter coupling rules from temporal geometry
+- [x] Verify mathematical consistency and general covariance
+- [x] Develop observable predictions for immediate testing
 
 **Path B: First-Principles Derivation (PARALLEL)**
 - [ ] **Derive τ(r) from thermodynamics** - most accessible approach
