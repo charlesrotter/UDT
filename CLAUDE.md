@@ -359,6 +359,91 @@ dr/dt = ±c τ(r) = ±c R₀/(R₀ + r)
 - `derive_udt_geodesics.py` - Geodesic equations and solutions
 - `udt_complete_luminosity_distance.py` - Distance relations from null geodesics
 
+## Research Philosophy & Methodology
+
+### **BRUTAL SCIENTIFIC HONESTY** (Mandatory Approach)
+- **Report ALL results** - failures, inconsistencies, and successes equally
+- **No cherry-picking** - include data that contradicts expectations
+- **No hiding problems** - document every issue encountered
+- **Extraordinary claims require extraordinary evidence**
+- **Exit criteria** - know when to abandon failed approaches
+
+### **DATA QUALITY FIRST** (Non-Negotiable)
+- **Use raw observational data** - avoid model-contaminated processed datasets
+- **Fair comparisons** - apply identical analysis methods to all theories
+- **Document data sources** - specify exactly which columns/files used
+- **Model contamination awareness** - many "standard" datasets contain ΛCDM assumptions
+- **Independent validation** - cross-check results with multiple datasets
+
+### **INCREMENTAL DEVELOPMENT** (Anti-Restart Protocol)
+- **One inch at a time** - build on established foundations incrementally
+- **Document everything** - preserve all key insights and equations
+- **Version control** - commit progress frequently with detailed messages
+- **Foundation protection** - don't re-derive established mathematical framework
+- **Systematic validation** - test each component before moving to next
+
+### **MULTI-SCALE PHYSICS** (UDT-Specific Approach)
+- **Accept scale hierarchy** - R₀(r) naturally varies with distance
+- **Different scales, same principles** - Distance Equivalence Principle operates universally
+- **UDT universe ≠ ΛCDM universe** - affects all cosmological validations
+- **Scale-dependent parameters** - natural consequence of temporal geometry
+- **Cosmic boundary physics** - infinite mass horizon is fundamental feature
+
+### **VALIDATION STANDARDS** 
+- **Real data only** - no synthetic or representative samples
+- **Statistical rigor** - proper χ² analysis, AIC comparison, error propagation
+- **Physical consistency** - results must make physical sense
+- **Mathematical self-consistency** - no internal contradictions
+- **Observational signatures** - predictions must be testable
+
+## Physical Interpretation Guidelines
+
+### **Distance Equivalence Principle** (Core Concept)
+- **Fundamental insight**: Extension of Einstein's velocity↔acceleration equivalence
+- **Physical meaning**: Distance from observer affects spacetime geometry locally
+- **NOT gravitational**: This is temporal geometry, not mass-induced curvature
+- **Universal operation**: Applies at all scales from quantum to cosmic
+- **Local equivalence**: Physics remains consistent locally everywhere
+
+### **R₀(r) Function Understanding**
+- **NOT a parameter**: R₀(r) is derived from cosmic boundary physics
+- **Scale emergence**: Different scales arise naturally from single geometric principle
+- **Physical meaning**: R₀(r) encodes how temporal geometry varies with cosmic position
+- **Boundary physics**: As r→∞, R₀(r)→∞, driving τ→0 and ρ→∞
+- **No fine-tuning**: The 125,000x scale enhancement is geometric necessity
+
+### **UDT vs ΛCDM Universe Size**
+- **Critical difference**: UDT universe has different size/structure than ΛCDM
+- **Affects ALL validations**: Can't directly compare UDT predictions to ΛCDM-derived expectations
+- **Observational implications**: May appear as systematic biases in cosmological data
+- **Validation strategy**: Must account for universe size differences in all tests
+
+### **Common Pitfalls & Error Patterns**
+
+#### **Data Contamination Errors** (Repeatedly encountered)
+- Using MU_SH0ES column (ΛCDM-processed distance moduli)
+- Using Vgas, Vdisk, Vbul columns (model-dependent velocity decompositions)
+- Assuming "standard" datasets are model-neutral
+- **Fix**: Always use raw observational columns documented in this file
+
+#### **Mathematical Consistency Errors**
+- Mixing UDT distances with flat-space luminosity calculations
+- Using constant R₀ instead of R₀(r) function
+- Applying (1+z)² factor incorrectly (this cancels in complete derivation)
+- **Fix**: Use complete geometric treatment throughout analysis
+
+#### **Physical Interpretation Errors**
+- Treating R₀ as free parameter (it's derived from cosmic boundary physics)
+- Expecting same R₀ at all scales (violates Distance Equivalence Principle)
+- Interpreting mass enhancement as "dark matter" (it's geometric effect)
+- **Fix**: Remember Distance Equivalence Principle operates universally
+
+#### **Validation Methodology Errors**
+- Comparing UDT to ΛCDM without accounting for universe size differences
+- Using synthetic/representative data instead of real observations
+- Cherry-picking results that support theory
+- **Fix**: Apply research philosophy guidelines above
+
 ## Warning to Future Developers
 
 **CURRENT STATUS**: UDT has evolved through rigorous mathematical development to a consistent framework based on the Distance Equivalence Principle. The current formulation (July 2025) provides:
