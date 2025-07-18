@@ -296,10 +296,68 @@ Starting with generally covariant temporal field φ(x^μ):
 - NEVER use Vgas, Vdisk, Vbul columns (model-dependent)
 
 ### Mathematical Framework (ESTABLISHED):
-- Complete spacetime metric: ds² = -c²τ²(r)dt² + dr² + r²dΩ²
-- Field equations: G_μν = 8πG[T_μν^matter + T_μν^constraint] 
-- Null geodesics derived for light propagation
-- Angular diameter and luminosity distances from first principles
+
+#### Core UDT Spacetime Metric:
+```
+ds² = -c²τ²(r)dt² + dr² + r²dΩ²
+where τ(r) = R₀/(R₀ + r)
+```
+
+#### Variable Scale Function:
+```
+R₀(r) = R₀_local × (1 + r/r_horizon)^3.0
+where r_horizon ≈ 27 Gly (cosmic boundary)
+```
+
+#### UDT Field Equations (Constraint-Enforced):
+```
+G_μν = 8πG[T_μν^matter + T_μν^constraint]
+Constraint: τ(r) - R₀/(R₀ + r) = 0
+```
+
+#### Complete Action:
+```
+S = S_geometry + S_constraint + S_matter
+S_geometry = (1/16πG) ∫ R √(-g) d⁴x
+S_constraint = ∫ λ(x)[τ(r) - R₀/(R₀ + r)] √(-g) d⁴x
+```
+
+#### Metric Components:
+```
+g_tt = -c²[R₀/(R₀ + r)]²
+g_rr = [(R₀ + r)/R₀]²  
+g_θθ = r²
+g_φφ = r² sin²θ
+```
+
+#### Christoffel Symbols (Key Components):
+```
+Γᵗᵣₜ = -R₀/(R₀ + r)²
+Γʳₜₜ = cR₀(R₀ + r)/R₀²
+Γʳᵣᵣ = -1/(R₀ + r)
+```
+
+#### Luminosity Distance:
+```
+d_L = z × R₀(r)
+μ = 5 log₁₀[z × R₀(r)] + 25
+```
+
+#### Null Geodesics:
+```
+dr/dt = ±c τ(r) = ±c R₀/(R₀ + r)
+```
+
+#### Mass Enhancement:
+```
+ρ_eff = ρ_matter × [1/τ(r)]³ = ρ_matter × (1 + r/R₀)³
+```
+
+**Implementation Files:**
+- `udt_spacetime_structure.py` - Complete spacetime analysis
+- `udt_field_equations_clean.py` - Field equations with constraints  
+- `derive_udt_geodesics.py` - Geodesic equations and solutions
+- `udt_complete_luminosity_distance.py` - Distance relations from null geodesics
 
 ## Warning to Future Developers
 
