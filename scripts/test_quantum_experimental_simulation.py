@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-Quantum Experimental Simulation - UDT Framework
-===============================================
+SYNTHETIC DATA TEST SCRIPT - NOT FOR SCIENTIFIC CLAIMS
+======================================================
 
-Simulates realistic experimental data for quantum phenomena to demonstrate
-how UDT predictions would compare against actual measurements.
+WARNING: This script generates SYNTHETIC experimental data.
+Results are NOT from real observations and should NOT be used
+for scientific validation or publication claims.
+
+This is for testing theoretical predictions only.
 
 This script generates synthetic experimental data with realistic noise
 and uncertainties for:

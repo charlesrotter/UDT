@@ -81,14 +81,12 @@ class FullHealPyCMBAnalysis:
         
         if not os.path.exists(self.planck_file):
             print(f"ERROR: Planck file not found: {self.planck_file}")
-            print("Creating synthetic CMB map for testing...")
-            return self.create_synthetic_cmb_map()
+            raise FileNotFoundError("Real Planck CMB data required for analysis")
         
         if not HEALPY_AVAILABLE:
             print("ERROR: HEALPy not available")
             print("Install with: pip install healpy")
-            print("Creating synthetic CMB map for testing...")
-            return self.create_synthetic_cmb_map()
+            raise ImportError("HEALPy required for CMB analysis")
         
         try:
             # Load temperature map using HEALPy

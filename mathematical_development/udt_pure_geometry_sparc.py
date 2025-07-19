@@ -146,10 +146,8 @@ class UDTPureGeometrySPARC:
                 except Exception as e:
                     print(f"Error parsing mass models: {e}")
         
-        # If no real data found, create representative sample
-        print("Real SPARC data not found. Creating representative sample...")
-        self.sparc_data = self._create_representative_sample()
-        return False
+        # FAIL HARD if no real data found - no synthetic fallbacks
+        raise FileNotFoundError("Real SPARC data not found. Analysis requires authentic observational data.")
     
     def _parse_sparc_table(self, filename):
         """Parse SPARC table file."""
@@ -176,17 +174,9 @@ class UDTPureGeometrySPARC:
                         # Real implementation would parse all columns properly
                         distance = float(parts[1]) if parts[1] != '...' else 10.0
                         
-                        # For now, create synthetic rotation curve
-                        # Real implementation would load actual rotation curves
-                        r_max = 30.0  # kpc
-                        n_points = 20
-                        r = np.linspace(1, r_max, n_points)
-                        
-                        # Typical flat rotation curve
-                        v_flat = 150 + 50 * np.random.randn()
-                        v_obs = v_flat * np.sqrt(1 - np.exp(-r/5))
-                        v_err = 5 + 2 * np.random.randn(n_points)
-                        v_err = np.abs(v_err)
+                        # REMOVED: No synthetic data generation
+                        # This script now requires real rotation curve data
+                        continue  # Skip entries without actual rotation curve data
                         
                         galaxies.append({
                             'name': galaxy_name,
@@ -209,48 +199,8 @@ class UDTPureGeometrySPARC:
         # Similar to SPARC table parsing
         return self._parse_sparc_table(filename)
     
-    def _create_representative_sample(self):
-        """Create representative sample of galaxies."""
-        galaxies = []
-        
-        # Galaxy types based on SPARC characteristics
-        galaxy_templates = [
-            {'name': 'NGC3198', 'type': 'spiral', 'v_flat': 150, 'r_max': 30},
-            {'name': 'DDO154', 'type': 'dwarf', 'v_flat': 50, 'r_max': 10},
-            {'name': 'NGC2403', 'type': 'spiral', 'v_flat': 130, 'r_max': 35},
-            {'name': 'NGC6946', 'type': 'spiral', 'v_flat': 180, 'r_max': 25},
-            {'name': 'UGC2885', 'type': 'giant', 'v_flat': 300, 'r_max': 50},
-            {'name': 'IC2574', 'type': 'irregular', 'v_flat': 70, 'r_max': 15},
-            {'name': 'NGC5055', 'type': 'spiral', 'v_flat': 200, 'r_max': 40},
-            {'name': 'DDO161', 'type': 'dwarf', 'v_flat': 40, 'r_max': 8}
-        ]
-        
-        for template in galaxy_templates:
-            # Create realistic rotation curve
-            n_points = 15 + np.random.randint(10)
-            r = np.linspace(0.5, template['r_max'], n_points)
-            
-            # Realistic rising then flat profile
-            v_flat = template['v_flat']
-            v_obs = v_flat * np.sqrt(1 - np.exp(-r/3))
-            
-            # Add realistic errors
-            v_err = 3 + 0.05 * v_obs + 2 * np.random.randn(n_points)
-            v_err = np.abs(v_err)
-            
-            # Add some scatter
-            v_obs += np.random.normal(0, v_err * 0.5)
-            
-            galaxies.append({
-                'name': template['name'],
-                'type': template['type'],
-                'distance': 10.0,  # Mpc
-                'radius': r,
-                'v_obs': v_obs,
-                'v_err': v_err
-            })
-        
-        return galaxies
+    # REMOVED: _create_representative_sample function
+    # This script now requires only real SPARC observational data
     
     def fit_single_galaxy(self, galaxy):
         """

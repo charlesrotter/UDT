@@ -140,34 +140,12 @@ class UDTSupernovaGeometric:
                 
             except Exception as e:
                 print(f"Error loading Pantheon+ data: {e}")
-                return self._create_synthetic_data()
+                raise FileNotFoundError("Real supernova data required for analysis")
         else:
-            print("Pantheon+ data not found, creating representative synthetic data")
-            return self._create_synthetic_data()
+            raise FileNotFoundError("Pantheon+ data not found. Analysis requires real observational data.")
     
-    def _create_synthetic_data(self):
-        """Create representative supernova data for testing."""
-        print("Creating synthetic supernova data based on typical observations")
-        
-        # Representative redshift range
-        z = np.logspace(-2, 0.7, 50)  # z = 0.01 to ~5
-        
-        # ΛCDM distance modulus for comparison
-        # mu = 5 log_10(d_L/Mpc) + 25, where d_L ~ z*c/H_0 for moderate z
-        H0 = 70  # km/s/Mpc
-        c_km_s = 299792.458
-        d_L_lcdm = z * c_km_s / H0  # Simple approximation
-        mu_lcdm = 5 * np.log10(d_L_lcdm) + 25
-        
-        # Add realistic scatter
-        np.random.seed(42)
-        mu_obs = mu_lcdm + np.random.normal(0, 0.15, len(z))
-        
-        print(f"Created {len(z)} synthetic supernovae")
-        print(f"Redshift range: {z.min():.3f} - {z.max():.3f}")
-        print(f"Distance modulus range: {mu_obs.min():.2f} - {mu_obs.max():.2f}")
-        
-        return z, mu_obs
+    # REMOVED: _create_synthetic_data function
+    # This script now requires only real supernova observational data
     
     def fit_udt_geometric_model(self, z, mu_obs):
         """
