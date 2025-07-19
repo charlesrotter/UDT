@@ -139,12 +139,12 @@ jobs:
     - name: Install pandoc
       run: |
         sudo apt-get update
-        sudo apt-get install -y pandoc pandoc-citeproc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
         
     - name: Build manuscript
       run: |
         pandoc Universal_Distance_Dilation_Theory_Manuscript.md \
-          --citeproc -o udt_preprint.pdf
+          --citeproc --bibliography=references.bib -o udt_preprint.pdf
           
     - name: Upload manuscript artifact
       uses: actions/upload-artifact@v4
