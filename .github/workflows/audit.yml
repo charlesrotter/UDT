@@ -32,10 +32,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip wheel
-        # Pre-install heavy scientific packages to avoid build issues
+        # Pre-install heavy wheels once
         pip install --prefer-binary numpy scipy matplotlib
-        # Install all dependencies with prefer-binary flag
-        pip install --prefer-binary -r requirements.txt
+        # Install project editably without re-building numpy/scipy
+        pip install --no-build-isolation --prefer-binary -e .[dev]
         
     - name: Verify data integrity
       run: |

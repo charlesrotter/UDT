@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Universal Distance Dilation Theory - Cosmological and galactic dynamics framework"
 readme = "README.md"
 authors = [
-    {name = "Charles Rotter", email = ""},
+    {name = "Charles Rotter"},
 ]
 license = {text = "MIT"}
 classifiers = [
