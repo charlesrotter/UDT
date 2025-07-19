@@ -12,6 +12,8 @@ making it ideal for testing UDT's modified distance-redshift relations.
 import os
 import sys
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Non-interactive backend
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize
 from datetime import datetime
@@ -19,8 +21,30 @@ from datetime import datetime
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from udt.cosmology import UDTCosmology
-from udt.constants import *
+from udt.core.temporal_geometry import temporal_redshift, distance_from_redshift
+import udt.core.cosmology as cosmology
+
+# Constants
+c_LIGHT_SI = 299792.458  # km/s
+
+class UDTCosmology:
+    """Simple wrapper for UDT cosmology calculations"""
+    def __init__(self, R0):
+        self.R0 = R0
+        self.H0 = 70.0  # km/s/Mpc (approximate)
+        
+    def comoving_distance(self, z):
+        """Comoving distance in Mpc"""
+        # In UDT, d_L = z * R0, and d_c = d_L / (1 + z)
+        d_L = distance_from_redshift(z, self.R0)
+        return d_L / (1 + z)
+        
+    def hubble_parameter(self, z):
+        """Hubble parameter H(z) in km/s/Mpc"""
+        # In UDT with τ(r) = R0/(R0 + r), H(z) varies
+        # For BAO, we need dz/dr relationship
+        # Approximate using H(z) = H0 * (1 + z)^(3/2) for matter-dominated
+        return self.H0 * np.sqrt((1 + z)**3)
 
 def load_bao_data(file_path):
     """Load BAO data from uncorBAO.txt file"""
@@ -169,9 +193,9 @@ def analyze_bao_with_udt():
     
     print(f"\nBest-fit parameters:")
     print(f"  R0 = {R0_best:.1f} Mpc")
-    print(f"  χ² = {chi2_best:.2f}")
+    print(f"  chi^2 = {chi2_best:.2f}")
     print(f"  n_points = {n_points}")
-    print(f"  χ²/dof = {chi2_dof:.2f}")
+    print(f"  chi^2/dof = {chi2_dof:.2f}")
     
     # Create plots for each parameter type
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -228,14 +252,14 @@ def analyze_bao_with_udt():
             continue
             
         ax.plot(z_theory, pred, 'r-', linewidth=2, 
-                label=f'UDT (R₀={R0_best:.0f} Mpc)')
+                label=f'UDT (R0={R0_best:.0f} Mpc)')
         
         ax.set_xlabel('Redshift z')
         ax.set_ylabel(label)
         ax.legend()
         ax.grid(True, alpha=0.3)
     
-    plt.suptitle(f'UDT Fit to BAO Data (χ²/dof = {chi2_dof:.2f})', fontsize=14)
+    plt.suptitle(f'UDT Fit to BAO Data (chi^2/dof = {chi2_dof:.2f})', fontsize=14)
     plt.tight_layout()
     
     # Save results
@@ -258,8 +282,8 @@ def analyze_bao_with_udt():
         f.write(f"Number used in fit: {n_points}\n\n")
         f.write("Best-fit parameters:\n")
         f.write(f"  R0 = {R0_best:.1f} Mpc\n")
-        f.write(f"  χ² = {chi2_best:.2f}\n")
-        f.write(f"  χ²/dof = {chi2_dof:.2f}\n\n")
+        f.write(f"  chi^2 = {chi2_best:.2f}\n")
+        f.write(f"  chi^2/dof = {chi2_dof:.2f}\n\n")
         f.write("Data points by experiment:\n")
         
         # Group by experiment
@@ -273,11 +297,11 @@ def analyze_bao_with_udt():
         for exp, points in experiments.items():
             f.write(f"\n{exp}:\n")
             for p in points:
-                f.write(f"  z={p['z']:.3f}, {p['parameter']}={p['value']:.3f}±{p['error']:.3f}\n")
+                f.write(f"  z={p['z']:.3f}, {p['parameter']}={p['value']:.3f}+/-{p['error']:.3f}\n")
     
     print(f"Results saved to: {results_file}")
     
-    plt.show()
+    # plt.show()  # Commented out for non-interactive mode
     
     return R0_best, chi2_dof
 
@@ -289,9 +313,9 @@ if __name__ == "__main__":
     print("="*70)
     print(f"\nSummary:")
     print(f"  Best-fit R0: {R0_best:.1f} Mpc")
-    print(f"  χ²/dof: {chi2_dof:.2f}")
+    print(f"  chi^2/dof: {chi2_dof:.2f}")
     
     if chi2_dof < 2.0:
-        print("\n✓ Good fit to BAO data!")
+        print("\n+ Good fit to BAO data!")
     else:
-        print("\n⚠ Moderate fit - may need additional parameters or corrections")
+        print("\n! Moderate fit - may need additional parameters or corrections")
