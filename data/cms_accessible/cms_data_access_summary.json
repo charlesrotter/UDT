@@ -1,0 +1,38 @@
+{
+  "download_directory": "C:/UDT/data/cms_accessible/",
+  "timestamp": "2025-07-18 19:15:00",
+  "accessible_data_types": [
+    "Metadata from CERN Open Data Portal records",
+    "Run validation lists (JSON format)",
+    "Analysis code examples",
+    "Documentation and guides"
+  ],
+  "data_access_challenges": [
+    "Most collision data files use ROOT protocol (not HTTP)",
+    "Large file sizes (GB range) for collision datasets",
+    "Requires special ROOT/CERN software for full access"
+  ],
+  "recommendations_for_udt_analysis": [
+    "Use metadata to understand data structure",
+    "Focus on kinematic variables described in dataset semantics",
+    "Consider requesting smaller samples from CERN collaboration",
+    "Use LIGO data (already available) as primary validation"
+  ],
+  "files_downloaded": [
+    {
+      "filename": "cms_open_data_guide.html",
+      "size_bytes": 28788,
+      "size_mb": 0.03
+    },
+    {
+      "filename": "CMS_validated_runs_2015.txt",
+      "size_bytes": 3588,
+      "size_mb": 0.0
+    },
+    {
+      "filename": "CMS_validated_runs_2016.txt",
+      "size_bytes": 11686,
+      "size_mb": 0.01
+    }
+  ]
+}

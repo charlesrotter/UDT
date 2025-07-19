@@ -1,0 +1,309 @@
+{
+  "created": "2024-12-02T21:55:18.801625+00:00",
+  "id": "5200",
+  "links": {
+    "bucket": "https://opendata.cern.ch/api/files/7e962e56-484b-42a8-9d23-4edc84634e3b",
+    "self": "https://opendata.cern.ch/api/records/5200"
+  },
+  "metadata": {
+    "$schema": "http://opendata.cern.ch/schema/records/record-v1.0.0.json",
+    "_availability_details": {
+      "online": 11
+    },
+    "_bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+    "_file_indices": [],
+    "_files": [
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:e5c82ef4",
+        "file_id": "8bc1427c-19a0-4890-a909-c593be243d29",
+        "key": "2e2mu_2011.csv",
+        "size": 4092,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/2e2mu_2011.csv",
+        "version_id": "4f792175-ed5c-4320-b0cb-fca64a0f2d9e"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:0fc901c2",
+        "file_id": "4dc04fde-b25c-473b-b45e-964b9f8adc8c",
+        "key": "2e2mu_2012.csv",
+        "size": 31445,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/2e2mu_2012.csv",
+        "version_id": "d7a6ec3a-38e2-4aca-93af-61023ce3bce2"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:0eb9cb89",
+        "file_id": "9526066e-fc57-41c6-97c5-f1ac7d11af79",
+        "key": "4e_2011.csv",
+        "size": 2271,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4e_2011.csv",
+        "version_id": "0d3086e9-0a15-49dc-9d6d-94a1a34ea38f"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:46ee8bb8",
+        "file_id": "61f39408-57bf-4565-b262-e565b2162436",
+        "key": "4e_2012.csv",
+        "size": 12445,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4e_2012.csv",
+        "version_id": "05ce7f80-af19-43b3-8764-3395825b9a23"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:79684aae",
+        "file_id": "679fd8a2-e299-43b9-bb6b-9ed357a5c385",
+        "key": "4mu_2011.csv",
+        "size": 5550,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4mu_2011.csv",
+        "version_id": "1d516f48-9ed7-466c-81ba-39c43fdf17dc"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:d176e9e1",
+        "file_id": "40bbbb0c-c2e3-4cd5-8746-9ff0c585a20d",
+        "key": "4mu_2012.csv",
+        "size": 28664,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4mu_2012.csv",
+        "version_id": "c1def2bc-9a63-440f-ae57-692a597860c6"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:22f41314",
+        "file_id": "d46a7bfa-2dfa-4499-9792-42966c9de960",
+        "key": "Hto4l_120-130GeV.ig",
+        "size": 1119117,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_120-130GeV.ig",
+        "version_id": "14d3aba7-0950-4b99-861a-9ae325ee8bbc"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:1570c187",
+        "file_id": "598d366a-0216-4612-af8d-9f117c5b8958",
+        "key": "Hto4l_2011A.ig",
+        "size": 2462918,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2011A.ig",
+        "version_id": "c29d2085-f946-4c3b-8579-43c1e721fa71"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:ce474272",
+        "file_id": "ffe8c139-8c78-4d10-b4c1-2f9417f9634f",
+        "key": "Hto4l_2012B.ig",
+        "size": 9370066,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012B.ig",
+        "version_id": "1aafad41-dcc1-41eb-a2b5-3c7895547031"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:3a32e8a7",
+        "file_id": "ea54c1c5-07a1-4569-ae76-729fec2b89ae",
+        "key": "Hto4l_2012C_1.ig",
+        "size": 7062143,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012C_1.ig",
+        "version_id": "274d5a98-cb85-4c72-a6ad-0a676b403b62"
+      },
+      {
+        "availability": "online",
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:8292b907",
+        "file_id": "431cb341-5e1a-4d15-8212-cbbdebb1fb11",
+        "key": "Hto4l_2012C_2.ig",
+        "size": 8688890,
+        "tags": {},
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012C_2.ig",
+        "version_id": "5f9179b9-f429-4a33-bfa0-b8ed9532e131"
+      }
+    ],
+    "abstract": {
+      "description": "<p>This document contains Higgs candidate events that pass the selections found in the example Higgs-to-four-lepton analysis example as part of the public release of CMS 2011 and 2012 data.</p> <p>These data were selected for use in education and outreach and contain a subset of the total event information. They are not suitable for a full physics analysis.</p>"
+    },
+    "accelerator": "CERN-LHC",
+    "authors": [
+      {
+        "name": "McCauley, Thomas",
+        "orcid": "0000-0001-6589-8286"
+      }
+    ],
+    "availability": "online",
+    "collections": [
+      "CMS-Derived-Datasets"
+    ],
+    "date_created": [
+      "2011",
+      "2012"
+    ],
+    "date_published": "2019",
+    "distribution": {
+      "formats": [
+        "csv",
+        "ig"
+      ],
+      "number_files": 11,
+      "size": 28787601
+    },
+    "doi": "10.7483/OPENDATA.CMS.YGG7.333M",
+    "experiment": [
+      "CMS"
+    ],
+    "files": [
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:e5c82ef4",
+        "key": "2e2mu_2011.csv",
+        "size": 4092,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/2e2mu_2011.csv",
+        "version_id": "4f792175-ed5c-4320-b0cb-fca64a0f2d9e"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:0fc901c2",
+        "key": "2e2mu_2012.csv",
+        "size": 31445,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/2e2mu_2012.csv",
+        "version_id": "d7a6ec3a-38e2-4aca-93af-61023ce3bce2"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:0eb9cb89",
+        "key": "4e_2011.csv",
+        "size": 2271,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4e_2011.csv",
+        "version_id": "0d3086e9-0a15-49dc-9d6d-94a1a34ea38f"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:46ee8bb8",
+        "key": "4e_2012.csv",
+        "size": 12445,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4e_2012.csv",
+        "version_id": "05ce7f80-af19-43b3-8764-3395825b9a23"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:79684aae",
+        "key": "4mu_2011.csv",
+        "size": 5550,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4mu_2011.csv",
+        "version_id": "1d516f48-9ed7-466c-81ba-39c43fdf17dc"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:d176e9e1",
+        "key": "4mu_2012.csv",
+        "size": 28664,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/4mu_2012.csv",
+        "version_id": "c1def2bc-9a63-440f-ae57-692a597860c6"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:22f41314",
+        "key": "Hto4l_120-130GeV.ig",
+        "size": 1119117,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_120-130GeV.ig",
+        "version_id": "14d3aba7-0950-4b99-861a-9ae325ee8bbc"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:1570c187",
+        "key": "Hto4l_2011A.ig",
+        "size": 2462918,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2011A.ig",
+        "version_id": "c29d2085-f946-4c3b-8579-43c1e721fa71"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:ce474272",
+        "key": "Hto4l_2012B.ig",
+        "size": 9370066,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012B.ig",
+        "version_id": "1aafad41-dcc1-41eb-a2b5-3c7895547031"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:3a32e8a7",
+        "key": "Hto4l_2012C_1.ig",
+        "size": 7062143,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012C_1.ig",
+        "version_id": "274d5a98-cb85-4c72-a6ad-0a676b403b62"
+      },
+      {
+        "bucket": "7e962e56-484b-42a8-9d23-4edc84634e3b",
+        "checksum": "adler32:8292b907",
+        "key": "Hto4l_2012C_2.ig",
+        "size": 8688890,
+        "uri": "root://eospublic.cern.ch//eos/opendata/cms/derived-data/run1-physics-candidates/higgs/13424-v5/Hto4l_2012C_2.ig",
+        "version_id": "5f9179b9-f429-4a33-bfa0-b8ed9532e131"
+      }
+    ],
+    "keywords": [
+      "education"
+    ],
+    "license": {
+      "attribution": "CC0-1.0"
+    },
+    "methodology": {
+      "description": "These events were selected in the example Higgs-to-four-lepton analysis of CMS public data."
+    },
+    "pids": {
+      "oai": {
+        "id": "oai:cernopendata.cern:5200"
+      }
+    },
+    "publisher": "CERN Open Data Portal",
+    "recid": "5200",
+    "run_period": [
+      "Run2011A",
+      "Run2012B",
+      "Run2012C"
+    ],
+    "title": "Higgs candidate events from CMS 2011 and 2012 open data release selected in the Higgs-to-four-lepton analysis example",
+    "type": {
+      "primary": "Dataset",
+      "secondary": [
+        "Derived"
+      ]
+    },
+    "usage": {
+      "description": " <p>Files with the extension .ig are JSON files containing information suitable for visual display. The data can be accessed from the file menu of <a href=\"/visualise/events/CMS\">the online event display</a>. Comma-separated value (csv) files can be used in online applications such as <a href=\"/visualise/histograms/CMS\">the histogram visualizer</a> and other applications, examples are given in</p> ",
+      "links": [
+        {
+          "recid": "5101"
+        },
+        {
+          "recid": "5102"
+        },
+        {
+          "recid": "5100"
+        },
+        {
+          "recid": "5500"
+        }
+      ]
+    },
+    "validation": {
+      "description": "These events were selected in the example Higgs-to-four-lepton analysis of CMS public data."
+    }
+  },
+  "updated": "2025-06-06T08:39:29.971931+00:00"
+}
