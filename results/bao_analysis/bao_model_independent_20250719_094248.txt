@@ -1,0 +1,39 @@
+Model-Independent BAO Analysis with UDT
+============================================================
+
+Analysis date: 2025-07-19 09:42:48
+Method: Joint fitting of R0 and rd parameters
+
+CONTAMINATION ISSUES ADDRESSED:
+- Standard BAO uses LCDM-derived rd = 147.09 Mpc (circular)
+- This analysis treats rd as free parameter
+- Avoids model-dependent fiducial cosmology assumptions
+
+BEST-FIT PARAMETERS:
+  R0 = 9548.7 Mpc (UDT characteristic scale)
+  rd = 170.0 Mpc (sound horizon, model-independent)
+  chi^2 = 603.30
+  n_points = 10
+  chi^2/dof = 75.41
+
+SOUND HORIZON COMPARISON:
+  Planck 2018 LCDM: 147.1 Mpc (diff: +15.6%)
+  Model-independent (Aubourg+): 139.7 Mpc (diff: +21.7%)
+  Model-independent (lower): 135.2 Mpc (diff: +25.8%)
+  Model-independent (upper): 145.0 Mpc (diff: +17.3%)
+
+DATA POINTS USED:
+  z=0.540, DArd=9.212+/-0.410 (# SDSS-III DR8 (luminous galaxies))
+  z=0.106, rdDV=0.336+/-0.015 (#6dFGS)
+  z=0.810, DArd=10.750+/-0.430 (#DES Year1 (galaxy clustering))
+  z=0.570, DVrd=13.670+/-0.220 (#SDSSIII/DR9 (galaxy clustering CMASS))
+  z=0.275, rdDV=0.139+/-0.004 (#SDSS-DR7+2dFGRS (galaxy clustering))
+  z=2.340, DHrd=8.860+/-0.290 (#BOSS DR14 Lya in LyBeta region)
+  z=0.440, rdDV=0.087+/-0.004 (#WiggleZ (galaxy clustering))
+  z=0.600, rdDV=0.067+/-0.003 (#WiggleZ (galaxy clustering))
+  z=0.730, rdDV=0.059+/-0.002 (#Wiggle (galaxy clustering))
+  z=1.480, DHrd=13.230+/-0.470 (#SDSS-IV/eBoss/DR16 BAO+RSD consensus Fourrier+config (quasars clustering))
+
+RELIABILITY ASSESSMENT:
+! POOR FIT: Significant tension between UDT and BAO
+! Sound horizon outside expected range - check analysis

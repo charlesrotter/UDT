@@ -4,26 +4,26 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "udt"
-version = "0.1.0"
-description = "Universal Distance Dilation Theory - Cosmological and galactic dynamics framework"
+version = "0.2.0"
+description = "Universal Distance Dilation Theory - Rigorous cosmological and galactic dynamics framework with validated artifact correction"
 readme = "README.md"
 authors = [
     {name = "Charles Rotter"},
 ]
 license = {text = "MIT"}
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Scientific/Engineering :: Astronomy",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
     "numpy>=1.21.0",
     "scipy>=1.7.0",
@@ -45,14 +45,17 @@ dev = [
     "pytest>=6.0",
     "pytest-cov",
     "black",
-    "flake8",
+    "ruff",
     "isort",
     "pip-tools",
+    "pre-commit",
+    "hypothesis",
 ]
 docs = [
-    "sphinx",
-    "sphinx-rtd-theme",
-    "nbsphinx",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "jupyter",
 ]
 
 [project.urls]
@@ -61,13 +64,17 @@ docs = [
 "Source" = "https://github.com/charlesrotter/UDT"
 
 [project.scripts]
+udt-validate = "src.udt.cli:main"
 udt-analyze-sparc = "scripts.analyze_sparc_galaxies:main"
 udt-analyze-supernovae = "scripts.analyze_supernovae:main"
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["udt*", "scripts*", "mathematical_development*", "quantum_validation*"]
-exclude = ["tests*", "docs*", "exploration*", "archive*"]
+where = ["src"]
+include = ["udt*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
 
 [tool.black]
 line-length = 120

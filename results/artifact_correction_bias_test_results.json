@@ -1,0 +1,69 @@
+{
+  "overall_valid": false,
+  "lcdm_recovery_test": {
+    "bias_test_pass": false,
+    "uncertainty_test_pass": true,
+    "raw_fits": {
+      "lcdm": {
+        "chi2": 139.4545322481266,
+        "dof": 149,
+        "chi2_per_dof": 0.9359364580411182,
+        "parameters": [
+          73.9440966519022
+        ],
+        "fit_success": true
+      },
+      "udt": {
+        "chi2": 290.2091238322836,
+        "dof": 149,
+        "chi2_per_dof": 1.9477122404851248,
+        "parameters": [
+          4943.52859869223
+        ],
+        "fit_success": true
+      }
+    },
+    "corrected_fits": {
+      "lcdm": {
+        "chi2": 19798.270138892563,
+        "dof": 149,
+        "chi2_per_dof": 132.87429623417827,
+        "parameters": [
+          59.78859160420099
+        ],
+        "fit_success": true
+      },
+      "udt": {
+        "chi2": 15900.2811873479,
+        "dof": 149,
+        "chi2_per_dof": 106.71329655938189,
+        "parameters": [
+          6125.624788894284
+        ],
+        "fit_success": true
+      }
+    },
+    "uncertainty_inflation": 1.0343340167505248
+  },
+  "udt_recovery_test": {
+    "symmetry_test_pass": true,
+    "udt_fit": {
+      "chi2": 15986.834077424353,
+      "dof": 149,
+      "chi2_per_dof": 107.29418843908962,
+      "parameters": [
+        4539.147580471633
+      ],
+      "fit_success": true
+    },
+    "lcdm_fit": {
+      "chi2": 19891.13909893724,
+      "dof": 149,
+      "chi2_per_dof": 133.4975778452164,
+      "parameters": [
+        80.6790426978953
+      ],
+      "fit_success": true
+    }
+  }
+}

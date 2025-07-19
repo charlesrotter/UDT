@@ -18,4 +18,15 @@
     "timing_agreement_ratio": 3197.5422469397786,
     "geometric_enhancement": 0.0,
     "base_strain": 5.60076623658712e-20,
-    "projection_theory_validation": 
+    "projection_theory_validation": false
+  },
+  "geometric_coupling": 0.0020591869890231604,
+  "cosmic_scale_R0": 1.1054052000000001e+32,
+  "data_source": "Real LIGO strain data from GWOSC",
+  "validation_summary": {
+    "projection_theory_validated": false,
+    "timing_agreement_ratio": 3197.5422469397786,
+    "geometric_enhancement": 0.0,
+    "overall_assessment": "PARTIALLY_VALIDATED"
+  }
+}
