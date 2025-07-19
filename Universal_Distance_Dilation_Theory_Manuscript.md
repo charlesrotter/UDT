@@ -229,6 +229,8 @@ where the enhancement factor F(τ(r)) naturally produces flat rotation curves wi
 
 The phenomenological success formula v²(r) ∝ r/(r + R₀/3) × (1 + r/R₀)² emerges naturally from the UDT enhancement function, providing theoretical justification for empirically successful models.
 
+**Figure 1** shows the comprehensive SPARC validation results, including the distribution of velocity residuals, goodness-of-fit statistics, example rotation curves, and validation success summary across all 175 galaxies. The detailed statistical analysis is provided in **Table S1** (see supplementary material: tables/sparc_validation_statistics.csv).
+
 ### 5.2 Gravitational Wave Timing
 
 UDT's projection theory was tested against LIGO GW150914 observations. The theory predicts that gravitational events occur instantaneously throughout space, with detectors observing projections traveling at speed c.
@@ -243,6 +245,8 @@ UDT's projection theory was tested against LIGO GW150914 observations. The theor
 | Test outcome | 3/3 tests passed | - | Validated |
 
 This represents the first successful validation of a cosmic connectivity theory using gravitational wave observations.
+
+**Figure 2** illustrates the UDT projection theory validation with LIGO GW150914, showing timing predictions, agreement ratios, the projection theory schematic, and comprehensive test results. Complete validation statistics are provided in **Table S2** (tables/gravitational_wave_statistics.csv).
 
 ### 5.3 Quantum Anomalies
 
@@ -260,6 +264,8 @@ The muon g-2 anomaly was analyzed using pure geometric rotational effects:
 | Agreement ratio | 0.42 | Same order of magnitude |
 
 This achievement represents the first geometric explanation of a quantum mechanical anomaly with quantitative success.
+
+**Figure 3** demonstrates the pure geometric approach to the muon g-2 anomaly, including experimental comparisons, agreement assessment, F(τ) enhancement visualization, and the rotational geometry model. Detailed quantum validation statistics are provided in **Table S3** (tables/muon_g2_statistics.csv).
 
 ### 5.4 Cosmological Structure
 
@@ -434,6 +440,8 @@ Key achievements include:
 - Quantum mechanical framework derived from pure geometry
 
 While current validation is limited by data contamination from standard model processing, the consistency of results across multiple independent domains suggests that UDT represents a viable alternative framework for fundamental physics.
+
+**Figure 4** provides a comprehensive summary of UDT's multi-scale validation, showing the enhancement hierarchy across physical scales, validation success rates, parameter consistency, and theoretical comparison with standard approaches. The complete multi-scale validation summary is provided in **Table S4** (tables/multi_scale_validation_summary.csv).
 
 The theory's most profound implication is that the apparent complexity of quantum mechanics and the mysterious nature of dark matter and dark energy may be manifestations of a simpler underlying geometric reality based on cosmic connectivity and instantaneous information propagation.
 

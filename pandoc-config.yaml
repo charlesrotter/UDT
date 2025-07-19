@@ -1,0 +1,45 @@
+# Pandoc configuration for UDT manuscript
+# Usage: pandoc Universal_Distance_Dilation_Theory_Manuscript.md -o manuscript.pdf --defaults=pandoc-config.yaml
+
+# Input and output
+from: markdown
+to: pdf
+
+# Bibliography and citations
+bibliography: references.bib
+citeproc: true
+cite-method: citeproc
+csl: https://www.zotero.org/styles/physical-review-letters
+
+# Document structure
+number-sections: true
+toc: true
+toc-depth: 3
+
+# PDF engine and formatting
+pdf-engine: pdflatex
+template: default
+
+# Variables for LaTeX
+variables:
+  documentclass: article
+  classoption: 
+    - 12pt
+    - a4paper
+    - onecolumn
+  geometry:
+    - margin=1in
+  fontfamily: times
+  linestretch: 1.5
+  
+# Filters and extensions
+standalone: true
+self-contained: false
+
+# Figure and table settings
+default-image-extension: .png
+
+# Metadata
+title-meta: "Universal Distance Dilation Theory: A Geometric Foundation for Physics from Quantum to Cosmic Scales"
+author-meta: "Charles Rotter"
+date-meta: "2025"

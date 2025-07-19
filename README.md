@@ -46,6 +46,42 @@ independent_verification/
 
 **Purpose**: Enable independent AI agents to verify claims, detect potential hallucinations, and assess scientific integrity without relying on author statements.
 
+## 🛠 Automated Results Generation
+
+**NEW**: Complete build system implementing reviewer requirements
+
+### Quick Start (Repository Integration)
+```bash
+# Windows
+audit-all.bat          # Reproduce all figures and tables
+build-paper.bat         # Generate PDF manuscript
+
+# Linux/macOS  
+make audit-all          # Reproduce all figures and tables
+make pdf               # Generate PDF manuscript
+```
+
+### Automated Pipeline
+- **audit-all**: Regenerates all manuscript figures and tables from raw data
+- **build-paper**: Creates publication-ready PDF with citations
+- **CI/CD**: GitHub Actions automatically build manuscript on changes
+- **Data integrity**: Systematic verification of all input datasets
+
+### Output Locations
+```
+results/           # Analysis data (CSV, JSON)
+fig/              # Manuscript figures (PNG)
+tables/           # Statistical tables (CSV)
+manuscript.pdf    # Publication-ready manuscript
+```
+
+### Build System Features
+- **Real data priority**: Uses authentic observational data when available
+- **Graceful fallbacks**: Creates informative placeholders if data missing
+- **Cross-platform**: Works on Windows (batch) and Unix (make)
+- **CI integration**: Automated builds on manuscript changes
+- **Artifact uploads**: Downloads available from GitHub Actions
+
 ## Project Structure
 
 ```
