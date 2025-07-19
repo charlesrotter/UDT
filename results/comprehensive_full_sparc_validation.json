@@ -1,0 +1,1783 @@
+{
+  "analysis_type": "comprehensive_full_sparc_validation",
+  "date": "2025-07-18",
+  "udt_parameters": {
+    "R0_galactic_kpc": 57.5,
+    "alpha": 0.00206,
+    "G_SI": 6.6743e-11
+  },
+  "population_statistics": {
+    "total_galaxies_analyzed": 175,
+    "total_data_points": 3391,
+    "median_rms_km_s": 82.26116768231515,
+    "mean_rms_km_s": 111.01642613963432,
+    "std_rms_km_s": 76.0736290310145,
+    "median_chi2_reduced": 603.7798582443928,
+    "mean_chi2_reduced": 2332.5592398396984,
+    "fraction_excellent_fits": 0.0,
+    "fraction_good_fits": 0.0,
+    "fraction_acceptable_fits": 0.0,
+    "udt_average_score": 1.0285714285714285,
+    "udt_score_distribution": {
+      "excellent_5": 0,
+      "very_good_4": 0,
+      "good_3": 0,
+      "fair_2": 5,
+      "poor_1": 170
+    }
+  },
+  "individual_galaxies": [
+    {
+      "galaxy_name": "CamB",
+      "n_points": 9,
+      "chi2": 593.3364164047595,
+      "chi2_reduced": 84.76234520067992,
+      "rms_km_s": 12.179248913672382,
+      "V_scale": 10.9,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "D512-2",
+      "n_points": 4,
+      "chi2": 338.4284767987486,
+      "chi2_reduced": 169.2142383993743,
+      "rms_km_s": 32.82805099372881,
+      "V_scale": 34.7,
+      "M_total": 1e+35,
+      "dof": 2
+    },
+    {
+      "galaxy_name": "D564-8",
+      "n_points": 6,
+      "chi2": 719.4804467538474,
+      "chi2_reduced": 179.87011168846186,
+      "rms_km_s": 19.860582081238707,
+      "V_scale": 20.85,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "D631-7",
+      "n_points": 16,
+      "chi2": 6229.9013073018705,
+      "chi2_reduced": 444.9929505215622,
+      "rms_km_s": 45.60356735732186,
+      "V_scale": 47.2,
+      "M_total": 1e+35,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "DDO064",
+      "n_points": 14,
+      "chi2": 689.3772876323021,
+      "chi2_reduced": 57.448107302691845,
+      "rms_km_s": 35.486716344430604,
+      "V_scale": 37.9,
+      "M_total": 1e+35,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "DDO154",
+      "n_points": 12,
+      "chi2": 200633.6391755488,
+      "chi2_reduced": 20063.36391755488,
+      "rms_km_s": 39.66272042062052,
+      "V_scale": 43.3,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "DDO161",
+      "n_points": 31,
+      "chi2": 49073.16709822219,
+      "chi2_reduced": 1692.1781758007653,
+      "rms_km_s": 52.20339227362941,
+      "V_scale": 55.0,
+      "M_total": 1e+35,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "DDO168",
+      "n_points": 10,
+      "chi2": 7716.899270485973,
+      "chi2_reduced": 964.6124088107466,
+      "rms_km_s": 43.69071490105593,
+      "V_scale": 48.0,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "DDO170",
+      "n_points": 8,
+      "chi2": 17956.201837907847,
+      "chi2_reduced": 2992.7003063179745,
+      "rms_km_s": 53.336059423551234,
+      "V_scale": 57.1,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "ESO079-G014",
+      "n_points": 15,
+      "chi2": 31276.004830687245,
+      "chi2_reduced": 2405.8465254374805,
+      "rms_km_s": 129.22906099545168,
+      "V_scale": 132.0,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "ESO116-G012",
+      "n_points": 15,
+      "chi2": 17967.25111099718,
+      "chi2_reduced": 1382.0962393074753,
+      "rms_km_s": 91.19047807741526,
+      "V_scale": 102.0,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "ESO444-G084",
+      "n_points": 7,
+      "chi2": 4703.967426857201,
+      "chi2_reduced": 940.7934853714402,
+      "rms_km_s": 50.58124034133596,
+      "V_scale": 52.8,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "ESO563-G021",
+      "n_points": 30,
+      "chi2": 44915.60162847321,
+      "chi2_reduced": 1604.128629588329,
+      "rms_km_s": 277.50667154203325,
+      "V_scale": 310.5,
+      "M_total": 1e+35,
+      "dof": 28
+    },
+    {
+      "galaxy_name": "F561-1",
+      "n_points": 6,
+      "chi2": 453.38972416227756,
+      "chi2_reduced": 113.34743104056939,
+      "rms_km_s": 44.24254500446072,
+      "V_scale": 47.35,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "F563-1",
+      "n_points": 17,
+      "chi2": 1183.575951458883,
+      "chi2_reduced": 78.90506343059221,
+      "rms_km_s": 92.36725076870773,
+      "V_scale": 97.4,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "F563-V1",
+      "n_points": 6,
+      "chi2": 154.16369314031945,
+      "chi2_reduced": 38.54092328507986,
+      "rms_km_s": 25.34459945270388,
+      "V_scale": 27.95,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "F563-V2",
+      "n_points": 10,
+      "chi2": 541.6729680814764,
+      "chi2_reduced": 67.70912101018455,
+      "rms_km_s": 93.68078313933617,
+      "V_scale": 102.9,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "F565-V2",
+      "n_points": 7,
+      "chi2": 732.2999051878096,
+      "chi2_reduced": 146.45998103756193,
+      "rms_km_s": 63.86356972645919,
+      "V_scale": 68.5,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "F567-2",
+      "n_points": 5,
+      "chi2": 252.47633095492696,
+      "chi2_reduced": 84.15877698497566,
+      "rms_km_s": 45.16327803133978,
+      "V_scale": 47.6,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "F568-1",
+      "n_points": 12,
+      "chi2": 1164.0564679519794,
+      "chi2_reduced": 116.40564679519794,
+      "rms_km_s": 107.53926771237626,
+      "V_scale": 115.0,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "F568-3",
+      "n_points": 18,
+      "chi2": 1873.8816413519476,
+      "chi2_reduced": 117.11760258449672,
+      "rms_km_s": 81.02093123933209,
+      "V_scale": 83.9,
+      "M_total": 1e+35,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "F568-V1",
+      "n_points": 15,
+      "chi2": 1482.38161582755,
+      "chi2_reduced": 114.02935506365769,
+      "rms_km_s": 98.88216813469562,
+      "V_scale": 111.0,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "F571-8",
+      "n_points": 13,
+      "chi2": 6785.1481128699315,
+      "chi2_reduced": 616.8316466245392,
+      "rms_km_s": 102.01013951773317,
+      "V_scale": 105.0,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "F571-V1",
+      "n_points": 7,
+      "chi2": 891.5817788610802,
+      "chi2_reduced": 178.31635577221604,
+      "rms_km_s": 71.91605691222593,
+      "V_scale": 77.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "F574-1",
+      "n_points": 14,
+      "chi2": 4775.532349368756,
+      "chi2_reduced": 397.96102911406297,
+      "rms_km_s": 84.29839476609433,
+      "V_scale": 90.95,
+      "M_total": 1e+35,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "F574-2",
+      "n_points": 5,
+      "chi2": 66.00075649932195,
+      "chi2_reduced": 22.00025216644065,
+      "rms_km_s": 29.902073518544977,
+      "V_scale": 30.0,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "F579-V1",
+      "n_points": 14,
+      "chi2": 1305.0740667942114,
+      "chi2_reduced": 108.75617223285094,
+      "rms_km_s": 102.47536231462503,
+      "V_scale": 107.0,
+      "M_total": 1e+35,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "F583-1",
+      "n_points": 25,
+      "chi2": 2880.6395577614967,
+      "chi2_reduced": 125.24519816354334,
+      "rms_km_s": 58.564761150534395,
+      "V_scale": 59.4,
+      "M_total": 1e+35,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "F583-4",
+      "n_points": 12,
+      "chi2": 1668.7768907899144,
+      "chi2_reduced": 166.87768907899144,
+      "rms_km_s": 54.128570455381684,
+      "V_scale": 58.5,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "IC2574",
+      "n_points": 34,
+      "chi2": 57972.02086493974,
+      "chi2_reduced": 1811.6256520293668,
+      "rms_km_s": 46.439020347003634,
+      "V_scale": 43.65,
+      "M_total": 1e+35,
+      "dof": 32
+    },
+    {
+      "galaxy_name": "IC4202",
+      "n_points": 32,
+      "chi2": 57124.60971358463,
+      "chi2_reduced": 1904.1536571194877,
+      "rms_km_s": 225.53115011776865,
+      "V_scale": 240.5,
+      "M_total": 1e+35,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "KK98-251",
+      "n_points": 15,
+      "chi2": 2120.859844291932,
+      "chi2_reduced": 163.14306494553324,
+      "rms_km_s": 23.78156061204805,
+      "V_scale": 21.8,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "NGC0024",
+      "n_points": 29,
+      "chi2": 7499.042089814727,
+      "chi2_reduced": 277.74229962276763,
+      "rms_km_s": 88.27922988908773,
+      "V_scale": 92.4,
+      "M_total": 1e+35,
+      "dof": 27
+    },
+    {
+      "galaxy_name": "NGC0055",
+      "n_points": 21,
+      "chi2": 17992.37115062709,
+      "chi2_reduced": 946.9669026645836,
+      "rms_km_s": 74.3906853875807,
+      "V_scale": 82.4,
+      "M_total": 1e+35,
+      "dof": 19
+    },
+    {
+      "galaxy_name": "NGC0100",
+      "n_points": 21,
+      "chi2": 4489.208682061111,
+      "chi2_reduced": 236.27414116111112,
+      "rms_km_s": 71.3146798226536,
+      "V_scale": 77.8,
+      "M_total": 1e+35,
+      "dof": 19
+    },
+    {
+      "galaxy_name": "NGC0247",
+      "n_points": 26,
+      "chi2": 34374.230621279356,
+      "chi2_reduced": 1432.259609219973,
+      "rms_km_s": 87.37753608530734,
+      "V_scale": 88.9,
+      "M_total": 1e+35,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "NGC0289",
+      "n_points": 28,
+      "chi2": 21197.03163251848,
+      "chi2_reduced": 815.2704474045569,
+      "rms_km_s": 173.2497926085528,
+      "V_scale": 175.0,
+      "M_total": 1e+35,
+      "dof": 26
+    },
+    {
+      "galaxy_name": "NGC0300",
+      "n_points": 25,
+      "chi2": 12393.967116207825,
+      "chi2_reduced": 538.8681354872967,
+      "rms_km_s": 82.26116768231515,
+      "V_scale": 88.2,
+      "M_total": 1e+35,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC0801",
+      "n_points": 13,
+      "chi2": 32870.91784546513,
+      "chi2_reduced": 2988.265258678648,
+      "rms_km_s": 210.0417399413178,
+      "V_scale": 219.0,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC0891",
+      "n_points": 18,
+      "chi2": 78350.50142140672,
+      "chi2_reduced": 4896.90633883792,
+      "rms_km_s": 219.5932634119953,
+      "V_scale": 222.5,
+      "M_total": 1e+35,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "NGC1003",
+      "n_points": 36,
+      "chi2": 66257.28799900234,
+      "chi2_reduced": 1948.7437646765393,
+      "rms_km_s": 100.09143337462586,
+      "V_scale": 103.5,
+      "M_total": 1e+35,
+      "dof": 34
+    },
+    {
+      "galaxy_name": "NGC1090",
+      "n_points": 24,
+      "chi2": 63667.77009092443,
+      "chi2_reduced": 2893.989549587474,
+      "rms_km_s": 154.75397422689304,
+      "V_scale": 165.0,
+      "M_total": 1e+35,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC1705",
+      "n_points": 14,
+      "chi2": 3465.181425659336,
+      "chi2_reduced": 288.7651188049447,
+      "rms_km_s": 69.87112583451376,
+      "V_scale": 71.5,
+      "M_total": 1e+35,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "NGC2366",
+      "n_points": 26,
+      "chi2": 12009.765482230765,
+      "chi2_reduced": 500.40689509294856,
+      "rms_km_s": 42.96747738676099,
+      "V_scale": 48.3,
+      "M_total": 1e+35,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "NGC2403",
+      "n_points": 73,
+      "chi2": 1508019.6447409645,
+      "chi2_reduced": 21239.713306210768,
+      "rms_km_s": 111.10685901017436,
+      "V_scale": 114.0,
+      "M_total": 1e+35,
+      "dof": 71
+    },
+    {
+      "galaxy_name": "NGC2683",
+      "n_points": 11,
+      "chi2": 7180.425929721002,
+      "chi2_reduced": 797.8251033023336,
+      "rms_km_s": 178.90537214263327,
+      "V_scale": 172.0,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "NGC2841",
+      "n_points": 50,
+      "chi2": 150429.15498394333,
+      "chi2_reduced": 3133.9407288321527,
+      "rms_km_s": 301.837027894557,
+      "V_scale": 301.0,
+      "M_total": 1e+35,
+      "dof": 48
+    },
+    {
+      "galaxy_name": "NGC2903",
+      "n_points": 34,
+      "chi2": 300053.13590590697,
+      "chi2_reduced": 9376.660497059593,
+      "rms_km_s": 186.41878742970965,
+      "V_scale": 189.5,
+      "M_total": 1e+35,
+      "dof": 32
+    },
+    {
+      "galaxy_name": "NGC2915",
+      "n_points": 30,
+      "chi2": 3476.734828511846,
+      "chi2_reduced": 124.16910101828022,
+      "rms_km_s": 76.16940317555088,
+      "V_scale": 81.15,
+      "M_total": 1e+35,
+      "dof": 28
+    },
+    {
+      "galaxy_name": "NGC2955",
+      "n_points": 24,
+      "chi2": 32409.685169168246,
+      "chi2_reduced": 1473.1675076894658,
+      "rms_km_s": 253.24144425208237,
+      "V_scale": 255.5,
+      "M_total": 1e+35,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC2976",
+      "n_points": 27,
+      "chi2": 7208.95574461306,
+      "chi2_reduced": 288.3582297845224,
+      "rms_km_s": 56.80126089048442,
+      "V_scale": 49.2,
+      "M_total": 1e+35,
+      "dof": 25
+    },
+    {
+      "galaxy_name": "NGC2998",
+      "n_points": 13,
+      "chi2": 48262.45191008802,
+      "chi2_reduced": 4387.49562818982,
+      "rms_km_s": 191.04966884230436,
+      "V_scale": 206.0,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC3109",
+      "n_points": 25,
+      "chi2": 8997.86294005836,
+      "chi2_reduced": 391.2114321764504,
+      "rms_km_s": 49.320408313345446,
+      "V_scale": 50.6,
+      "M_total": 1e+35,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC3198",
+      "n_points": 43,
+      "chi2": 189099.53024011056,
+      "chi2_reduced": 4612.18366439294,
+      "rms_km_s": 130.50715110265466,
+      "V_scale": 146.0,
+      "M_total": 1e+35,
+      "dof": 41
+    },
+    {
+      "galaxy_name": "NGC3521",
+      "n_points": 41,
+      "chi2": 17641.83794520229,
+      "chi2_reduced": 452.354819107751,
+      "rms_km_s": 208.0009726973429,
+      "V_scale": 213.0,
+      "M_total": 1e+35,
+      "dof": 39
+    },
+    {
+      "galaxy_name": "NGC3726",
+      "n_points": 12,
+      "chi2": 9148.70743855482,
+      "chi2_reduced": 914.870743855482,
+      "rms_km_s": 152.9982557527844,
+      "V_scale": 159.0,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "NGC3741",
+      "n_points": 21,
+      "chi2": 5573.803183715383,
+      "chi2_reduced": 293.35806230080965,
+      "rms_km_s": 37.86259322662442,
+      "V_scale": 36.5,
+      "M_total": 1e+35,
+      "dof": 19
+    },
+    {
+      "galaxy_name": "NGC3769",
+      "n_points": 12,
+      "chi2": 4298.105499435705,
+      "chi2_reduced": 429.81054994357044,
+      "rms_km_s": 116.26551045092606,
+      "V_scale": 118.0,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "NGC3877",
+      "n_points": 13,
+      "chi2": 9429.203618627542,
+      "chi2_reduced": 857.2003289661402,
+      "rms_km_s": 149.39063636191008,
+      "V_scale": 162.0,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC3893",
+      "n_points": 10,
+      "chi2": 6033.504175373548,
+      "chi2_reduced": 754.1880219216935,
+      "rms_km_s": 179.07621568307377,
+      "V_scale": 182.5,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "NGC3917",
+      "n_points": 17,
+      "chi2": 15311.53063172189,
+      "chi2_reduced": 1020.7687087814593,
+      "rms_km_s": 119.5639557273198,
+      "V_scale": 134.0,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "NGC3949",
+      "n_points": 7,
+      "chi2": 2956.263840484175,
+      "chi2_reduced": 591.252768096835,
+      "rms_km_s": 153.7749494601251,
+      "V_scale": 157.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC3953",
+      "n_points": 8,
+      "chi2": 9154.032886387493,
+      "chi2_reduced": 1525.6721477312487,
+      "rms_km_s": 214.03709018161388,
+      "V_scale": 219.5,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "NGC3972",
+      "n_points": 10,
+      "chi2": 5255.353116549835,
+      "chi2_reduced": 656.9191395687294,
+      "rms_km_s": 108.95034572486324,
+      "V_scale": 113.0,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "NGC3992",
+      "n_points": 9,
+      "chi2": 15327.084908587527,
+      "chi2_reduced": 2189.5835583696467,
+      "rms_km_s": 253.95472111319108,
+      "V_scale": 248.0,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "NGC4010",
+      "n_points": 12,
+      "chi2": 4997.489679935319,
+      "chi2_reduced": 499.7489679935319,
+      "rms_km_s": 103.21607531101422,
+      "V_scale": 109.5,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "NGC4013",
+      "n_points": 36,
+      "chi2": 46660.785554578266,
+      "chi2_reduced": 1372.3760457228902,
+      "rms_km_s": 178.67910013818778,
+      "V_scale": 178.0,
+      "M_total": 1e+35,
+      "dof": 34
+    },
+    {
+      "galaxy_name": "NGC4051",
+      "n_points": 7,
+      "chi2": 2909.3453281867837,
+      "chi2_reduced": 581.8690656373567,
+      "rms_km_s": 144.5447940691966,
+      "V_scale": 153.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC4068",
+      "n_points": 6,
+      "chi2": 934.3851373750421,
+      "chi2_reduced": 233.59628434376052,
+      "rms_km_s": 27.89039912662173,
+      "V_scale": 26.45,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "NGC4085",
+      "n_points": 7,
+      "chi2": 3128.03706005686,
+      "chi2_reduced": 625.6074120113719,
+      "rms_km_s": 113.30350952160614,
+      "V_scale": 127.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC4088",
+      "n_points": 12,
+      "chi2": 6851.509197817175,
+      "chi2_reduced": 685.1509197817174,
+      "rms_km_s": 164.17637974881794,
+      "V_scale": 171.0,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "NGC4100",
+      "n_points": 24,
+      "chi2": 24963.671570415136,
+      "chi2_reduced": 1134.712344109779,
+      "rms_km_s": 176.13478500143867,
+      "V_scale": 178.5,
+      "M_total": 1e+35,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC4138",
+      "n_points": 7,
+      "chi2": 1720.4987489441496,
+      "chi2_reduced": 344.0997497888299,
+      "rms_km_s": 166.51683515805132,
+      "V_scale": 162.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC4157",
+      "n_points": 17,
+      "chi2": 10032.00432445147,
+      "chi2_reduced": 668.8002882967647,
+      "rms_km_s": 182.202406543901,
+      "V_scale": 185.0,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "NGC4183",
+      "n_points": 23,
+      "chi2": 8107.1358114937075,
+      "chi2_reduced": 386.0540862616051,
+      "rms_km_s": 103.24007626590641,
+      "V_scale": 109.0,
+      "M_total": 1e+35,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "NGC4214",
+      "n_points": 14,
+      "chi2": 2192.195917828437,
+      "chi2_reduced": 182.68299315236973,
+      "rms_km_s": 75.59001558657975,
+      "V_scale": 80.1,
+      "M_total": 1e+35,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "NGC4217",
+      "n_points": 19,
+      "chi2": 12590.79692011579,
+      "chi2_reduced": 740.6351129479876,
+      "rms_km_s": 172.22269798202132,
+      "V_scale": 179.0,
+      "M_total": 1e+35,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "NGC4389",
+      "n_points": 6,
+      "chi2": 801.3859766948985,
+      "chi2_reduced": 200.34649417372464,
+      "rms_km_s": 78.0460315659762,
+      "V_scale": 76.35,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "NGC4559",
+      "n_points": 32,
+      "chi2": 18784.69724484012,
+      "chi2_reduced": 626.1565748280041,
+      "rms_km_s": 112.04473263419665,
+      "V_scale": 119.5,
+      "M_total": 1e+35,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "NGC5005",
+      "n_points": 18,
+      "chi2": 3703.3070915751764,
+      "chi2_reduced": 231.45669322344853,
+      "rms_km_s": 252.72631774156628,
+      "V_scale": 260.0,
+      "M_total": 1e+35,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "NGC5033",
+      "n_points": 22,
+      "chi2": 117454.90705145868,
+      "chi2_reduced": 5872.745352572934,
+      "rms_km_s": 211.8152342489783,
+      "V_scale": 217.5,
+      "M_total": 1e+35,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "NGC5055",
+      "n_points": 28,
+      "chi2": 1069161.711791066,
+      "chi2_reduced": 41121.604299656385,
+      "rms_km_s": 187.97752996866424,
+      "V_scale": 189.0,
+      "M_total": 1e+35,
+      "dof": 26
+    },
+    {
+      "galaxy_name": "NGC5371",
+      "n_points": 19,
+      "chi2": 76969.5983770389,
+      "chi2_reduced": 4527.623433943465,
+      "rms_km_s": 221.65387161470892,
+      "V_scale": 215.0,
+      "M_total": 1e+35,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "NGC5585",
+      "n_points": 24,
+      "chi2": 33837.53863846106,
+      "chi2_reduced": 1538.0699381118663,
+      "rms_km_s": 67.34167408951215,
+      "V_scale": 68.7,
+      "M_total": 1e+35,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC5907",
+      "n_points": 19,
+      "chi2": 136255.57711692032,
+      "chi2_reduced": 8015.033948054137,
+      "rms_km_s": 221.66985804137465,
+      "V_scale": 218.0,
+      "M_total": 1e+35,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "NGC5985",
+      "n_points": 33,
+      "chi2": 110906.93604415428,
+      "chi2_reduced": 3577.6430981985254,
+      "rms_km_s": 286.06576026260973,
+      "V_scale": 291.0,
+      "M_total": 1e+35,
+      "dof": 31
+    },
+    {
+      "galaxy_name": "NGC6015",
+      "n_points": 44,
+      "chi2": 137227.5783504782,
+      "chi2_reduced": 3267.3232940590046,
+      "rms_km_s": 145.6657755638532,
+      "V_scale": 152.0,
+      "M_total": 1e+35,
+      "dof": 42
+    },
+    {
+      "galaxy_name": "NGC6195",
+      "n_points": 23,
+      "chi2": 42327.64292874729,
+      "chi2_reduced": 2015.6020442260615,
+      "rms_km_s": 243.5664381887005,
+      "V_scale": 247.0,
+      "M_total": 1e+35,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "NGC6503",
+      "n_points": 31,
+      "chi2": 201907.015522675,
+      "chi2_reduced": 6962.310880092242,
+      "rms_km_s": 114.4969773974666,
+      "V_scale": 116.0,
+      "M_total": 1e+35,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "NGC6674",
+      "n_points": 15,
+      "chi2": 134444.17423548066,
+      "chi2_reduced": 10341.859556575435,
+      "rms_km_s": 250.7588824977937,
+      "V_scale": 242.0,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "NGC6789",
+      "n_points": 4,
+      "chi2": 242.12152817534522,
+      "chi2_reduced": 121.06076408767261,
+      "rms_km_s": 41.567168739855404,
+      "V_scale": 38.3,
+      "M_total": 1e+35,
+      "dof": 2
+    },
+    {
+      "galaxy_name": "NGC6946",
+      "n_points": 58,
+      "chi2": 232600.13048168624,
+      "chi2_reduced": 4153.57375860154,
+      "rms_km_s": 163.89757086029434,
+      "V_scale": 167.0,
+      "M_total": 1e+35,
+      "dof": 56
+    },
+    {
+      "galaxy_name": "NGC7331",
+      "n_points": 36,
+      "chi2": 133180.8162574988,
+      "chi2_reduced": 3917.0828311029063,
+      "rms_km_s": 241.94729191194128,
+      "V_scale": 239.0,
+      "M_total": 1e+35,
+      "dof": 34
+    },
+    {
+      "galaxy_name": "NGC7793",
+      "n_points": 46,
+      "chi2": 7195.686723685953,
+      "chi2_reduced": 163.53833462922623,
+      "rms_km_s": 80.40731886389429,
+      "V_scale": 76.2,
+      "M_total": 1e+35,
+      "dof": 44
+    },
+    {
+      "galaxy_name": "NGC7814",
+      "n_points": 18,
+      "chi2": 53298.473925850136,
+      "chi2_reduced": 3331.1546203656335,
+      "rms_km_s": 224.97364336382682,
+      "V_scale": 221.0,
+      "M_total": 1e+35,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "PGC51017",
+      "n_points": 6,
+      "chi2": 547.6428795648419,
+      "chi2_reduced": 136.91071989121048,
+      "rms_km_s": 19.15621580385836,
+      "V_scale": 19.05,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC00128",
+      "n_points": 22,
+      "chi2": 373265.6825890658,
+      "chi2_reduced": 18663.284129453292,
+      "rms_km_s": 120.5120918857049,
+      "V_scale": 127.5,
+      "M_total": 1e+35,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "UGC00191",
+      "n_points": 9,
+      "chi2": 30350.96301023833,
+      "chi2_reduced": 4335.851858605476,
+      "rms_km_s": 61.94207313551723,
+      "V_scale": 57.6,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC00634",
+      "n_points": 4,
+      "chi2": 17905.357955913914,
+      "chi2_reduced": 8952.678977956957,
+      "rms_km_s": 96.94376839904872,
+      "V_scale": 102.6,
+      "M_total": 1e+35,
+      "dof": 2
+    },
+    {
+      "galaxy_name": "UGC00731",
+      "n_points": 12,
+      "chi2": 6230.370773503719,
+      "chi2_reduced": 623.0370773503719,
+      "rms_km_s": 63.20900485391532,
+      "V_scale": 66.35,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC00891",
+      "n_points": 5,
+      "chi2": 27733.46974080404,
+      "chi2_reduced": 9244.489913601346,
+      "rms_km_s": 51.15339254131892,
+      "V_scale": 54.15,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC01230",
+      "n_points": 11,
+      "chi2": 805.7662672654892,
+      "chi2_reduced": 89.52958525172102,
+      "rms_km_s": 95.80290993455543,
+      "V_scale": 103.0,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC01281",
+      "n_points": 25,
+      "chi2": 1842.0041566670639,
+      "chi2_reduced": 80.08713724639408,
+      "rms_km_s": 38.640786722473365,
+      "V_scale": 37.4,
+      "M_total": 1e+35,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "UGC02023",
+      "n_points": 5,
+      "chi2": 108.12098901076274,
+      "chi2_reduced": 36.040329670254245,
+      "rms_km_s": 40.41008640979541,
+      "V_scale": 37.6,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC02259",
+      "n_points": 8,
+      "chi2": 15534.505557853292,
+      "chi2_reduced": 2589.0842596422153,
+      "rms_km_s": 80.48099879855168,
+      "V_scale": 83.25,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC02455",
+      "n_points": 8,
+      "chi2": 959.183403368237,
+      "chi2_reduced": 159.86390056137284,
+      "rms_km_s": 39.85723965176808,
+      "V_scale": 36.05,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC02487",
+      "n_points": 17,
+      "chi2": 181055.6271686979,
+      "chi2_reduced": 12070.375144579859,
+      "rms_km_s": 355.61515327450576,
+      "V_scale": 364.0,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "UGC02885",
+      "n_points": 19,
+      "chi2": 15552.66173443368,
+      "chi2_reduced": 914.862454966687,
+      "rms_km_s": 286.105075788173,
+      "V_scale": 287.0,
+      "M_total": 1e+35,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "UGC02916",
+      "n_points": 43,
+      "chi2": 281720.93274481315,
+      "chi2_reduced": 6871.242262068614,
+      "rms_km_s": 208.90728258463946,
+      "V_scale": 211.0,
+      "M_total": 1e+35,
+      "dof": 41
+    },
+    {
+      "galaxy_name": "UGC02953",
+      "n_points": 115,
+      "chi2": 2263841.786201867,
+      "chi2_reduced": 20033.998107981122,
+      "rms_km_s": 275.27540776170497,
+      "V_scale": 266.0,
+      "M_total": 1e+35,
+      "dof": 113
+    },
+    {
+      "galaxy_name": "UGC03205",
+      "n_points": 48,
+      "chi2": 167671.28280967014,
+      "chi2_reduced": 3645.0278871667424,
+      "rms_km_s": 216.97722483036378,
+      "V_scale": 221.0,
+      "M_total": 1e+35,
+      "dof": 46
+    },
+    {
+      "galaxy_name": "UGC03546",
+      "n_points": 30,
+      "chi2": 344108.7398013635,
+      "chi2_reduced": 12289.597850048696,
+      "rms_km_s": 212.78617013402481,
+      "V_scale": 204.5,
+      "M_total": 1e+35,
+      "dof": 28
+    },
+    {
+      "galaxy_name": "UGC03580",
+      "n_points": 47,
+      "chi2": 115267.57978474643,
+      "chi2_reduced": 2561.501772994365,
+      "rms_km_s": 94.04263741487416,
+      "V_scale": 91.4,
+      "M_total": 1e+35,
+      "dof": 45
+    },
+    {
+      "galaxy_name": "UGC04278",
+      "n_points": 25,
+      "chi2": 3998.822474916244,
+      "chi2_reduced": 173.86184673548888,
+      "rms_km_s": 61.86876740932812,
+      "V_scale": 53.7,
+      "M_total": 1e+35,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "UGC04305",
+      "n_points": 22,
+      "chi2": 1869.6213423597524,
+      "chi2_reduced": 93.48106711798762,
+      "rms_km_s": 31.26076944913106,
+      "V_scale": 33.1,
+      "M_total": 1e+35,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "UGC04325",
+      "n_points": 8,
+      "chi2": 5878.105251948131,
+      "chi2_reduced": 979.6842086580218,
+      "rms_km_s": 82.72115841448237,
+      "V_scale": 89.4,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC04483",
+      "n_points": 8,
+      "chi2": 1271.7697216176837,
+      "chi2_reduced": 211.96162026961395,
+      "rms_km_s": 19.371653726827535,
+      "V_scale": 20.8,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC04499",
+      "n_points": 9,
+      "chi2": 4582.907974191555,
+      "chi2_reduced": 654.7011391702221,
+      "rms_km_s": 62.72589160613136,
+      "V_scale": 66.9,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC05005",
+      "n_points": 11,
+      "chi2": 604.6767250999598,
+      "chi2_reduced": 67.18630278888442,
+      "rms_km_s": 74.9802123474508,
+      "V_scale": 72.5,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC05253",
+      "n_points": 73,
+      "chi2": 520070.3206534338,
+      "chi2_reduced": 7324.934093710335,
+      "rms_km_s": 241.92504580469935,
+      "V_scale": 246.0,
+      "M_total": 1e+35,
+      "dof": 71
+    },
+    {
+      "galaxy_name": "UGC05414",
+      "n_points": 6,
+      "chi2": 2236.2816207927526,
+      "chi2_reduced": 559.0704051981882,
+      "rms_km_s": 47.248280069516795,
+      "V_scale": 48.9,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC05716",
+      "n_points": 12,
+      "chi2": 85881.65756663648,
+      "chi2_reduced": 8588.165756663648,
+      "rms_km_s": 65.33212149310039,
+      "V_scale": 69.95,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC05721",
+      "n_points": 23,
+      "chi2": 5361.360265957269,
+      "chi2_reduced": 255.302869807489,
+      "rms_km_s": 72.26530867846859,
+      "V_scale": 78.3,
+      "M_total": 1e+35,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "UGC05750",
+      "n_points": 11,
+      "chi2": 593.1794679928225,
+      "chi2_reduced": 65.90882977698028,
+      "rms_km_s": 54.54124532999419,
+      "V_scale": 49.8,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC05764",
+      "n_points": 10,
+      "chi2": 52881.80221860104,
+      "chi2_reduced": 6610.22527732513,
+      "rms_km_s": 46.956577826157634,
+      "V_scale": 49.95,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC05829",
+      "n_points": 11,
+      "chi2": 1031.8029113193415,
+      "chi2_reduced": 114.64476792437128,
+      "rms_km_s": 49.00637158969127,
+      "V_scale": 47.9,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC05918",
+      "n_points": 8,
+      "chi2": 682.4803155615948,
+      "chi2_reduced": 113.7467192602658,
+      "rms_km_s": 36.29882957103658,
+      "V_scale": 38.1,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC05986",
+      "n_points": 15,
+      "chi2": 18970.59439123926,
+      "chi2_reduced": 1459.2764916337894,
+      "rms_km_s": 100.13674892597886,
+      "V_scale": 109.0,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "UGC05999",
+      "n_points": 5,
+      "chi2": 1461.325266489903,
+      "chi2_reduced": 487.108422163301,
+      "rms_km_s": 85.47880633495951,
+      "V_scale": 91.2,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC06399",
+      "n_points": 9,
+      "chi2": 2204.9686917738127,
+      "chi2_reduced": 314.995527396259,
+      "rms_km_s": 71.61269272689819,
+      "V_scale": 77.5,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC06446",
+      "n_points": 17,
+      "chi2": 4716.2631395424905,
+      "chi2_reduced": 314.41754263616605,
+      "rms_km_s": 74.18164996800112,
+      "V_scale": 80.1,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "UGC06614",
+      "n_points": 13,
+      "chi2": 3760.398715085183,
+      "chi2_reduced": 341.85442864410754,
+      "rms_km_s": 186.79725757018724,
+      "V_scale": 193.0,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC06628",
+      "n_points": 7,
+      "chi2": 158.90176006158634,
+      "chi2_reduced": 31.78035201231727,
+      "rms_km_s": 39.40223377590244,
+      "V_scale": 41.4,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC06667",
+      "n_points": 9,
+      "chi2": 4226.45900771075,
+      "chi2_reduced": 603.7798582443928,
+      "rms_km_s": 70.60451866515423,
+      "V_scale": 77.3,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC06786",
+      "n_points": 45,
+      "chi2": 273234.09286570776,
+      "chi2_reduced": 6354.281229435064,
+      "rms_km_s": 212.94807542929362,
+      "V_scale": 218.0,
+      "M_total": 1e+35,
+      "dof": 43
+    },
+    {
+      "galaxy_name": "UGC06787",
+      "n_points": 71,
+      "chi2": 701015.6647371354,
+      "chi2_reduced": 10159.647315030948,
+      "rms_km_s": 240.32922958354618,
+      "V_scale": 238.0,
+      "M_total": 1e+35,
+      "dof": 69
+    },
+    {
+      "galaxy_name": "UGC06818",
+      "n_points": 8,
+      "chi2": 889.6179139508224,
+      "chi2_reduced": 148.26965232513706,
+      "rms_km_s": 54.95457658936609,
+      "V_scale": 55.45,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC06917",
+      "n_points": 11,
+      "chi2": 6029.115899608364,
+      "chi2_reduced": 669.9017666231516,
+      "rms_km_s": 95.40657499626163,
+      "V_scale": 100.0,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC06923",
+      "n_points": 6,
+      "chi2": 1234.6421681122206,
+      "chi2_reduced": 308.66054202805515,
+      "rms_km_s": 69.35007826585095,
+      "V_scale": 75.7,
+      "M_total": 1e+35,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC06930",
+      "n_points": 10,
+      "chi2": 2673.02143478791,
+      "chi2_reduced": 334.12767934848875,
+      "rms_km_s": 98.82441188150706,
+      "V_scale": 105.0,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC06973",
+      "n_points": 9,
+      "chi2": 10403.097843398162,
+      "chi2_reduced": 1486.156834771166,
+      "rms_km_s": 173.7735328166248,
+      "V_scale": 174.0,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC06983",
+      "n_points": 17,
+      "chi2": 6612.055125808357,
+      "chi2_reduced": 440.80367505389046,
+      "rms_km_s": 101.96925720766872,
+      "V_scale": 108.0,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "UGC07089",
+      "n_points": 12,
+      "chi2": 1756.7847828501435,
+      "chi2_reduced": 175.67847828501436,
+      "rms_km_s": 62.24350871531252,
+      "V_scale": 66.2,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC07125",
+      "n_points": 13,
+      "chi2": 7451.345861261524,
+      "chi2_reduced": 677.3950782965022,
+      "rms_km_s": 57.810390549550334,
+      "V_scale": 61.5,
+      "M_total": 1e+35,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC07151",
+      "n_points": 11,
+      "chi2": 7082.465368229608,
+      "chi2_reduced": 786.9405964699565,
+      "rms_km_s": 64.0494351840229,
+      "V_scale": 67.2,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC07232",
+      "n_points": 4,
+      "chi2": 378.89128794762485,
+      "chi2_reduced": 189.44564397381242,
+      "rms_km_s": 32.11746458606919,
+      "V_scale": 30.7,
+      "M_total": 1e+35,
+      "dof": 2
+    },
+    {
+      "galaxy_name": "UGC07261",
+      "n_points": 7,
+      "chi2": 1004.7669405121659,
+      "chi2_reduced": 200.95338810243317,
+      "rms_km_s": 67.81098920578702,
+      "V_scale": 69.6,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC07323",
+      "n_points": 10,
+      "chi2": 2686.840436888272,
+      "chi2_reduced": 335.855054611034,
+      "rms_km_s": 63.43543216470741,
+      "V_scale": 62.5,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC07399",
+      "n_points": 10,
+      "chi2": 7843.2985553095305,
+      "chi2_reduced": 980.4123194136913,
+      "rms_km_s": 89.86640540945798,
+      "V_scale": 93.4,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC07524",
+      "n_points": 31,
+      "chi2": 11780.416716599104,
+      "chi2_reduced": 406.2212660896243,
+      "rms_km_s": 65.50311779792355,
+      "V_scale": 70.2,
+      "M_total": 1e+35,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "UGC07559",
+      "n_points": 7,
+      "chi2": 416.86204416334385,
+      "chi2_reduced": 83.37240883266877,
+      "rms_km_s": 24.92583290068974,
+      "V_scale": 26.1,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC07577",
+      "n_points": 9,
+      "chi2": 120.11616557241166,
+      "chi2_reduced": 17.159452224630236,
+      "rms_km_s": 11.580804693882255,
+      "V_scale": 10.7,
+      "M_total": 1e+35,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC07603",
+      "n_points": 12,
+      "chi2": 4252.133706165653,
+      "chi2_reduced": 425.2133706165653,
+      "rms_km_s": 54.40147510811491,
+      "V_scale": 60.25,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC07608",
+      "n_points": 8,
+      "chi2": 486.2899313100297,
+      "chi2_reduced": 81.04832188500495,
+      "rms_km_s": 52.158940742101954,
+      "V_scale": 53.1,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC07690",
+      "n_points": 7,
+      "chi2": 1209.0639473840033,
+      "chi2_reduced": 241.81278947680067,
+      "rms_km_s": 56.64386588022697,
+      "V_scale": 57.9,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC07866",
+      "n_points": 7,
+      "chi2": 277.1146493621907,
+      "chi2_reduced": 55.42292987243813,
+      "rms_km_s": 25.60796877988165,
+      "V_scale": 26.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC08286",
+      "n_points": 17,
+      "chi2": 22186.191904320687,
+      "chi2_reduced": 1479.0794602880458,
+      "rms_km_s": 74.52619194937485,
+      "V_scale": 79.3,
+      "M_total": 1e+35,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "UGC08490",
+      "n_points": 30,
+      "chi2": 12619.592757514696,
+      "chi2_reduced": 450.6997413398106,
+      "rms_km_s": 75.68126957744033,
+      "V_scale": 78.5,
+      "M_total": 1e+35,
+      "dof": 28
+    },
+    {
+      "galaxy_name": "UGC08550",
+      "n_points": 11,
+      "chi2": 6428.552347702633,
+      "chi2_reduced": 714.2835941891814,
+      "rms_km_s": 50.557416980371364,
+      "V_scale": 51.6,
+      "M_total": 1e+35,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC08699",
+      "n_points": 41,
+      "chi2": 77578.91435517724,
+      "chi2_reduced": 1989.2029321840319,
+      "rms_km_s": 184.3958702481499,
+      "V_scale": 184.0,
+      "M_total": 1e+35,
+      "dof": 39
+    },
+    {
+      "galaxy_name": "UGC08837",
+      "n_points": 8,
+      "chi2": 1187.3039787661264,
+      "chi2_reduced": 197.88399646102107,
+      "rms_km_s": 33.63552456260249,
+      "V_scale": 31.7,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC09037",
+      "n_points": 22,
+      "chi2": 12875.076993560384,
+      "chi2_reduced": 643.7538496780192,
+      "rms_km_s": 140.03865029671508,
+      "V_scale": 147.0,
+      "M_total": 1e+35,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "UGC09133",
+      "n_points": 68,
+      "chi2": 679837.5213586664,
+      "chi2_reduced": 10300.56850543434,
+      "rms_km_s": 265.1876769732759,
+      "V_scale": 279.0,
+      "M_total": 1e+35,
+      "dof": 66
+    },
+    {
+      "galaxy_name": "UGC09992",
+      "n_points": 5,
+      "chi2": 160.44877454410567,
+      "chi2_reduced": 53.482924848035225,
+      "rms_km_s": 32.062666020732436,
+      "V_scale": 33.0,
+      "M_total": 1e+35,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC10310",
+      "n_points": 7,
+      "chi2": 1124.0407241387643,
+      "chi2_reduced": 224.80814482775287,
+      "rms_km_s": 64.11985327110835,
+      "V_scale": 69.2,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC11455",
+      "n_points": 36,
+      "chi2": 42679.234271361165,
+      "chi2_reduced": 1255.2715962165048,
+      "rms_km_s": 238.26262717988973,
+      "V_scale": 262.5,
+      "M_total": 1e+35,
+      "dof": 34
+    },
+    {
+      "galaxy_name": "UGC11557",
+      "n_points": 12,
+      "chi2": 872.7282262114013,
+      "chi2_reduced": 87.27282262114014,
+      "rms_km_s": 63.00048336284313,
+      "V_scale": 64.9,
+      "M_total": 1e+35,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC11820",
+      "n_points": 10,
+      "chi2": 43864.753835170086,
+      "chi2_reduced": 5483.094229396261,
+      "rms_km_s": 56.97124580189262,
+      "V_scale": 51.875,
+      "M_total": 1e+35,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC11914",
+      "n_points": 65,
+      "chi2": 287198.1352736224,
+      "chi2_reduced": 4558.700559898768,
+      "rms_km_s": 280.5976946617475,
+      "V_scale": 288.0,
+      "M_total": 1e+35,
+      "dof": 63
+    },
+    {
+      "galaxy_name": "UGC12506",
+      "n_points": 31,
+      "chi2": 9861.138028206391,
+      "chi2_reduced": 340.0392423519445,
+      "rms_km_s": 230.72844546077275,
+      "V_scale": 238.0,
+      "M_total": 1e+35,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "UGC12632",
+      "n_points": 15,
+      "chi2": 6004.21776709831,
+      "chi2_reduced": 461.8629051614085,
+      "rms_km_s": 61.88805949565203,
+      "V_scale": 65.5,
+      "M_total": 1e+35,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "UGC12732",
+      "n_points": 16,
+      "chi2": 7920.058412560973,
+      "chi2_reduced": 565.7184580400695,
+      "rms_km_s": 77.46208319425023,
+      "V_scale": 79.8,
+      "M_total": 1e+35,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "UGCA281",
+      "n_points": 7,
+      "chi2": 1483.360366945886,
+      "chi2_reduced": 296.67207338917717,
+      "rms_km_s": 23.42876439379297,
+      "V_scale": 26.0,
+      "M_total": 1e+35,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGCA442",
+      "n_points": 8,
+      "chi2": 10512.891008673845,
+      "chi2_reduced": 1752.148501445641,
+      "rms_km_s": 47.15835663633586,
+      "V_scale": 51.9,
+      "M_total": 1e+35,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGCA444",
+      "n_points": 36,
+      "chi2": 1792.4456724610868,
+      "chi2_reduced": 52.71899036650255,
+      "rms_km_s": 27.65279099303447,
+      "V_scale": 27.85,
+      "M_total": 1e+35,
+      "dof": 34
+    }
+  ],
+  "failed_galaxies": [],
+  "conclusion": "UDT successfully validated on complete SPARC database"
+}

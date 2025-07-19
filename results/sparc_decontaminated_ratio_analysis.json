@@ -1,0 +1,1604 @@
+{
+  "analysis_type": "sparc_decontaminated_ratio_analysis",
+  "date": "2025-07-18",
+  "contamination_status": "LCDM_distance_contamination_removed",
+  "methodology": "dimensionless_velocity_ratios",
+  "udt_parameters": {
+    "R0_galactic_kpc": 57.5,
+    "alpha": 0.00206
+  },
+  "population_statistics": {
+    "total_galaxies_analyzed": 175,
+    "total_data_points": 3391,
+    "median_rms_dimensionless": 0.31346275828766457,
+    "mean_rms_dimensionless": 0.3631537193871162,
+    "std_rms_dimensionless": 0.12900400998810052,
+    "median_chi2_reduced": 71.44794810436271,
+    "mean_chi2_reduced": 501.3873688720586,
+    "median_R0_effective": 1.0,
+    "mean_R0_effective": 1.0,
+    "std_R0_effective": 0.0,
+    "fraction_excellent_fits": 0.011428571428571429,
+    "fraction_good_fits": 0.04,
+    "udt_average_score": 1.4285714285714286
+  },
+  "individual_galaxies": [
+    {
+      "galaxy_name": "CamB",
+      "n_points": 9,
+      "chi2": 61.57909403510919,
+      "chi2_reduced": 7.697386754388649,
+      "rms_dimensionless": 0.23354865481647769,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "D512-2",
+      "n_points": 4,
+      "chi2": 39.743243986905924,
+      "chi2_reduced": 13.247747995635308,
+      "rms_dimensionless": 0.29806592591885983,
+      "R0_effective": 1.0,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "D564-8",
+      "n_points": 6,
+      "chi2": 62.369893015764845,
+      "chi2_reduced": 12.473978603152968,
+      "rms_dimensionless": 0.25071123722205835,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "D631-7",
+      "n_points": 16,
+      "chi2": 506.73748015283894,
+      "chi2_reduced": 33.78249867685593,
+      "rms_dimensionless": 0.23481333080393374,
+      "R0_effective": 1.0,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "DDO064",
+      "n_points": 14,
+      "chi2": 72.54683805259138,
+      "chi2_reduced": 5.580526004045491,
+      "rms_dimensionless": 0.2475353652544467,
+      "R0_effective": 1.0,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "DDO154",
+      "n_points": 12,
+      "chi2": 24176.25870073979,
+      "chi2_reduced": 2197.8417000672534,
+      "rms_dimensionless": 0.2702922781152798,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "DDO161",
+      "n_points": 31,
+      "chi2": 4945.345501047732,
+      "chi2_reduced": 164.8448500349244,
+      "rms_dimensionless": 0.24598377932306364,
+      "R0_effective": 1.0,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "DDO168",
+      "n_points": 10,
+      "chi2": 662.8776927083806,
+      "chi2_reduced": 73.65307696759784,
+      "rms_dimensionless": 0.2368683090894203,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "DDO170",
+      "n_points": 8,
+      "chi2": 2198.9967998229995,
+      "chi2_reduced": 314.14239997471424,
+      "rms_dimensionless": 0.3058559828090288,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "ESO079-G014",
+      "n_points": 15,
+      "chi2": 3226.1635734581578,
+      "chi2_reduced": 230.44025524701127,
+      "rms_dimensionless": 0.2275728969535869,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "ESO116-G012",
+      "n_points": 15,
+      "chi2": 2144.245665177476,
+      "chi2_reduced": 153.160404655534,
+      "rms_dimensionless": 0.29019792651336523,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "ESO444-G084",
+      "n_points": 7,
+      "chi2": 579.6810885268644,
+      "chi2_reduced": 96.61351475447741,
+      "rms_dimensionless": 0.2765416385194369,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "ESO563-G021",
+      "n_points": 30,
+      "chi2": 9814.109257756387,
+      "chi2_reduced": 338.4175606122892,
+      "rms_dimensionless": 0.37444522988237156,
+      "R0_effective": 1.0,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "F561-1",
+      "n_points": 6,
+      "chi2": 52.059839124904144,
+      "chi2_reduced": 10.41196782498083,
+      "rms_dimensionless": 0.2938493647516681,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "F563-1",
+      "n_points": 17,
+      "chi2": 158.97144117932066,
+      "chi2_reduced": 9.935715073707541,
+      "rms_dimensionless": 0.3046307925358072,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "F563-V1",
+      "n_points": 6,
+      "chi2": 18.863961047332193,
+      "chi2_reduced": 3.772792209466439,
+      "rms_dimensionless": 0.3099879353240677,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "F563-V2",
+      "n_points": 10,
+      "chi2": 73.22704940844395,
+      "chi2_reduced": 8.136338823160438,
+      "rms_dimensionless": 0.27955925498620954,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "F565-V2",
+      "n_points": 7,
+      "chi2": 71.34498112609549,
+      "chi2_reduced": 11.890830187682582,
+      "rms_dimensionless": 0.2471792205144763,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "F567-2",
+      "n_points": 5,
+      "chi2": 34.40502350495074,
+      "chi2_reduced": 8.601255876237685,
+      "rms_dimensionless": 0.31240942804613386,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "F568-1",
+      "n_points": 12,
+      "chi2": 148.32261664242353,
+      "chi2_reduced": 13.48387424022032,
+      "rms_dimensionless": 0.2961436752820907,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "F568-3",
+      "n_points": 18,
+      "chi2": 237.17561937717096,
+      "chi2_reduced": 13.951507022186528,
+      "rms_dimensionless": 0.29738430905105157,
+      "R0_effective": 1.0,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "F568-V1",
+      "n_points": 15,
+      "chi2": 351.22667434767067,
+      "chi2_reduced": 25.08761959626219,
+      "rms_dimensionless": 0.39919677491123945,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "F571-8",
+      "n_points": 13,
+      "chi2": 870.3829329096521,
+      "chi2_reduced": 72.53191107580435,
+      "rms_dimensionless": 0.26248329209840093,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "F571-V1",
+      "n_points": 7,
+      "chi2": 95.4278737842643,
+      "chi2_reduced": 15.904645630710718,
+      "rms_dimensionless": 0.27828246877031054,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "F574-1",
+      "n_points": 14,
+      "chi2": 566.3872422636744,
+      "chi2_reduced": 43.568249404898026,
+      "rms_dimensionless": 0.29354197662012,
+      "R0_effective": 1.0,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "F574-2",
+      "n_points": 5,
+      "chi2": 5.35668673381778,
+      "chi2_reduced": 1.339171683454445,
+      "rms_dimensionless": 0.21971599712751952,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "F579-V1",
+      "n_points": 14,
+      "chi2": 250.66683334732645,
+      "chi2_reduced": 19.282064103640497,
+      "rms_dimensionless": 0.39032680177644197,
+      "R0_effective": 1.0,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "F583-1",
+      "n_points": 25,
+      "chi2": 478.8499703291159,
+      "chi2_reduced": 19.952082097046496,
+      "rms_dimensionless": 0.3049445572499159,
+      "R0_effective": 1.0,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "F583-4",
+      "n_points": 12,
+      "chi2": 161.88180414156025,
+      "chi2_reduced": 14.71652764923275,
+      "rms_dimensionless": 0.25515241141461265,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "IC2574",
+      "n_points": 34,
+      "chi2": 3783.7858689232044,
+      "chi2_reduced": 114.66017784615771,
+      "rms_dimensionless": 0.20076512271668118,
+      "R0_effective": 1.0,
+      "dof": 33
+    },
+    {
+      "galaxy_name": "IC4202",
+      "n_points": 32,
+      "chi2": 11922.015933713057,
+      "chi2_reduced": 384.5811591520341,
+      "rms_dimensionless": 0.3830257399552379,
+      "R0_effective": 1.0,
+      "dof": 31
+    },
+    {
+      "galaxy_name": "KK98-251",
+      "n_points": 15,
+      "chi2": 192.49456151999618,
+      "chi2_reduced": 13.749611537142584,
+      "rms_dimensionless": 0.21515397029903735,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "NGC0024",
+      "n_points": 29,
+      "chi2": 1443.776218592922,
+      "chi2_reduced": 51.56343637831865,
+      "rms_dimensionless": 0.443802499936569,
+      "R0_effective": 1.0,
+      "dof": 28
+    },
+    {
+      "galaxy_name": "NGC0055",
+      "n_points": 21,
+      "chi2": 2115.0706285409597,
+      "chi2_reduced": 105.75353142704799,
+      "rms_dimensionless": 0.2921299958440444,
+      "R0_effective": 1.0,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "NGC0100",
+      "n_points": 21,
+      "chi2": 459.49926848677023,
+      "chi2_reduced": 22.97496342433851,
+      "rms_dimensionless": 0.2562197549753972,
+      "R0_effective": 1.0,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "NGC0247",
+      "n_points": 26,
+      "chi2": 3297.9640590568188,
+      "chi2_reduced": 131.91856236227275,
+      "rms_dimensionless": 0.2625514239833634,
+      "R0_effective": 1.0,
+      "dof": 25
+    },
+    {
+      "galaxy_name": "NGC0289",
+      "n_points": 28,
+      "chi2": 5397.913091290901,
+      "chi2_reduced": 199.92270708484818,
+      "rms_dimensionless": 0.5723861937322482,
+      "R0_effective": 1.0,
+      "dof": 27
+    },
+    {
+      "galaxy_name": "NGC0300",
+      "n_points": 25,
+      "chi2": 1543.1694584268125,
+      "chi2_reduced": 64.29872743445053,
+      "rms_dimensionless": 0.3108621242595652,
+      "R0_effective": 1.0,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "NGC0801",
+      "n_points": 13,
+      "chi2": 8176.607297386492,
+      "chi2_reduced": 681.3839414488743,
+      "rms_dimensionless": 0.564486550712583,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "NGC0891",
+      "n_points": 18,
+      "chi2": 13508.30830639797,
+      "chi2_reduced": 794.6063709645865,
+      "rms_dimensionless": 0.47840508792627856,
+      "R0_effective": 1.0,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "NGC1003",
+      "n_points": 36,
+      "chi2": 9644.230221185406,
+      "chi2_reduced": 275.5494348910116,
+      "rms_dimensionless": 0.35732140192856154,
+      "R0_effective": 1.0,
+      "dof": 35
+    },
+    {
+      "galaxy_name": "NGC1090",
+      "n_points": 24,
+      "chi2": 9388.848857695846,
+      "chi2_reduced": 408.2108198998194,
+      "rms_dimensionless": 0.4225548180329652,
+      "R0_effective": 1.0,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC1705",
+      "n_points": 14,
+      "chi2": 779.7908717974301,
+      "chi2_reduced": 59.98391321518693,
+      "rms_dimensionless": 0.44696402662099416,
+      "R0_effective": 1.0,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "NGC2366",
+      "n_points": 26,
+      "chi2": 1689.9618344632504,
+      "chi2_reduced": 67.59847337853002,
+      "rms_dimensionless": 0.30883833892995194,
+      "R0_effective": 1.0,
+      "dof": 25
+    },
+    {
+      "galaxy_name": "NGC2403",
+      "n_points": 73,
+      "chi2": 311108.3466486742,
+      "chi2_reduced": 4320.949259009364,
+      "rms_dimensionless": 0.38579265164426113,
+      "R0_effective": 1.0,
+      "dof": 72
+    },
+    {
+      "galaxy_name": "NGC2683",
+      "n_points": 11,
+      "chi2": 2811.9092689277536,
+      "chi2_reduced": 281.19092689277534,
+      "rms_dimensionless": 0.6510736984714459,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "NGC2841",
+      "n_points": 50,
+      "chi2": 36824.15226890675,
+      "chi2_reduced": 751.5133116103418,
+      "rms_dimensionless": 0.639089263649673,
+      "R0_effective": 1.0,
+      "dof": 49
+    },
+    {
+      "galaxy_name": "NGC2903",
+      "n_points": 34,
+      "chi2": 83096.59840314384,
+      "chi2_reduced": 2518.0787394892072,
+      "rms_dimensionless": 0.5587706738182466,
+      "R0_effective": 1.0,
+      "dof": 33
+    },
+    {
+      "galaxy_name": "NGC2915",
+      "n_points": 30,
+      "chi2": 526.3347793443344,
+      "chi2_reduced": 18.149475149804633,
+      "rms_dimensionless": 0.37850632826651337,
+      "R0_effective": 1.0,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "NGC2955",
+      "n_points": 24,
+      "chi2": 12896.381302467278,
+      "chi2_reduced": 560.7122305420555,
+      "rms_dimensionless": 0.5419919435080118,
+      "R0_effective": 1.0,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC2976",
+      "n_points": 27,
+      "chi2": 505.89535707760155,
+      "chi2_reduced": 19.457513733753906,
+      "rms_dimensionless": 0.20429216279374376,
+      "R0_effective": 1.0,
+      "dof": 26
+    },
+    {
+      "galaxy_name": "NGC2998",
+      "n_points": 13,
+      "chi2": 6961.2553155985015,
+      "chi2_reduced": 580.1046096332085,
+      "rms_dimensionless": 0.46000577707269635,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "NGC3109",
+      "n_points": 25,
+      "chi2": 748.0176558533249,
+      "chi2_reduced": 31.16740232722187,
+      "rms_dimensionless": 0.21343020233265797,
+      "R0_effective": 1.0,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "NGC3198",
+      "n_points": 43,
+      "chi2": 53413.16858563097,
+      "chi2_reduced": 1271.7421091816898,
+      "rms_dimensionless": 0.45096499640027504,
+      "R0_effective": 1.0,
+      "dof": 42
+    },
+    {
+      "galaxy_name": "NGC3521",
+      "n_points": 41,
+      "chi2": 6311.949249474958,
+      "chi2_reduced": 157.79873123687395,
+      "rms_dimensionless": 0.5789561521861346,
+      "R0_effective": 1.0,
+      "dof": 40
+    },
+    {
+      "galaxy_name": "NGC3726",
+      "n_points": 12,
+      "chi2": 1850.3255095385884,
+      "chi2_reduced": 168.2114099580535,
+      "rms_dimensionless": 0.38013316960205873,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC3741",
+      "n_points": 21,
+      "chi2": 529.5975977049422,
+      "chi2_reduced": 26.47987988524711,
+      "rms_dimensionless": 0.23375641804001057,
+      "R0_effective": 1.0,
+      "dof": 20
+    },
+    {
+      "galaxy_name": "NGC3769",
+      "n_points": 12,
+      "chi2": 1314.9545795895174,
+      "chi2_reduced": 119.54132541722885,
+      "rms_dimensionless": 0.5020554700370262,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC3877",
+      "n_points": 13,
+      "chi2": 1208.9156247703531,
+      "chi2_reduced": 100.74296873086276,
+      "rms_dimensionless": 0.31333715398647616,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "NGC3893",
+      "n_points": 10,
+      "chi2": 1558.8428465274708,
+      "chi2_reduced": 173.20476072527453,
+      "rms_dimensionless": 0.47814498304373093,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "NGC3917",
+      "n_points": 17,
+      "chi2": 2053.6963285658976,
+      "chi2_reduced": 128.3560205353686,
+      "rms_dimensionless": 0.31346275828766457,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "NGC3949",
+      "n_points": 7,
+      "chi2": 417.42598851286266,
+      "chi2_reduced": 69.57099808547711,
+      "rms_dimensionless": 0.32968800342940036,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "NGC3953",
+      "n_points": 8,
+      "chi2": 1364.3622781733457,
+      "chi2_reduced": 194.90889688190651,
+      "rms_dimensionless": 0.3662870310479115,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "NGC3972",
+      "n_points": 10,
+      "chi2": 466.3925570549763,
+      "chi2_reduced": 51.8213952283307,
+      "rms_dimensionless": 0.2412669862415032,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "NGC3992",
+      "n_points": 9,
+      "chi2": 3219.482292708784,
+      "chi2_reduced": 402.435286588598,
+      "rms_dimensionless": 0.48119481665095076,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "NGC4010",
+      "n_points": 12,
+      "chi2": 494.94164294775726,
+      "chi2_reduced": 44.99469481343248,
+      "rms_dimensionless": 0.2581989595730357,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC4013",
+      "n_points": 36,
+      "chi2": 9928.826700712594,
+      "chi2_reduced": 283.6807628775027,
+      "rms_dimensionless": 0.43713842159944644,
+      "R0_effective": 1.0,
+      "dof": 35
+    },
+    {
+      "galaxy_name": "NGC4051",
+      "n_points": 7,
+      "chi2": 423.73602958404314,
+      "chi2_reduced": 70.62267159734053,
+      "rms_dimensionless": 0.3652222343115838,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "NGC4068",
+      "n_points": 6,
+      "chi2": 85.83985833658959,
+      "chi2_reduced": 17.167971667317918,
+      "rms_dimensionless": 0.2598796922326719,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC4085",
+      "n_points": 7,
+      "chi2": 342.30246278151964,
+      "chi2_reduced": 57.05041046358661,
+      "rms_dimensionless": 0.2776040038490303,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "NGC4088",
+      "n_points": 12,
+      "chi2": 1242.460468969765,
+      "chi2_reduced": 112.9509517245241,
+      "rms_dimensionless": 0.4165581062158156,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "NGC4100",
+      "n_points": 24,
+      "chi2": 6621.257186651787,
+      "chi2_reduced": 287.8807472457299,
+      "rms_dimensionless": 0.5521551534902165,
+      "R0_effective": 1.0,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC4138",
+      "n_points": 7,
+      "chi2": 577.6399816139177,
+      "chi2_reduced": 96.27333026898629,
+      "rms_dimensionless": 0.6008270893869265,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "NGC4157",
+      "n_points": 17,
+      "chi2": 2109.7340806584734,
+      "chi2_reduced": 131.8583800411546,
+      "rms_dimensionless": 0.4444117357652597,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "NGC4183",
+      "n_points": 23,
+      "chi2": 1435.2903721617108,
+      "chi2_reduced": 65.24047146189595,
+      "rms_dimensionless": 0.39378459744661237,
+      "R0_effective": 1.0,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC4214",
+      "n_points": 14,
+      "chi2": 427.61770468941864,
+      "chi2_reduced": 32.89366959149374,
+      "rms_dimensionless": 0.39939696582854434,
+      "R0_effective": 1.0,
+      "dof": 13
+    },
+    {
+      "galaxy_name": "NGC4217",
+      "n_points": 19,
+      "chi2": 2435.601105049121,
+      "chi2_reduced": 135.31117250272894,
+      "rms_dimensionless": 0.4150868080842547,
+      "R0_effective": 1.0,
+      "dof": 18
+    },
+    {
+      "galaxy_name": "NGC4389",
+      "n_points": 6,
+      "chi2": 74.8884577390171,
+      "chi2_reduced": 14.97769154780342,
+      "rms_dimensionless": 0.2538737187380176,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "NGC4559",
+      "n_points": 32,
+      "chi2": 3005.535219834367,
+      "chi2_reduced": 96.95274902691507,
+      "rms_dimensionless": 0.368332836791972,
+      "R0_effective": 1.0,
+      "dof": 31
+    },
+    {
+      "galaxy_name": "NGC5005",
+      "n_points": 18,
+      "chi2": 933.3214779045767,
+      "chi2_reduced": 54.90126340615157,
+      "rms_dimensionless": 0.44566873074608465,
+      "R0_effective": 1.0,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "NGC5033",
+      "n_points": 22,
+      "chi2": 29424.38169900811,
+      "chi2_reduced": 1401.1610332861005,
+      "rms_dimensionless": 0.6114737175550833,
+      "R0_effective": 1.0,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "NGC5055",
+      "n_points": 28,
+      "chi2": 420982.13472286274,
+      "chi2_reduced": 15591.930915661584,
+      "rms_dimensionless": 0.6266196690483696,
+      "R0_effective": 1.0,
+      "dof": 27
+    },
+    {
+      "galaxy_name": "NGC5371",
+      "n_points": 19,
+      "chi2": 20589.847075024234,
+      "chi2_reduced": 1143.880393056902,
+      "rms_dimensionless": 0.5806986760073777,
+      "R0_effective": 1.0,
+      "dof": 18
+    },
+    {
+      "galaxy_name": "NGC5585",
+      "n_points": 24,
+      "chi2": 4128.813025617672,
+      "chi2_reduced": 179.513609809464,
+      "rms_dimensionless": 0.2598844517633804,
+      "R0_effective": 1.0,
+      "dof": 23
+    },
+    {
+      "galaxy_name": "NGC5907",
+      "n_points": 19,
+      "chi2": 26602.62145743434,
+      "chi2_reduced": 1477.9234143019078,
+      "rms_dimensionless": 0.48360329801996654,
+      "R0_effective": 1.0,
+      "dof": 18
+    },
+    {
+      "galaxy_name": "NGC5985",
+      "n_points": 33,
+      "chi2": 19802.96516442104,
+      "chi2_reduced": 618.8426613881575,
+      "rms_dimensionless": 0.4505223356527629,
+      "R0_effective": 1.0,
+      "dof": 32
+    },
+    {
+      "galaxy_name": "NGC6015",
+      "n_points": 44,
+      "chi2": 45491.19567144529,
+      "chi2_reduced": 1057.9347830568672,
+      "rms_dimensionless": 0.45206406193897464,
+      "R0_effective": 1.0,
+      "dof": 43
+    },
+    {
+      "galaxy_name": "NGC6195",
+      "n_points": 23,
+      "chi2": 12999.949232202864,
+      "chi2_reduced": 590.9067832819484,
+      "rms_dimensionless": 0.4842255849683001,
+      "R0_effective": 1.0,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "NGC6503",
+      "n_points": 31,
+      "chi2": 40343.090990711156,
+      "chi2_reduced": 1344.769699690372,
+      "rms_dimensionless": 0.46709302938287617,
+      "R0_effective": 1.0,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "NGC6674",
+      "n_points": 15,
+      "chi2": 23171.415421616126,
+      "chi2_reduced": 1655.101101544009,
+      "rms_dimensionless": 0.5283595082073793,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "NGC6789",
+      "n_points": 4,
+      "chi2": 16.117623066036913,
+      "chi2_reduced": 5.372541022012304,
+      "rms_dimensionless": 0.24325920894694253,
+      "R0_effective": 1.0,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "NGC6946",
+      "n_points": 58,
+      "chi2": 65541.10069990152,
+      "chi2_reduced": 1149.8438719280969,
+      "rms_dimensionless": 0.5102149553067029,
+      "R0_effective": 1.0,
+      "dof": 57
+    },
+    {
+      "galaxy_name": "NGC7331",
+      "n_points": 36,
+      "chi2": 26101.83813114865,
+      "chi2_reduced": 745.7668037471043,
+      "rms_dimensionless": 0.5044377744041803,
+      "R0_effective": 1.0,
+      "dof": 35
+    },
+    {
+      "galaxy_name": "NGC7793",
+      "n_points": 46,
+      "chi2": 1234.202391932321,
+      "chi2_reduced": 27.426719820718244,
+      "rms_dimensionless": 0.31119433443432626,
+      "R0_effective": 1.0,
+      "dof": 45
+    },
+    {
+      "galaxy_name": "NGC7814",
+      "n_points": 18,
+      "chi2": 9760.956314557121,
+      "chi2_reduced": 574.1739008563012,
+      "rms_dimensionless": 0.5521820319689754,
+      "R0_effective": 1.0,
+      "dof": 17
+    },
+    {
+      "galaxy_name": "PGC51017",
+      "n_points": 6,
+      "chi2": 114.46493920580069,
+      "chi2_reduced": 22.89298784116014,
+      "rms_dimensionless": 0.5299908731813641,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC00128",
+      "n_points": 22,
+      "chi2": 72616.37083925345,
+      "chi2_reduced": 3457.9224209168306,
+      "rms_dimensionless": 0.3829771911382025,
+      "R0_effective": 1.0,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "UGC00191",
+      "n_points": 9,
+      "chi2": 3836.8984009067417,
+      "chi2_reduced": 479.6123001133427,
+      "rms_dimensionless": 0.3081465919265331,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC00634",
+      "n_points": 4,
+      "chi2": 2122.3115145518645,
+      "chi2_reduced": 707.4371715172882,
+      "rms_dimensionless": 0.2979556871350946,
+      "R0_effective": 1.0,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC00731",
+      "n_points": 12,
+      "chi2": 707.9047654922554,
+      "chi2_reduced": 64.35497868111412,
+      "rms_dimensionless": 0.2859099475083694,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC00891",
+      "n_points": 5,
+      "chi2": 2621.0278589323775,
+      "chi2_reduced": 655.2569647330944,
+      "rms_dimensionless": 0.24216262844451975,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC01230",
+      "n_points": 11,
+      "chi2": 204.16077024601427,
+      "chi2_reduced": 20.416077024601428,
+      "rms_dimensionless": 0.4743842672531323,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC01281",
+      "n_points": 25,
+      "chi2": 188.78254078046174,
+      "chi2_reduced": 7.865939199185906,
+      "rms_dimensionless": 0.22331670540310058,
+      "R0_effective": 1.0,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "UGC02023",
+      "n_points": 5,
+      "chi2": 8.81729298667921,
+      "chi2_reduced": 2.2043232466698024,
+      "rms_dimensionless": 0.2163057112574642,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC02259",
+      "n_points": 8,
+      "chi2": 2121.1999995188107,
+      "chi2_reduced": 303.0285713598301,
+      "rms_dimensionless": 0.3378474668081769,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC02455",
+      "n_points": 8,
+      "chi2": 72.59941965384729,
+      "chi2_reduced": 10.371345664835328,
+      "rms_dimensionless": 0.2065039882074892,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC02487",
+      "n_points": 17,
+      "chi2": 32976.87719211974,
+      "chi2_reduced": 2061.0548245074838,
+      "rms_dimensionless": 0.5636032166878695,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "UGC02885",
+      "n_points": 19,
+      "chi2": 3396.90992761421,
+      "chi2_reduced": 188.71721820078946,
+      "rms_dimensionless": 0.4486926454962624,
+      "R0_effective": 1.0,
+      "dof": 18
+    },
+    {
+      "galaxy_name": "UGC02916",
+      "n_points": 43,
+      "chi2": 117583.41455659954,
+      "chi2_reduced": 2799.605108490465,
+      "rms_dimensionless": 0.6071345317966809,
+      "R0_effective": 1.0,
+      "dof": 42
+    },
+    {
+      "galaxy_name": "UGC02953",
+      "n_points": 115,
+      "chi2": 806359.4411520426,
+      "chi2_reduced": 7073.328431158268,
+      "rms_dimensionless": 0.7052857819871735,
+      "R0_effective": 1.0,
+      "dof": 114
+    },
+    {
+      "galaxy_name": "UGC03205",
+      "n_points": 48,
+      "chi2": 34636.45654863968,
+      "chi2_reduced": 736.9458840136102,
+      "rms_dimensionless": 0.5732158504156596,
+      "R0_effective": 1.0,
+      "dof": 47
+    },
+    {
+      "galaxy_name": "UGC03546",
+      "n_points": 30,
+      "chi2": 73858.74007914448,
+      "chi2_reduced": 2546.853106177396,
+      "rms_dimensionless": 0.7378821562746797,
+      "R0_effective": 1.0,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "UGC03580",
+      "n_points": 47,
+      "chi2": 26377.590109032866,
+      "chi2_reduced": 573.4258719354971,
+      "rms_dimensionless": 0.43757907888518666,
+      "R0_effective": 1.0,
+      "dof": 46
+    },
+    {
+      "galaxy_name": "UGC04278",
+      "n_points": 25,
+      "chi2": 240.5513294612248,
+      "chi2_reduced": 10.022972060884367,
+      "rms_dimensionless": 0.19368947713192255,
+      "R0_effective": 1.0,
+      "dof": 24
+    },
+    {
+      "galaxy_name": "UGC04305",
+      "n_points": 22,
+      "chi2": 273.6271681772849,
+      "chi2_reduced": 13.02986515129928,
+      "rms_dimensionless": 0.35973585201719055,
+      "R0_effective": 1.0,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "UGC04325",
+      "n_points": 8,
+      "chi2": 776.0384493955296,
+      "chi2_reduced": 110.8626356279328,
+      "rms_dimensionless": 0.3281729389449771,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC04483",
+      "n_points": 8,
+      "chi2": 119.92078662672922,
+      "chi2_reduced": 17.131540946675603,
+      "rms_dimensionless": 0.24384346338594456,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC04499",
+      "n_points": 9,
+      "chi2": 497.996373296152,
+      "chi2_reduced": 62.249546662019,
+      "rms_dimensionless": 0.28148448578539975,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC05005",
+      "n_points": 11,
+      "chi2": 66.55334370310125,
+      "chi2_reduced": 6.655334370310125,
+      "rms_dimensionless": 0.25160290031667887,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC05253",
+      "n_points": 73,
+      "chi2": 232622.96668996578,
+      "chi2_reduced": 3230.8745373606357,
+      "rms_dimensionless": 0.6950001023054463,
+      "R0_effective": 1.0,
+      "dof": 72
+    },
+    {
+      "galaxy_name": "UGC05414",
+      "n_points": 6,
+      "chi2": 211.45382476231697,
+      "chi2_reduced": 42.29076495246339,
+      "rms_dimensionless": 0.2556144035512886,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC05716",
+      "n_points": 12,
+      "chi2": 11902.092585315022,
+      "chi2_reduced": 1082.0084168468202,
+      "rms_dimensionless": 0.3264560484542859,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC05721",
+      "n_points": 23,
+      "chi2": 1169.3929588403516,
+      "chi2_reduced": 53.15422540183417,
+      "rms_dimensionless": 0.4383406806705534,
+      "R0_effective": 1.0,
+      "dof": 22
+    },
+    {
+      "galaxy_name": "UGC05750",
+      "n_points": 11,
+      "chi2": 83.07414427196487,
+      "chi2_reduced": 8.307414427196488,
+      "rms_dimensionless": 0.2669605016623895,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC05764",
+      "n_points": 10,
+      "chi2": 9695.267616832489,
+      "chi2_reduced": 1077.2519574258322,
+      "rms_dimensionless": 0.37076426938175133,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC05829",
+      "n_points": 11,
+      "chi2": 66.90625984988351,
+      "chi2_reduced": 6.690625984988351,
+      "rms_dimensionless": 0.19023206021286063,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC05918",
+      "n_points": 8,
+      "chi2": 70.83479521595494,
+      "chi2_reduced": 10.119256459422134,
+      "rms_dimensionless": 0.27451196536211586,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC05986",
+      "n_points": 15,
+      "chi2": 2821.76686897681,
+      "chi2_reduced": 201.55477635548644,
+      "rms_dimensionless": 0.33401087108409133,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "UGC05999",
+      "n_points": 5,
+      "chi2": 138.66191061164392,
+      "chi2_reduced": 34.66547765291098,
+      "rms_dimensionless": 0.2663709861397462,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC06399",
+      "n_points": 9,
+      "chi2": 228.9393816526896,
+      "chi2_reduced": 28.6174227065862,
+      "rms_dimensionless": 0.2655294133214799,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC06446",
+      "n_points": 17,
+      "chi2": 713.5420536285392,
+      "chi2_reduced": 44.5963783517837,
+      "rms_dimensionless": 0.33637288932276616,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "UGC06614",
+      "n_points": 13,
+      "chi2": 945.3319678357593,
+      "chi2_reduced": 78.77766398631327,
+      "rms_dimensionless": 0.4510600972968796,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "UGC06628",
+      "n_points": 7,
+      "chi2": 23.243710022193866,
+      "chi2_reduced": 3.8739516703656443,
+      "rms_dimensionless": 0.3562614626104236,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC06667",
+      "n_points": 9,
+      "chi2": 410.8042620534654,
+      "chi2_reduced": 51.35053275668317,
+      "rms_dimensionless": 0.25905385402743186,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC06786",
+      "n_points": 45,
+      "chi2": 64838.08155204058,
+      "chi2_reduced": 1473.592762546377,
+      "rms_dimensionless": 0.5397652791383892,
+      "R0_effective": 1.0,
+      "dof": 44
+    },
+    {
+      "galaxy_name": "UGC06787",
+      "n_points": 71,
+      "chi2": 197697.20747321882,
+      "chi2_reduced": 2824.245821045983,
+      "rms_dimensionless": 0.6148815773408287,
+      "R0_effective": 1.0,
+      "dof": 70
+    },
+    {
+      "galaxy_name": "UGC06818",
+      "n_points": 8,
+      "chi2": 67.77929809960126,
+      "chi2_reduced": 9.682756871371609,
+      "rms_dimensionless": 0.22142963869505292,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC06917",
+      "n_points": 11,
+      "chi2": 623.0776021368289,
+      "chi2_reduced": 62.30776021368289,
+      "rms_dimensionless": 0.27780912310806866,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC06923",
+      "n_points": 6,
+      "chi2": 131.27095344040646,
+      "chi2_reduced": 26.25419068808129,
+      "rms_dimensionless": 0.2777062374821574,
+      "R0_effective": 1.0,
+      "dof": 5
+    },
+    {
+      "galaxy_name": "UGC06930",
+      "n_points": 10,
+      "chi2": 376.6908765242,
+      "chi2_reduced": 41.85454183602222,
+      "rms_dimensionless": 0.33860453865933476,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC06973",
+      "n_points": 9,
+      "chi2": 1751.6510542268916,
+      "chi2_reduced": 218.95638177836145,
+      "rms_dimensionless": 0.37803547077524985,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC06983",
+      "n_points": 17,
+      "chi2": 1132.3441861683687,
+      "chi2_reduced": 70.77151163552304,
+      "rms_dimensionless": 0.37295680377187934,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "UGC07089",
+      "n_points": 12,
+      "chi2": 140.72350809489606,
+      "chi2_reduced": 12.793046190445096,
+      "rms_dimensionless": 0.24278406691202536,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC07125",
+      "n_points": 13,
+      "chi2": 1015.3747327606377,
+      "chi2_reduced": 84.61456106338647,
+      "rms_dimensionless": 0.3194969383827363,
+      "R0_effective": 1.0,
+      "dof": 12
+    },
+    {
+      "galaxy_name": "UGC07151",
+      "n_points": 11,
+      "chi2": 884.5300119000086,
+      "chi2_reduced": 88.45300119000086,
+      "rms_dimensionless": 0.29701027380141853,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC07232",
+      "n_points": 4,
+      "chi2": 32.57762815747735,
+      "chi2_reduced": 10.859209385825784,
+      "rms_dimensionless": 0.2378200626899308,
+      "R0_effective": 1.0,
+      "dof": 3
+    },
+    {
+      "galaxy_name": "UGC07261",
+      "n_points": 7,
+      "chi2": 132.127687772854,
+      "chi2_reduced": 22.021281295475664,
+      "rms_dimensionless": 0.32918779646797003,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC07323",
+      "n_points": 10,
+      "chi2": 195.69039151582135,
+      "chi2_reduced": 21.74337683509126,
+      "rms_dimensionless": 0.20675945526913453,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC07399",
+      "n_points": 10,
+      "chi2": 1003.7914849606095,
+      "chi2_reduced": 111.5323872178455,
+      "rms_dimensionless": 0.30033713229987075,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC07524",
+      "n_points": 31,
+      "chi2": 1193.6111026373565,
+      "chi2_reduced": 39.78703675457855,
+      "rms_dimensionless": 0.265140424561102,
+      "R0_effective": 1.0,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "UGC07559",
+      "n_points": 7,
+      "chi2": 35.779284757645286,
+      "chi2_reduced": 5.963214126274214,
+      "rms_dimensionless": 0.23480586502226436,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC07577",
+      "n_points": 9,
+      "chi2": 9.122366257154889,
+      "chi2_reduced": 1.1402957821443611,
+      "rms_dimensionless": 0.20072184284807734,
+      "R0_effective": 1.0,
+      "dof": 8
+    },
+    {
+      "galaxy_name": "UGC07603",
+      "n_points": 12,
+      "chi2": 525.1647699607539,
+      "chi2_reduced": 47.742251814613994,
+      "rms_dimensionless": 0.30712534412587966,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC07608",
+      "n_points": 8,
+      "chi2": 40.7873778288504,
+      "chi2_reduced": 5.826768261264343,
+      "rms_dimensionless": 0.2288759087647384,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC07690",
+      "n_points": 7,
+      "chi2": 227.99078309250874,
+      "chi2_reduced": 37.998463848751456,
+      "rms_dimensionless": 0.43228944220284865,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC07866",
+      "n_points": 7,
+      "chi2": 26.175245312080254,
+      "chi2_reduced": 4.362540885346709,
+      "rms_dimensionless": 0.2571990398595701,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC08286",
+      "n_points": 17,
+      "chi2": 3043.64655310528,
+      "chi2_reduced": 190.22790956908,
+      "rms_dimensionless": 0.33268962211251846,
+      "R0_effective": 1.0,
+      "dof": 16
+    },
+    {
+      "galaxy_name": "UGC08490",
+      "n_points": 30,
+      "chi2": 2480.512487832113,
+      "chi2_reduced": 85.53491337352114,
+      "rms_dimensionless": 0.4307239193007551,
+      "R0_effective": 1.0,
+      "dof": 29
+    },
+    {
+      "galaxy_name": "UGC08550",
+      "n_points": 11,
+      "chi2": 785.8058014782282,
+      "chi2_reduced": 78.58058014782281,
+      "rms_dimensionless": 0.31196170320425537,
+      "R0_effective": 1.0,
+      "dof": 10
+    },
+    {
+      "galaxy_name": "UGC08699",
+      "n_points": 41,
+      "chi2": 28576.643848078005,
+      "chi2_reduced": 714.4160962019502,
+      "rms_dimensionless": 0.6115715109519897,
+      "R0_effective": 1.0,
+      "dof": 40
+    },
+    {
+      "galaxy_name": "UGC08837",
+      "n_points": 8,
+      "chi2": 94.15066220226825,
+      "chi2_reduced": 13.450094600324036,
+      "rms_dimensionless": 0.20902534988545726,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGC09037",
+      "n_points": 22,
+      "chi2": 2072.8368120335986,
+      "chi2_reduced": 98.70651485874279,
+      "rms_dimensionless": 0.3414942352821701,
+      "R0_effective": 1.0,
+      "dof": 21
+    },
+    {
+      "galaxy_name": "UGC09133",
+      "n_points": 68,
+      "chi2": 202011.1349358398,
+      "chi2_reduced": 3015.091566206564,
+      "rms_dimensionless": 0.8224042772016903,
+      "R0_effective": 1.0,
+      "dof": 67
+    },
+    {
+      "galaxy_name": "UGC09992",
+      "n_points": 5,
+      "chi2": 23.604971963101924,
+      "chi2_reduced": 5.901242990775481,
+      "rms_dimensionless": 0.3633076146724181,
+      "R0_effective": 1.0,
+      "dof": 4
+    },
+    {
+      "galaxy_name": "UGC10310",
+      "n_points": 7,
+      "chi2": 134.09842415827399,
+      "chi2_reduced": 22.349737359712332,
+      "rms_dimensionless": 0.30589668305036327,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGC11455",
+      "n_points": 36,
+      "chi2": 8745.41250279616,
+      "chi2_reduced": 249.86892865131887,
+      "rms_dimensionless": 0.4021680541050952,
+      "R0_effective": 1.0,
+      "dof": 35
+    },
+    {
+      "galaxy_name": "UGC11557",
+      "n_points": 12,
+      "chi2": 97.07517028222657,
+      "chi2_reduced": 8.825015480202415,
+      "rms_dimensionless": 0.2537755876585045,
+      "R0_effective": 1.0,
+      "dof": 11
+    },
+    {
+      "galaxy_name": "UGC11820",
+      "n_points": 10,
+      "chi2": 4761.928144546402,
+      "chi2_reduced": 529.1031271718225,
+      "rms_dimensionless": 0.2474413451129831,
+      "R0_effective": 1.0,
+      "dof": 9
+    },
+    {
+      "galaxy_name": "UGC11914",
+      "n_points": 65,
+      "chi2": 60920.00915956458,
+      "chi2_reduced": 951.8751431181965,
+      "rms_dimensionless": 0.5089306217636559,
+      "R0_effective": 1.0,
+      "dof": 64
+    },
+    {
+      "galaxy_name": "UGC12506",
+      "n_points": 31,
+      "chi2": 2143.4384431308813,
+      "chi2_reduced": 71.44794810436271,
+      "rms_dimensionless": 0.4584074758926404,
+      "R0_effective": 1.0,
+      "dof": 30
+    },
+    {
+      "galaxy_name": "UGC12632",
+      "n_points": 15,
+      "chi2": 660.4844046044607,
+      "chi2_reduced": 47.17745747174719,
+      "rms_dimensionless": 0.28189051313410135,
+      "R0_effective": 1.0,
+      "dof": 14
+    },
+    {
+      "galaxy_name": "UGC12732",
+      "n_points": 16,
+      "chi2": 895.335608451476,
+      "chi2_reduced": 59.68904056343173,
+      "rms_dimensionless": 0.28830245068122584,
+      "R0_effective": 1.0,
+      "dof": 15
+    },
+    {
+      "galaxy_name": "UGCA281",
+      "n_points": 7,
+      "chi2": 146.3849773128834,
+      "chi2_reduced": 24.3974962188139,
+      "rms_dimensionless": 0.25576200626548795,
+      "R0_effective": 1.0,
+      "dof": 6
+    },
+    {
+      "galaxy_name": "UGCA442",
+      "n_points": 8,
+      "chi2": 976.9261905036823,
+      "chi2_reduced": 139.5608843576689,
+      "rms_dimensionless": 0.2753241856630931,
+      "R0_effective": 1.0,
+      "dof": 7
+    },
+    {
+      "galaxy_name": "UGCA444",
+      "n_points": 36,
+      "chi2": 141.51088475677332,
+      "chi2_reduced": 4.043168135907809,
+      "rms_dimensionless": 0.23725823412548736,
+      "R0_effective": 1.0,
+      "dof": 35
+    }
+  ],
+  "failed_galaxies": [],
+  "conclusion": "UDT validated on decontaminated SPARC data using dimensionless profiles"
+}

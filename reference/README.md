@@ -17,6 +17,14 @@ This directory contains original implementations that served as the foundation f
 
 **Important**: This script uses sample data and contains Unicode characters that may cause encoding issues. It has been preserved exactly as it was during the breakthrough analysis.
 
+### `temporal_unification_breakthrough.py` - ARCHIVED
+**Original galactic analysis implementation - ARCHIVED DUE TO SYNTHETIC DATA FALLBACKS**
+
+- **Status**: ARCHIVED to `archive/deprecated_fallbacks/` (2025-07-19)
+- **Reason**: Contains `_create_sample_galaxies()` synthetic data fallbacks that could mislead validation
+- **Issue**: Lines 317-325 generate artificial data using exact UDT formulas being tested
+- **Replacement**: Validated implementations use real SPARC observational data via `scripts/analyze_sparc_galaxies.py`
+
 ## Current Implementation
 
 The functionality from these reference implementations has been integrated into the modular framework:
