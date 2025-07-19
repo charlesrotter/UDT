@@ -244,7 +244,7 @@ def validate_supernova_data_integrity(data_directory):
             residual_trend = np.corrcoef(data['redshift'], mu_residuals)[0,1]
             
             if abs(residual_trend) > 0.1:
-                integrity_summary['contamination_warning'] = f"Potential ΛCDM bias detected (trend = {residual_trend:.3f})"
+                integrity_summary['contamination_warning'] = f"Potential LCDM bias detected (trend = {residual_trend:.3f})"
         
         return integrity_summary
         
