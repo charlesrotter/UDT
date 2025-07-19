@@ -10,7 +10,7 @@ import pandas as pd
 from pathlib import Path
 
 
-def load_planck_data(data_directory, dataset='SMICA'):
+def load_planck_data(data_directory, dataset='TT'):
     """
     Load Planck CMB power spectrum data.
     
@@ -19,7 +19,7 @@ def load_planck_data(data_directory, dataset='SMICA'):
     data_directory : str
         Path to Planck data directory
     dataset : str
-        Planck dataset to load ('SMICA', 'temperature', etc.)
+        Planck dataset to load ('TT', 'EE', 'TE', or 'auto')
         
     Returns
     -------
@@ -29,12 +29,22 @@ def load_planck_data(data_directory, dataset='SMICA'):
     data_path = Path(data_directory)
     
     # Look for Planck power spectrum files
-    planck_patterns = [
-        f"*{dataset}*.dat",
-        f"*{dataset}*.txt", 
-        "COM_PowerSpect*.dat",
-        "planck*.dat"
-    ]
+    if dataset.lower() == 'auto':
+        # Auto-detect available files
+        planck_patterns = [
+            "COM_PowerSpect*.txt",
+            "COM_PowerSpect*.dat", 
+            "planck*.dat",
+            "planck*.txt"
+        ]
+    else:
+        # Look for specific dataset
+        planck_patterns = [
+            f"*{dataset}*.txt",
+            f"*{dataset}*.dat",
+            f"COM_PowerSpect*{dataset}*.txt",
+            f"COM_PowerSpect*{dataset}*.dat"
+        ]
     
     planck_files = []
     for pattern in planck_patterns:
@@ -62,14 +72,20 @@ def load_planck_data(data_directory, dataset='SMICA'):
             parts = line.strip().split()
             if len(parts) >= 3:
                 try:
-                    l = int(parts[0])
-                    cl = float(parts[1])
-                    cl_err = float(parts[2]) if len(parts) > 2 else cl * 0.01  # 1% default error
+                    l = float(parts[0])  # l can be floating point in Planck data
+                    dl = float(parts[1])  # This is D_l = l(l+1)C_l/(2π)
+                    dl_err = float(parts[2]) if len(parts) > 2 else dl * 0.01  # Error on D_l
                     
-                    if l > 0 and cl > 0:  # Valid power spectrum point
-                        ell.append(l)
-                        c_ell.append(cl)
-                        c_ell_error.append(cl_err)
+                    if l > 0 and dl > 0:  # Valid power spectrum point
+                        # Convert D_l back to C_l: C_l = D_l * 2π / [l(l+1)]
+                        l_int = int(round(l))
+                        if l_int > 1:  # Avoid division by zero
+                            cl = dl * 2 * np.pi / (l * (l + 1))
+                            cl_err = dl_err * 2 * np.pi / (l * (l + 1))
+                            
+                            ell.append(l_int)
+                            c_ell.append(cl)
+                            c_ell_error.append(cl_err)
                         
                 except ValueError:
                     continue

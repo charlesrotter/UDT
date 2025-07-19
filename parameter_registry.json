@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "created": "2025-07-19T14:03:15.425174",
+    "version": "1.0",
+    "description": "UDT validated parameter registry"
+  },
+  "multi_scale_framework": {
+    "galactic": {
+      "R0_mpc": 0.038,
+      "R0_kpc": 38.0,
+      "description": "Galaxy rotation curve scale",
+      "validated_analyses": [
+        "sparc_rotation_curves"
+      ],
+      "typical_distances": "0.01-100 kpc",
+      "last_validated": null,
+      "chi2_dof_best": null
+    },
+    "cosmological": {
+      "R0_mpc": 3000.0,
+      "R0_gpc": 3.0,
+      "description": "Supernova distance scale",
+      "validated_analyses": [
+        "pantheon_supernovae"
+      ],
+      "typical_distances": "10-10000 Mpc",
+      "last_validated": null,
+      "chi2_dof_best": null
+    },
+    "cmb": {
+      "R0_mpc": 13041.1,
+      "R0_gpc": 13.041,
+      "description": "CMB acoustic peak scale",
+      "validated_analyses": [
+        "planck_cmb_analysis"
+      ],
+      "typical_distances": "14000 Mpc (recombination)",
+      "last_validated": null,
+      "chi2_dof_best": 27.32,
+      "alternative_method": {
+        "R0_mpc": 10316.4,
+        "description": "Optimized for l1=220",
+        "method": "angular_diameter_distance_modification"
+      }
+    }
+  },
+  "analysis_specific_parameters": {
+    "cmb_analysis": {
+      "standard_cosmology_baseline": {
+        "eta_rec_mpc_per_c": 288.0,
+        "r_s_mpc": 147.3,
+        "D_A_standard_mpc": 13975.0,
+        "l1_target": 220.0
+      },
+      "udt_modifications": {
+        "method": "angular_diameter_distance",
+        "formula": "D_A = eta_rec * tau(eta_rec)",
+        "tau_formula": "R0_cmb / (R0_cmb + eta_rec)"
+      }
+    },
+    "supernova_analysis": {
+      "artifact_correction": {
+        "systematic_uncertainty": 0.03,
+        "bias_correction_required": true,
+        "mean_correction_magnitude": 0.068
+      }
+    },
+    "galaxy_analysis": {
+      "enhancement_formula": "1/tau^2 = (1 + r/R0)^2",
+      "typical_enhancement_range": [
+        1.1,
+        100.0
+      ]
+    }
+  },
+  "validation_history": {
+    "successful_analyses": [],
+    "failed_analyses": [],
+    "parameter_updates": []
+  }
+}
