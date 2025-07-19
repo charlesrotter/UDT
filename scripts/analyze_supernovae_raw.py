@@ -18,6 +18,11 @@ import argparse
 import numpy as np
 import pandas as pd
 from pathlib import Path
+
+# Add src to path for ParameterRegistry
+sys.path.append(str(Path(__file__).parent.parent))
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
+from src.udt.diagnostics.mandatory_validation_gate import ValidationGate
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
 import warnings
@@ -33,7 +38,7 @@ from udt.utils.data_loader import load_csp_database, load_pantheon_data
 from udt.utils.plotting import plot_hubble_diagram, setup_plot_style
 
 
-def analyze_supernova_sample(sn_data, dataset_name="Supernovae", data_type="unknown"):
+def analyze_supernova_sample(sn_data, dataset_name="Supernovae", data_type="unknown", cosmo_params=None):
     """Analyze a supernova dataset with UDT model."""
     print(f"\nAnalyzing {dataset_name} ({data_type})...")
     print(f"  Number of SNe: {len(sn_data)}")
@@ -44,9 +49,16 @@ def analyze_supernova_sample(sn_data, dataset_name="Supernovae", data_type="unkn
     m_obs = sn_data['m'].values
     m_err = sn_data['m_err'].values if 'm_err' in sn_data else np.ones_like(m_obs) * 0.15
     
+    # Use registry-informed bounds if available, otherwise defaults
+    if cosmo_params:
+        R0_center = cosmo_params['R0_mpc']  # 3000.0 Mpc
+        R0_bounds = (R0_center * 0.1, R0_center * 3.0)  # 300-9000 Mpc range
+    else:
+        R0_bounds = (100, 10000)  # Default fallback
+    
     # Fit UDT model
     fit_result = fit_supernova_hubble_diagram(z_obs, m_obs, m_err, 
-                                            R0_bounds=(100, 10000),
+                                            R0_bounds=R0_bounds,
                                             M_B_bounds=(-22, -17))
     
     if fit_result['success']:
@@ -211,6 +223,17 @@ def main():
     
     args = parser.parse_args()
     
+    # Initialize parameter registry and validation
+    registry = ParameterRegistry()
+    validator = ValidationGate()
+    
+    # Load validated supernova parameters
+    cosmo_params = registry.get_parameters_for_analysis('supernova')
+    R0_cosmological = cosmo_params['R0_mpc']  # 3000.0 Mpc
+    
+    # Enforce validation before supernova analysis
+    validator.require_validation('supernova', args.data_dir)
+    
     # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
     
@@ -220,6 +243,7 @@ def main():
     print(f"Theory: tau(r) = R0/(R0 + r)")
     print(f"Distance: d_L = z × R0")
     print(f"No expansion - pure temporal geometry")
+    print(f"Registry R0_cosmological = {R0_cosmological:.0f} Mpc (validated scale)")
     print(f"DATA CONTAMINATION PREVENTION: Using only RAW observational data")
     print("=" * 80)
     
@@ -236,7 +260,7 @@ def main():
             csp_df, csp_data_type = load_csp_raw_data(csp_dir, args.z_max)
             if len(csp_df) > 0:
                 # Analyze
-                csp_result = analyze_supernova_sample(csp_df, "CSP DR3", csp_data_type)
+                csp_result = analyze_supernova_sample(csp_df, "CSP DR3", csp_data_type, cosmo_params)
                 results['csp'] = csp_result
                 
                 # Plot if requested
@@ -266,7 +290,7 @@ def main():
             pantheon_df, pantheon_data_type = load_pantheon_raw_data(pantheon_file, args.z_max)
             if len(pantheon_df) > 0:
                 # Analyze
-                pantheon_result = analyze_supernova_sample(pantheon_df, "Pantheon+", pantheon_data_type)
+                pantheon_result = analyze_supernova_sample(pantheon_df, "Pantheon+", pantheon_data_type, cosmo_params)
                 results['pantheon'] = pantheon_result
                 
                 # Plot if requested

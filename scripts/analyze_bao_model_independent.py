@@ -27,6 +27,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from udt.core.temporal_geometry import temporal_redshift, distance_from_redshift
 import udt.core.cosmology as cosmology
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
+from src.udt.diagnostics.mandatory_validation_gate import ValidationGate
 
 # Constants
 c_LIGHT_SI = 299792.458  # km/s
@@ -253,15 +255,75 @@ def fit_udt_bao_model_independent(data):
     
     return best_result
 
+def fit_udt_bao_with_validated_r0(data, R0_validated):
+    """
+    Fit BAO data using validated R0 parameter, fitting only rd
+    
+    Uses ParameterRegistry validated R0 = 3000 Mpc and fits only sound horizon rd
+    """
+    print(f"Performing constrained fitting with R0 = {R0_validated:.1f} Mpc...")
+    
+    # Only fit rd with validated R0 fixed
+    bounds = [(120, 180)]  # rd range in Mpc only
+    
+    def chi_squared_constrained(params):
+        rd = params[0]
+        return chi_squared_model_independent([R0_validated, rd], data, UDTCosmology)
+    
+    # Initial guesses for rd only
+    rd_options = [139.7, 147.1, 135.0, 155.0]  # Model-independent estimates
+    
+    best_result = None
+    best_chi2 = np.inf
+    
+    for rd0 in rd_options:
+        try:
+            result = differential_evolution(
+                chi_squared_constrained,
+                bounds,
+                seed=42,
+                maxiter=100,
+                atol=1e-8,
+                popsize=15
+            )
+            
+            if result.success and result.fun < best_chi2:
+                best_chi2 = result.fun
+                # Reconstruct full result format
+                best_result = type('Result', (), {
+                    'success': True,
+                    'fun': result.fun,
+                    'x': [R0_validated, result.x[0]]  # [R0_fixed, rd_fitted]
+                })()
+                
+        except Exception as e:
+            print(f"Constrained fitting attempt failed: {e}")
+    
+    return best_result
+
 def analyze_model_contamination():
     """Main analysis comparing model-dependent vs model-independent approaches"""
     print("\n" + "="*80)
     print("MODEL-INDEPENDENT BAO ANALYSIS WITH UDT")
     print("="*80)
+    
+    # Initialize validation and parameter systems
+    validation_gate = ValidationGate()
+    registry = ParameterRegistry()
+    
+    # Use validated cosmological parameters 
+    cosmo_params = registry.get_parameters_for_analysis('bao')
+    R0_validated = cosmo_params['R0_mpc']  # 3000.0 Mpc from cosmological scale
+    
+    print(f"\nUsing ParameterRegistry validated parameters:")
+    print(f"- Cosmological R0: {R0_validated:.1f} Mpc (validated scale)")
+    print(f"- Analysis approach: Constrained fitting with validated R0")
+    
     print("\nAddressing model contamination in standard BAO analysis:")
     print("- Standard approach uses LCDM-derived rd = 147.09 Mpc (circular)")
     print("- Model-independent approach fits rd as free parameter")
     print("- Literature estimates: rd = 139.7 +5.2/-4.5 Mpc (model-independent)")
+    print(f"- UDT validated approach: R0 = {R0_validated:.1f} Mpc from ParameterRegistry")
     
     # Load BAO data
     data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'bao', 'uncorBAO.txt')
@@ -277,12 +339,51 @@ def analyze_model_contamination():
     usable_data = [d for d in data if d['parameter'] in usable_params]
     print(f"Usable for model-independent analysis: {len(usable_data)} measurements")
     
-    # Perform model-independent fit
-    result = fit_udt_bao_model_independent(usable_data)
+    # Perform BOTH analyses for comparison
+    print(f"\n" + "="*50)
+    print("RUNNING DUAL ANALYSIS APPROACH")
+    print("="*50)
+    
+    # Analysis 1: Original free fitting
+    print(f"\n1. ORIGINAL MODEL-INDEPENDENT APPROACH (free R0 + rd):")
+    result_original = fit_udt_bao_model_independent(usable_data)
+    
+    # Analysis 2: Validated R0 approach  
+    print(f"\n2. VALIDATED R0 APPROACH (R0={R0_validated:.1f} Mpc, fit rd only):")
+    result_validated = fit_udt_bao_with_validated_r0(usable_data, R0_validated)
+    
+    # Compare results
+    if result_original and result_original.success:
+        R0_orig, rd_orig = result_original.x
+        chi2_orig = result_original.fun
+        chi2_dof_orig = chi2_orig / (len(usable_data) - 2)
+        print(f"\nOriginal approach: R0={R0_orig:.1f} Mpc, rd={rd_orig:.1f} Mpc, chi2/dof={chi2_dof_orig:.2f}")
+    else:
+        print(f"\nOriginal approach: FAILED")
+        chi2_dof_orig = np.inf
+        
+    if result_validated and result_validated.success:
+        R0_val, rd_val = result_validated.x  
+        chi2_val = result_validated.fun
+        chi2_dof_val = chi2_val / (len(usable_data) - 1)  # One less parameter
+        print(f"Validated approach: R0={R0_val:.1f} Mpc, rd={rd_val:.1f} Mpc, chi2/dof={chi2_dof_val:.2f}")
+    else:
+        print(f"Validated approach: FAILED")
+        chi2_dof_val = np.inf
+    
+    # Select best approach
+    if chi2_dof_val < chi2_dof_orig:
+        print(f"\n>>> VALIDATED R0 APPROACH PERFORMS BETTER <<<")
+        result = result_validated
+        best_approach = "validated"
+    else:
+        print(f"\n>>> ORIGINAL FREE FITTING PERFORMS BETTER <<<") 
+        result = result_original
+        best_approach = "original"
     
     if result is None or not result.success:
-        print("\n! Model-independent fitting failed!")
-        print("This may indicate fundamental incompatibility between UDT and BAO data")
+        print("\n! Both fitting approaches failed!")
+        print("This indicates fundamental incompatibility between UDT and BAO data")
         return None, None, None
     
     R0_best, rd_best = result.x

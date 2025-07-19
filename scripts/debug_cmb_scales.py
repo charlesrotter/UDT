@@ -20,14 +20,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
 import os
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
 
 class CMBScaleDebugger:
     """Debug CMB scale calculations in UDT framework."""
     
     def __init__(self):
         """Initialize with both UDT and standard cosmology parameters."""
-        # UDT parameters
-        self.R0_cosmic = 3000.0  # Mpc (from supernova analysis)
+        # Load validated parameters from registry
+        self.registry = ParameterRegistry()
+        
+        # UDT parameters - CRITICAL: Use CMB scale, not supernova scale!
+        cmb_params = self.registry.get_parameters_for_analysis('cmb')
+        self.R0_cmb = cmb_params['R0_mpc']  # 13041.1 Mpc (CMB acoustic peak scale)
         
         # Standard cosmology (for comparison)
         self.c_light = 299792.458  # km/s
@@ -51,11 +59,11 @@ class CMBScaleDebugger:
         
         # Method 1: Current UDT approach
         z_rec = 1100.0
-        eta_rec_udt_v1 = self.R0_cosmic / (1 + z_rec)  # Mpc
+        eta_rec_udt_v1 = self.R0_cmb / (1 + z_rec)  # Mpc
         eta_rec_conf_v1 = eta_rec_udt_v1 / self.c_light  # Mpc/c
         
         print(f"Method 1 (current UDT):")
-        print(f"  eta_rec = R0/(1+z) = {self.R0_cosmic}/(1+{z_rec}) = {eta_rec_udt_v1:.2f} Mpc")
+        print(f"  eta_rec = R0/(1+z) = {self.R0_cmb}/(1+{z_rec}) = {eta_rec_udt_v1:.2f} Mpc")
         print(f"  eta_rec_conf = {eta_rec_conf_v1:.6f} Mpc/c")
         print(f"  This is {eta_rec_conf_v1/self.eta_rec_standard*100:.2f}% of standard value")
         print()
@@ -135,7 +143,7 @@ class CMBScaleDebugger:
         def simple_sound_speed(eta):
             # Rough approximation: c_s decreases as baryons become important
             eta_Mpc = eta * self.c_light
-            z_eff = max(1, self.R0_cosmic / eta_Mpc - 1)
+            z_eff = max(1, self.R0_cmb / eta_Mpc - 1)
             R_gamma = 3 * self.Omega_b / (4 * self.Omega_r * (1 + z_eff))
             c_s_squared = 1.0 / (3.0 * (1.0 + R_gamma))
             return np.sqrt(c_s_squared)
@@ -158,7 +166,7 @@ class CMBScaleDebugger:
         eta_rec_Mpc = eta_rec_conf * self.c_light
         
         # Method 1: Current UDT approach
-        tau_rec = self.R0_cosmic / (self.R0_cosmic + eta_rec_Mpc)
+        tau_rec = self.R0_cmb / (self.R0_cmb + eta_rec_Mpc)
         D_A_udt = eta_rec_Mpc * tau_rec
         l1_udt = np.pi * D_A_udt / r_s
         
@@ -229,12 +237,12 @@ class CMBScaleDebugger:
         # What R0 would give this?
         R0_required = eta_rec_target * (1 + self.z_recombination)
         print(f"  Required UDT scale: R0 = {R0_required:.1f} Mpc")
-        print(f"  Current R0: {self.R0_cosmic:.1f} Mpc")
-        print(f"  Scale factor needed: {R0_required/self.R0_cosmic:.2f}")
+        print(f"  Current R0: {self.R0_cmb:.1f} Mpc")
+        print(f"  Scale factor needed: {R0_required/self.R0_cmb:.2f}")
         
         return {
             'R0_required': R0_required,
-            'scale_factor': R0_required/self.R0_cosmic
+            'scale_factor': R0_required/self.R0_cmb
         }
     
     def create_scale_diagnostic_plots(self, output_dir="results/cmb_scale_debug"):
@@ -251,8 +259,8 @@ class CMBScaleDebugger:
         plt.plot(R0_range, eta_conf_range, 'b-', linewidth=2)
         plt.axhline(y=self.eta_rec_standard, color='red', linestyle='--', 
                    label=f'Standard = {self.eta_rec_standard:.0f} Mpc/c')
-        plt.axvline(x=self.R0_cosmic, color='green', linestyle='--', 
-                   label=f'Current R0 = {self.R0_cosmic:.0f} Mpc')
+        plt.axvline(x=self.R0_cmb, color='green', linestyle='--', 
+                   label=f'Current R0 = {self.R0_cmb:.0f} Mpc')
         plt.xlabel('R0 (Mpc)')
         plt.ylabel('Conformal Time (Mpc/c)')
         plt.title('Conformal Time at Recombination')
@@ -266,7 +274,7 @@ class CMBScaleDebugger:
         plt.plot(R0_range, r_s_range, 'g-', linewidth=2)
         plt.axhline(y=self.r_s_standard, color='red', linestyle='--',
                    label=f'Standard = {self.r_s_standard:.0f} Mpc')
-        plt.axvline(x=self.R0_cosmic, color='green', linestyle='--')
+        plt.axvline(x=self.R0_cmb, color='green', linestyle='--')
         plt.xlabel('R0 (Mpc)')
         plt.ylabel('Sound Horizon (Mpc)')
         plt.title('Sound Horizon vs R0')
@@ -283,7 +291,7 @@ class CMBScaleDebugger:
         plt.plot(R0_range, eta_Mpc_range, 'c--', linewidth=2, label='Flat space')
         plt.axhline(y=self.l1_observed * self.r_s_standard / np.pi, 
                    color='red', linestyle='--', label='Required for l1=220')
-        plt.axvline(x=self.R0_cosmic, color='green', linestyle='--')
+        plt.axvline(x=self.R0_cmb, color='green', linestyle='--')
         plt.xlabel('R0 (Mpc)')
         plt.ylabel('Angular Distance (Mpc)')
         plt.title('Angular Diameter Distance vs R0')
@@ -299,7 +307,7 @@ class CMBScaleDebugger:
         plt.plot(R0_range, l1_flat_range, 'c--', linewidth=2, label='Flat space')
         plt.axhline(y=self.l1_observed, color='red', linestyle='--',
                    label=f'Observed = {self.l1_observed:.0f}')
-        plt.axvline(x=self.R0_cosmic, color='green', linestyle='--')
+        plt.axvline(x=self.R0_cmb, color='green', linestyle='--')
         plt.xlabel('R0 (Mpc)')
         plt.ylabel('First Peak l1')
         plt.title('First Acoustic Peak vs R0')
@@ -309,7 +317,7 @@ class CMBScaleDebugger:
         
         # 5. Scale factor analysis
         plt.subplot(2, 3, 5)
-        scale_factors = R0_range / self.R0_cosmic
+        scale_factors = R0_range / self.R0_cmb
         l1_scaled = l1_range[0] * scale_factors  # Linear scaling approximation
         
         plt.plot(scale_factors, l1_scaled, 'orange', linewidth=2)
@@ -329,7 +337,7 @@ class CMBScaleDebugger:
         l1_error = abs(l1_range - self.l1_observed) / self.l1_observed * 100
         
         plt.plot(R0_range, l1_error, 'red', linewidth=2)
-        plt.axvline(x=self.R0_cosmic, color='green', linestyle='--')
+        plt.axvline(x=self.R0_cmb, color='green', linestyle='--')
         plt.axhline(y=5, color='orange', linestyle='--', label='5% error')
         plt.axhline(y=10, color='blue', linestyle='--', label='10% error')
         plt.xlabel('R0 (Mpc)')
@@ -388,7 +396,7 @@ class CMBScaleDebugger:
         print()
         print("RECOMMENDED FIXES:")
         print("1. Recalibrate UDT R0 to match standard conformal time")
-        print(f"   Current R0 = {self.R0_cosmic:.1f} Mpc")
+        print(f"   Current R0 = {self.R0_cmb:.1f} Mpc")
         print(f"   Required R0 = {standard_comparison['R0_required']:.1f} Mpc")
         print(f"   Scale factor = {standard_comparison['scale_factor']:.2f}")
         print()

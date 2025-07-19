@@ -27,6 +27,11 @@ from scipy.optimize import curve_fit
 from scipy.interpolate import interp1d
 import json
 
+# Add src to path for ParameterRegistry
+sys.path.append(str(Path(__file__).parent.parent))
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
+from src.udt.diagnostics.mandatory_validation_gate import ValidationGate
+
 # Add parent directory to path to import udt package
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -35,6 +40,13 @@ class UDTCMBAnalyzer:
     
     def __init__(self):
         """Initialize with physical constants and CMB parameters."""
+        # Initialize parameter registry and validation gate
+        self.registry = ParameterRegistry()
+        self.validator = ValidationGate()
+        
+        # Load validated CMB parameters 
+        cmb_params = self.registry.get_parameters_for_analysis('cmb')
+        
         # Physical constants
         self.c = 2.998e8           # Speed of light (m/s)
         self.h = 6.626e-34         # Planck constant
@@ -46,8 +58,8 @@ class UDTCMBAnalyzer:
         self.z_recomb = 1090       # Recombination redshift
         self.z_star = 1020         # Surface of last scattering
         
-        # UDT parameters (will be fitted)
-        self.R0_cmb = 14000        # CMB-scale R₀ (Mpc) - initial guess
+        # UDT parameters from validated registry
+        self.R0_cmb = cmb_params['R0_mpc']  # 13041.1 Mpc (validated CMB scale)
         
         # Data directories
         self.data_dir = Path(__file__).parent.parent / "data" / "cmb_planck"
@@ -535,6 +547,10 @@ class UDTCMBAnalyzer:
 def main():
     """Main CMB analysis."""
     analyzer = UDTCMBAnalyzer()
+    
+    # Enforce validation before CMB analysis
+    analyzer.validator.require_validation('cmb', analyzer.data_dir)
+    
     results = analyzer.run_cmb_analysis()
     return results
 

@@ -22,6 +22,10 @@ import matplotlib.pyplot as plt
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar
 import os
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
 
 class FixedUDTCMB:
     """Fixed UDT CMB physics with proper scale dependencies."""
@@ -46,8 +50,12 @@ class FixedUDTCMB:
         self.r_s_standard = 147.3       # Sound horizon (Mpc)
         self.D_A_standard = 13975.0     # Angular diameter distance (Mpc)
         
-        # UDT parameters - use cosmological scale as baseline
-        self.R0_baseline = 3000.0       # Mpc (from supernova analysis)
+        # Load validated parameters from registry
+        self.registry = ParameterRegistry()
+        cmb_params = self.registry.get_parameters_for_analysis('cmb')
+        
+        # UDT parameters - use validated CMB scale, not supernova scale!
+        self.R0_cmb = cmb_params['R0_mpc']  # 13041.1 Mpc (validated CMB scale)
         
         print("FIXED UDT CMB PHYSICS")
         print("=" * 40)

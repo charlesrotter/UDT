@@ -17,6 +17,11 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
+# Add src to path for ParameterRegistry
+sys.path.append(str(Path(__file__).parent.parent))
+from src.udt.diagnostics.parameter_registry import ParameterRegistry
+from src.udt.diagnostics.mandatory_validation_gate import ValidationGate
+
 # Add parent directory to path to import udt package
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -78,6 +83,17 @@ def main():
     
     args = parser.parse_args()
     
+    # Initialize parameter registry and validation
+    registry = ParameterRegistry()
+    validator = ValidationGate()
+    
+    # Load validated galactic parameters
+    galactic_params = registry.get_parameters_for_analysis('sparc')
+    R0_galactic = galactic_params['R0_mpc']  # 0.038 Mpc (38 kpc)
+    
+    # Enforce validation before galactic analysis
+    validator.require_validation('galactic', args.data_dir)
+    
     # Create output directory
     os.makedirs(args.output_dir, exist_ok=True)
     
@@ -86,6 +102,7 @@ def main():
     print("=" * 60)
     print(f"Theory: tau(r) = R0/(R0 + r)")
     print(f"Enhancement: 1/tau^2 = (1 + r/R0)^2")
+    print(f"Registry R0_galactic = {R0_galactic:.3f} Mpc ({R0_galactic*1000:.0f} kpc) (validated scale)")
     print("=" * 60)
     
     # Load galaxy data
