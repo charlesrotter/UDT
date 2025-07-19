@@ -129,3 +129,25 @@ jobs:
       run: |
         echo "Testing package installation and basic functionality..."
         python -c "import sys; sys.path.insert(0, 'src'); from udt.models.core import UDTCosmology; from udt.diagnostics.validation import ValidationSuite; print('Package integrity test: PASSED')"
+
+  build-paper:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc pandoc-citeproc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+        
+    - name: Build manuscript
+      run: |
+        pandoc Universal_Distance_Dilation_Theory_Manuscript.md \
+          --citeproc -o udt_preprint.pdf
+          
+    - name: Upload manuscript artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: udt_preprint
+        path: udt_preprint.pdf
